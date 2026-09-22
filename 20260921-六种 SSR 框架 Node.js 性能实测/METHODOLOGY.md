@@ -1,4 +1,8 @@
+> 最新无压缩 / 无 HTML ETag、600 KB 后端 JSON 复测：[查看本轮完整报告](rerun-20260922-noetag-json/REPORT.md) 和 [本轮方法](rerun-20260922-noetag-json/METHODOLOGY.md)。以下保留此前实验内容。
+
 # SSR Node.js 基准测试口径
+
+> **2026-09-22 补充复核：** 本文件描述原六框架实验。SvelteKit 独立复测使用相同锁文件、Node 镜像与资源限制，但增加 60 秒重复、独立 CPU profile 和 ETag 诊断对照；这些新数据独立保存，详见 [复测报告](svelte-recheck-20260922/REPORT.md)。
 
 测试日期：2026-09-21（Asia/Shanghai）。报告是这台 ARM64 Docker 主机上的合成负载实测，不代表任意生产业务的框架排名。
 

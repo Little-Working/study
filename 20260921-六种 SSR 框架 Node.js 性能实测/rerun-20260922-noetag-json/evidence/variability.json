@@ -1,0 +1,107 @@
+{
+  "interpretation": "Observed cross-process variation; no outlier removed or corrected. Root cause unproven without synchronized profiles and host scheduling/frequency measurements.",
+  "records": [
+    {
+      "id": "focus-0-nuxt",
+      "rps": 123.76395691387376,
+      "p95Ms": 604.6968199908733,
+      "cpuMsPerRequest": 8.756293818571047,
+      "appCpuPct": 108.32189152877538,
+      "backendTimerMeanMs": 54.29558391170788,
+      "loadCpuPct": 16.516192414924994,
+      "gcTotalMs": 2646.141923248768,
+      "good": 3737,
+      "exactBytes": {
+        "min": 1609605,
+        "max": 1609605,
+        "mean": 1609605
+      },
+      "backendCalls": 3737
+    },
+    {
+      "id": "focus-0-tanstack",
+      "rps": 120.08142572534942,
+      "p95Ms": 600.0816549956799,
+      "cpuMsPerRequest": 9.291846446011936,
+      "appCpuPct": 111.54272585914256,
+      "backendTimerMeanMs": 54.22792738741132,
+      "loadCpuPct": 15.173486999992772,
+      "gcTotalMs": 1977.0508360266685,
+      "good": 3686,
+      "exactBytes": {
+        "min": 1585879,
+        "max": 1585879,
+        "mean": 1585879
+      },
+      "backendCalls": 3686
+    },
+    {
+      "id": "focus-1-nuxt",
+      "rps": 98.05843050108419,
+      "p95Ms": 1163.6784430146217,
+      "cpuMsPerRequest": 11.32185122854258,
+      "appCpuPct": 110.92475006593472,
+      "backendTimerMeanMs": 53.38530176944651,
+      "loadCpuPct": 18.198562130647662,
+      "gcTotalMs": 2946.812902033329,
+      "good": 2971,
+      "exactBytes": {
+        "min": 1609605,
+        "max": 1609605,
+        "mean": 1609605
+      },
+      "backendCalls": 2971
+    },
+    {
+      "id": "focus-1-tanstack",
+      "rps": 75.71393606011459,
+      "p95Ms": 1280.7711369991302,
+      "cpuMsPerRequest": 13.73134375,
+      "appCpuPct": 103.91126794298088,
+      "backendTimerMeanMs": 55.92042689767869,
+      "loadCpuPct": 25.36710508810373,
+      "gcTotalMs": 2550.096314072609,
+      "good": 2336,
+      "exactBytes": {
+        "min": 1585879,
+        "max": 1585879,
+        "mean": 1585879
+      },
+      "backendCalls": 2336
+    },
+    {
+      "id": "focus-2-nuxt",
+      "rps": 127.41399960028015,
+      "p95Ms": 581.8291730284691,
+      "cpuMsPerRequest": 8.367664326573063,
+      "appCpuPct": 106.55859766900028,
+      "backendTimerMeanMs": 54.59022802470235,
+      "loadCpuPct": 14.527683939707543,
+      "gcTotalMs": 2533.4083340466022,
+      "good": 3846,
+      "exactBytes": {
+        "min": 1609605,
+        "max": 1609605,
+        "mean": 1609605
+      },
+      "backendCalls": 3846
+    },
+    {
+      "id": "focus-2-tanstack",
+      "rps": 124.59686790796968,
+      "p95Ms": 573.345970004797,
+      "cpuMsPerRequest": 8.318132929718347,
+      "appCpuPct": 103.60948584801409,
+      "backendTimerMeanMs": 53.91113797051866,
+      "loadCpuPct": 16.23936016451429,
+      "gcTotalMs": 1700.627897799015,
+      "good": 3799,
+      "exactBytes": {
+        "min": 1585879,
+        "max": 1585879,
+        "mean": 1585879
+      },
+      "backendCalls": 3799
+    }
+  ]
+}

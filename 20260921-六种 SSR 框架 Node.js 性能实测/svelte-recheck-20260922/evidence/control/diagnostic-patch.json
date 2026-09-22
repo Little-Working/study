@@ -1,0 +1,1 @@
+{"path":"/bench/apps/svelte/build/server/chunks/index.js-Dtk6_EEA.js","removed":"\tif (!chunks) headers.set(\"etag\", `\"${hash(transformed)}\"`);"}

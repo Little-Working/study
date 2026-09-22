@@ -1,0 +1,626 @@
+{
+  "next": {
+    "versions": {
+      "next": "16.3.5",
+      "react": "19.3.0",
+      "react-dom": "19.3.0"
+    },
+    "sourceEvidence": [
+      {
+        "file": ".next/server/chunks/ssr/[root-of-the-server]__07-cb6x._.js",
+        "line": 1,
+        "text": "module.exports=[70406,(a,b,c)=>{b.exports=a.x(\"next/dist/compiled/@opentelemetry/api\",()=>require(\"next/dist/compiled/@opentelemetry/api\"))},62562,(a,b,c)=>{(()=>{\"use strict\";let c,d,e,f,g;var h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x={912:(a,b,c)=>{Object.defineProperty(b,\"__esModule\",{value:!0}),b.ContextAPI=void 0;let d=c(108),e=c(221),f=c(44),g=\"context\",h=new d.NoopContextManager;b.ContextAPI=class a{static getInstance(){return this._instance||(this._instance=new a),this._instance}setGlobalContextManager(a){return(0,e.registerGlobal)(g,a,f.DiagAPI.instance())}active(){return this._getContextManager().active()}with(a,b,c,...d){return this._getContextManager().with(a,b,c,...d)}bind(a,b){return this._getContextManager().bind(a,b)}_getContextManager(){return(0,e.getGlobal)(g)||h}disable(){this._getContextManager().disable(),(0,e.unregisterGlobal)(g,f.DiagAPI.instance())}}},44:(a,b,c)=>{Object.defineProperty(b,\"__esModule\",{value:!0}),b.DiagAPI=void 0;let d=c(757),e=c(412),f=c(711),g=c(221);b"
+      },
+      {
+        "file": ".next/server/chunks/ssr/[root-of-the-server]__07-cb6x._.js",
+        "line": 10,
+        "text": "Original Message: ${d}`);console.error(`Route ${b} errored during ${c}. These errors are normally ignored and may not prevent the route from prerendering but are logged here because build debugging is enabled. The thrown value is logged just following this message`),console.error(a)}}(a,(null==b?void 0:b.route)??\"unknown route\",bW.SegmentCollection)}}function bY(a){let b=a.f;return 1!==b.length||3!==b[0].length&&4!==b[0].length?(console.error(\"Internal Next.js error: InitialRSCPayload does not match the expected shape for a prerendered page during segment prefetch generation.\"),null):{buildId:a.b,flightRouterState:b[0][0],seedData:b[0][1],head:b[0][2]}}async function bZ(a,b,c,d,g,h,i,j){let k,m,n,o=new Map,p=!0;try{let a=await (0,bL.createFromReadableStream)(b5((0,bM.streamFromBuffer)(b)),{findSourceMapURL:f,serverConsumerManifest:g});await (0,bN.waitAtLeastOneReactRenderTask)(),void 0!==a.a&&(n=await a.a),void 0!==a.u&&(p=function(a){switch(a.then(b3,b3),a.status){case\"fulfilled\":retu"
+      }
+    ],
+    "effectiveConfig": {
+      "env": {},
+      "webpack": null,
+      "typescript": {
+        "ignoreBuildErrors": false
+      },
+      "typedRoutes": false,
+      "distDir": ".next",
+      "cleanDistDir": true,
+      "assetPrefix": "",
+      "cacheMaxMemorySize": 52428800,
+      "configOrigin": "next.config.mjs",
+      "useFileSystemPublicRoutes": true,
+      "generateEtags": false,
+      "pageExtensions": [
+        "tsx",
+        "ts",
+        "jsx",
+        "js"
+      ],
+      "instrumentationClientInject": [],
+      "poweredByHeader": false,
+      "compress": false,
+      "images": {
+        "deviceSizes": [
+          640,
+          750,
+          828,
+          1080,
+          1200,
+          1920,
+          2048,
+          3840
+        ],
+        "imageSizes": [
+          32,
+          48,
+          64,
+          96,
+          128,
+          256,
+          384
+        ],
+        "path": "/_next/image",
+        "loader": "default",
+        "loaderFile": "",
+        "domains": [],
+        "disableStaticImages": false,
+        "minimumCacheTTL": 14400,
+        "formats": [
+          "image/webp"
+        ],
+        "maximumRedirects": 3,
+        "maximumResponseBody": 50000000,
+        "dangerouslyAllowLocalIP": false,
+        "dangerouslyAllowSVG": false,
+        "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
+        "contentDispositionType": "attachment",
+        "localPatterns": [
+          {
+            "pathname": "**",
+            "search": ""
+          }
+        ],
+        "remotePatterns": [],
+        "qualities": [
+          75
+        ],
+        "unoptimized": false,
+        "customCacheHandler": false
+      },
+      "devIndicators": {
+        "position": "bottom-left"
+      },
+      "onDemandEntries": {
+        "maxInactiveAge": 60000,
+        "pagesBufferLength": 5
+      },
+      "basePath": "",
+      "sassOptions": {},
+      "trailingSlash": false,
+      "i18n": null,
+      "productionBrowserSourceMaps": false,
+      "excludeDefaultMomentLocales": true,
+      "reactProductionProfiling": false,
+      "reactStrictMode": null,
+      "reactMaxHeadersLength": 6000,
+      "httpAgentOptions": {
+        "keepAlive": true
+      },
+      "logging": {
+        "serverFunctions": true,
+        "browserToTerminal": "warn"
+      },
+      "compiler": {},
+      "expireTime": 31536000,
+      "staticPageGenerationTimeout": 60,
+      "modularizeImports": {
+        "@mui/icons-material": {
+          "transform": "@mui/icons-material/{{member}}"
+        },
+        "lodash": {
+          "transform": "lodash/{{member}}"
+        }
+      },
+      "outputFileTracingRoot": "/bench/apps/next",
+      "enablePrerenderSourceMaps": true,
+      "cacheComponents": false,
+      "cacheLife": {
+        "default": {
+          "stale": 300,
+          "revalidate": 900,
+          "expire": 4294967294
+        },
+        "seconds": {
+          "stale": 30,
+          "revalidate": 1,
+          "expire": 60
+        },
+        "minutes": {
+          "stale": 300,
+          "revalidate": 60,
+          "expire": 3600
+        },
+        "hours": {
+          "stale": 300,
+          "revalidate": 3600,
+          "expire": 86400
+        },
+        "days": {
+          "stale": 300,
+          "revalidate": 86400,
+          "expire": 604800
+        },
+        "weeks": {
+          "stale": 300,
+          "revalidate": 604800,
+          "expire": 2592000
+        },
+        "max": {
+          "stale": 300,
+          "revalidate": 2592000,
+          "expire": 31536000
+        }
+      },
+      "cacheHandlers": {},
+      "experimental": {
+        "appNewScrollHandler": true,
+        "coldCacheBadge": false,
+        "devValidationWorker": true,
+        "useSkewCookie": false,
+        "cssChunking": true,
+        "multiZoneDraftMode": false,
+        "appNavFailHandling": false,
+        "prerenderEarlyExit": true,
+        "serverMinification": true,
+        "linkNoTouchStart": false,
+        "caseSensitiveRoutes": false,
+        "cachedNavigations": false,
+        "dynamicOnHover": false,
+        "useOffline": false,
+        "varyParams": true,
+        "optimisticRouting": true,
+        "instrumentationClientRouterTransitionEvents": false,
+        "prefetchInlining": {
+          "maxSize": 2048,
+          "maxBundleSize": 10240
+        },
+        "preloadEntriesOnStart": true,
+        "clientRouterFilter": true,
+        "clientRouterFilterRedirects": false,
+        "fetchCacheKeyPrefix": "",
+        "proxyPrefetch": "flexible",
+        "optimisticClientCache": true,
+        "manualClientBasePath": false,
+        "cpus": 2,
+        "memoryBasedWorkersCount": false,
+        "imgOptConcurrency": null,
+        "imgOptOperationCache": null,
+        "imgOptTimeoutInSeconds": 7,
+        "imgOptMaxInputPixels": 268402689,
+        "imgOptSequentialRead": null,
+        "isrFlushToDisk": true,
+        "workerThreads": false,
+        "optimizeCss": false,
+        "nextScriptWorkers": false,
+        "scrollRestoration": false,
+        "externalDir": false,
+        "devMemoryThresholdRestart": true,
+        "disableOptimizedLoading": false,
+        "gzipSize": true,
+        "craCompat": false,
+        "esmExternals": true,
+        "fullySpecified": false,
+        "swcTraceProfiling": false,
+        "forceSwcTransforms": false,
+        "requestInsights": false,
+        "largePageDataBytes": 128000,
+        "typedEnv": false,
+        "parallelServerCompiles": false,
+        "parallelServerBuildTraces": false,
+        "ppr": false,
+        "authInterrupts": false,
+        "webpackMemoryOptimizations": false,
+        "optimizeServerReact": true,
+        "strictRouteTypes": false,
+        "useTypeScriptCli": true,
+        "removeUncaughtErrorAndRejectionListeners": false,
+        "validateRSCRequestHeaders": true,
+        "staleTimes": {
+          "dynamic": 0,
+          "static": 300
+        },
+        "reactDebugChannel": true,
+        "serverComponentsHmrCache": true,
+        "serverComponentsHmrCancellation": false,
+        "staticGenerationMaxConcurrency": 8,
+        "staticGenerationMinPagesPerWorker": 25,
+        "transitionIndicator": false,
+        "gestureTransition": false,
+        "inlineCss": false,
+        "useCache": false,
+        "globalNotFound": false,
+        "browserDebugInfoInTerminal": "warn",
+        "lockDistDir": true,
+        "proxyClientMaxBodySize": 10485760,
+        "hideLogsAfterAbort": false,
+        "mcpServer": true,
+        "turbopackFileSystemCacheForDev": true,
+        "turbopackFileSystemCacheForBuild": true,
+        "turbopackInferModuleSideEffects": true,
+        "turbopackPluginRuntimeStrategy": "childProcesses",
+        "turbopackMemoryEvictionMode": "auto",
+        "optimizePackageImports": [
+          "lucide-react",
+          "date-fns",
+          "lodash-es",
+          "ramda",
+          "antd",
+          "react-bootstrap",
+          "ahooks",
+          "@ant-design/icons",
+          "@headlessui/react",
+          "@headlessui-float/react",
+          "@heroicons/react/20/solid",
+          "@heroicons/react/24/solid",
+          "@heroicons/react/24/outline",
+          "@visx/visx",
+          "@tremor/react",
+          "rxjs",
+          "@mui/material",
+          "@mui/icons-material",
+          "recharts",
+          "react-use",
+          "effect",
+          "@effect/schema",
+          "@effect/platform",
+          "@effect/platform-node",
+          "@effect/platform-browser",
+          "@effect/platform-bun",
+          "@effect/sql",
+          "@effect/sql-mssql",
+          "@effect/sql-mysql2",
+          "@effect/sql-pg",
+          "@effect/sql-sqlite-node",
+          "@effect/sql-sqlite-bun",
+          "@effect/sql-sqlite-wasm",
+          "@effect/sql-sqlite-react-native",
+          "@effect/rpc",
+          "@effect/rpc-http",
+          "@effect/typeclass",
+          "@effect/experimental",
+          "@effect/opentelemetry",
+          "@material-ui/core",
+          "@material-ui/icons",
+          "@tabler/icons-react",
+          "mui-core",
+          "react-icons/ai",
+          "react-icons/bi",
+          "react-icons/bs",
+          "react-icons/cg",
+          "react-icons/ci",
+          "react-icons/di",
+          "react-icons/fa",
+          "react-icons/fa6",
+          "react-icons/fc",
+          "react-icons/fi",
+          "react-icons/gi",
+          "react-icons/go",
+          "react-icons/gr",
+          "react-icons/hi",
+          "react-icons/hi2",
+          "react-icons/im",
+          "react-icons/io",
+          "react-icons/io5",
+          "react-icons/lia",
+          "react-icons/lib",
+          "react-icons/lu",
+          "react-icons/md",
+          "react-icons/pi",
+          "react-icons/ri",
+          "react-icons/rx",
+          "react-icons/si",
+          "react-icons/sl",
+          "react-icons/tb",
+          "react-icons/tfi",
+          "react-icons/ti",
+          "react-icons/vsc",
+          "react-icons/wi"
+        ],
+        "useCacheTimeout": 54,
+        "instantInsights": {
+          "validationLevel": "warning"
+        },
+        "trustHostHeader": false,
+        "isExperimentalCompile": false
+      },
+      "htmlLimitedBots": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
+      "bundlePagesRouterDependencies": false,
+      "configFileName": "next.config.mjs",
+      "repoRoot": "/bench/apps/next",
+      "turbopack": {
+        "root": "/bench/apps/next"
+      },
+      "distDirRoot": ".next"
+    }
+  },
+  "nuxt": {
+    "versions": {
+      "nuxt": "4.5.2",
+      "vue": "3.5.41",
+      "nitropack": "2.13.4",
+      "vite": "8.3.0"
+    },
+    "sourceEvidence": [
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 987,
+        "text": "  if (opts.etag) {"
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 988,
+        "text": "    event.node.res.setHeader(\"etag\", opts.etag);"
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 990,
+        "text": "    if (ifNonMatch === opts.etag) {"
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 3670,
+        "text": "      if (entry.value.headers.etag === \"undefined\" || entry.value.headers[\"last-modified\"] === \"undefined\") {"
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 3774,
+        "text": "      headers.etag = String("
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 3775,
+        "text": "        headers.Etag || headers.etag || `W/\"${hash(body)}\"`"
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 3820,
+        "text": "      etag: response.headers.etag,"
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 4492,
+        "text": "    \"etag\": \"\\\"d3a-yehXVRyz/jTlM7T2Esb8uierIRQ\\\"\","
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 4499,
+        "text": "    \"etag\": \"\\\"266a-u8Ehse6ar7maV3hfN8JHyrpo6bY\\\"\","
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 4506,
+        "text": "    \"etag\": \"\\\"14e6c-WnwA/wM9jxuguHP4ctvHJ/ls/ug\\\"\","
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 4513,
+        "text": "    \"etag\": \"\\\"97d-4h9VfBznldxjqagfMldh1hDncR0\\\"\","
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 4520,
+        "text": "    \"etag\": \"\\\"772-nqXXACYtFiPK+D42BNu4uEECARA\\\"\","
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 4527,
+        "text": "    \"etag\": \"\\\"e2a0-o6WLoMXNbvDWbg85kvTxV5ir60c\\\"\","
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 4534,
+        "text": "    \"etag\": \"\\\"58-rH8ATr8lCDwTPhzFd43yRlXoI6U\\\"\","
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 4541,
+        "text": "    \"etag\": \"\\\"47-0e+l+rGSUW9x+bIxshFLAA8PP0o\\\"\","
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 4548,
+        "text": "    \"etag\": \"\\\"39a-b/C9txkp6LLUlnYAfT3aOPQ+vpc\\\"\","
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 4733,
+        "text": "  const ifNotMatch = getRequestHeader(event, \"if-none-match\") === asset.etag;"
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 4747,
+        "text": "  if (asset.etag && !getResponseHeader(event, \"ETag\")) {"
+      },
+      {
+        "file": ".output/server/chunks/nitro/nitro.mjs",
+        "line": 4748,
+        "text": "    setResponseHeader(event, \"ETag\", asset.etag);"
+      }
+    ]
+  },
+  "svelte": {
+    "versions": {
+      "svelte": "5.57.1",
+      "@sveltejs/kit": "2.70.3",
+      "@sveltejs/adapter-node": "5.5.7",
+      "vite": "8.3.0"
+    },
+    "sourceEvidence": [
+      {
+        "file": "build/server/chunks/handler-CBLv3dKj.js",
+        "line": 619,
+        "text": "\tif (isEtag) headers['ETag'] = `W/\"${stats.size}-${stats.mtime.getTime()}\"`;"
+      },
+      {
+        "file": "build/server/chunks/handler-CBLv3dKj.js",
+        "line": 637,
+        "text": "\tlet isEtag = !!opts.etag;"
+      },
+      {
+        "file": "build/server/chunks/handler-CBLv3dKj.js",
+        "line": 688,
+        "text": "\t\tif (isEtag && req.headers['if-none-match'] === data.headers['ETag']) {"
+      },
+      {
+        "file": "build/server/chunks/handler-CBLv3dKj.js",
+        "line": 1007,
+        "text": "\t\t\t\tetag: true,"
+      },
+      {
+        "file": "build/server/chunks/index.js-DTDqAf6e.js",
+        "line": 2373,
+        "text": "// Benchmark configuration: HTML ETag computation disabled at source."
+      },
+      {
+        "file": "build/server/chunks/index.js-DTDqAf6e.js",
+        "line": 3316,
+        "text": "var etag;"
+      },
+      {
+        "file": "build/server/chunks/index.js-DTDqAf6e.js",
+        "line": 3327,
+        "text": "\tetag ??= `W/${Date.now()}`;"
+      },
+      {
+        "file": "build/server/chunks/index.js-DTDqAf6e.js",
+        "line": 3330,
+        "text": "\t\tetag"
+      },
+      {
+        "file": "build/server/chunks/index.js-DTDqAf6e.js",
+        "line": 3332,
+        "text": "\tif (request.headers.get(\"if-none-match\") === etag) return new Response(void 0, {"
+      },
+      {
+        "file": "build/server/chunks/index.js-DTDqAf6e.js",
+        "line": 3641,
+        "text": "\t\tif (response.status === 200 && response.headers.has(\"etag\")) {"
+      },
+      {
+        "file": "build/server/chunks/index.js-DTDqAf6e.js",
+        "line": 3644,
+        "text": "\t\t\tconst etag = response.headers.get(\"etag\");"
+      },
+      {
+        "file": "build/server/chunks/index.js-DTDqAf6e.js",
+        "line": 3645,
+        "text": "\t\t\tif (if_none_match_value === etag) {"
+      },
+      {
+        "file": "build/server/chunks/index.js-DTDqAf6e.js",
+        "line": 3646,
+        "text": "\t\t\t\tconst headers = new Headers({ etag });"
+      }
+    ]
+  },
+  "tanstack": {
+    "versions": {
+      "react": "19.3.0",
+      "react-dom": "19.3.0",
+      "nitro": "3.0.260903-beta",
+      "@tanstack/react-start": "1.168.56",
+      "@tanstack/react-router": "1.170.38",
+      "vite": "8.3.0"
+    },
+    "sourceEvidence": [
+      {
+        "file": ".output/server/_libs/srvx.mjs",
+        "line": 630,
+        "text": "\t\"etag\","
+      },
+      {
+        "file": ".output/server/index.mjs",
+        "line": 13,
+        "text": "\t\t\"etag\": \"\\\"53c49-1D6JxG2UTStiExw2CZZPMAFaYkw\\\"\","
+      },
+      {
+        "file": ".output/server/index.mjs",
+        "line": 20,
+        "text": "\t\t\"etag\": \"\\\"327-UBIjCLfioGn6gfweZY1BkTpIwcg\\\"\","
+      },
+      {
+        "file": ".output/server/index.mjs",
+        "line": 72,
+        "text": "\tif (event.req.headers.get(\"if-none-match\") === asset.etag) {"
+      },
+      {
+        "file": ".output/server/index.mjs",
+        "line": 85,
+        "text": "\tif (asset.etag && !event.res.headers.has(\"ETag\")) event.res.headers.set(\"ETag\", asset.etag);"
+      }
+    ]
+  },
+  "react-router": {
+    "versions": {
+      "react": "19.3.0",
+      "react-dom": "19.3.0",
+      "react-router": "8.4.0",
+      "@react-router/express": "8.4.0",
+      "express": "5.2.1",
+      "vite": "8.3.0"
+    },
+    "sourceEvidence": []
+  },
+  "solid": {
+    "versions": {
+      "nitro": "3.0.260903-beta",
+      "@solidjs/start": "2.0.5",
+      "solid-js": "1.9.15",
+      "@solidjs/router": "1.0.0",
+      "vite": "8.3.0"
+    },
+    "sourceEvidence": [
+      {
+        "file": ".output/server/_libs/srvx.mjs",
+        "line": 630,
+        "text": "\t\"etag\","
+      },
+      {
+        "file": ".output/server/index.mjs",
+        "line": 13,
+        "text": "\t\t\"etag\": \"\\\"2f5-jYm2cuGhnIFz+FJZ//Zfe0mRNnM\\\"\","
+      },
+      {
+        "file": ".output/server/index.mjs",
+        "line": 20,
+        "text": "\t\t\"etag\": \"\\\"34c3-dNixKXvkFVYm2ZKmUKLS9WTPvyg\\\"\","
+      },
+      {
+        "file": ".output/server/index.mjs",
+        "line": 27,
+        "text": "\t\t\"etag\": \"\\\"12c1-zTw+4PkOZvqO/MMD/Tm3LMPvqH0\\\"\","
+      },
+      {
+        "file": ".output/server/index.mjs",
+        "line": 34,
+        "text": "\t\t\"etag\": \"\\\"41d8-Ir6xJ4/PLGqzaf+sj9Miwf8YFNg\\\"\","
+      },
+      {
+        "file": ".output/server/index.mjs",
+        "line": 41,
+        "text": "\t\t\"etag\": \"\\\"f7e9-IPbRztrWGgLD/paT1T4INX0t27o\\\"\","
+      },
+      {
+        "file": ".output/server/index.mjs",
+        "line": 93,
+        "text": "\tif (event.req.headers.get(\"if-none-match\") === asset.etag) {"
+      },
+      {
+        "file": ".output/server/index.mjs",
+        "line": 106,
+        "text": "\tif (asset.etag && !event.res.headers.has(\"ETag\")) event.res.headers.set(\"ETag\", asset.etag);"
+      }
+    ]
+  }
+}

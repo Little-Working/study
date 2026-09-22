@@ -1,0 +1,15 @@
+{
+  "NCPU": 10,
+  "MemTotal": 8393289728,
+  "Architecture": "aarch64",
+  "OperatingSystem": "OrbStack",
+  "KernelVersion": "7.0.14-orbstack-00380-ga7e0a2dc9535",
+  "ServerVersion": "29.4.0",
+  "image": "sha256:5c24c5d1bf4c19805b692346798c62097f27d1f60e2a9e24adc9368ea96cda4e",
+  "versions": {
+    "@sveltejs/kit": "2.70.3",
+    "@sveltejs/adapter-node": "5.5.7",
+    "svelte": "5.57.1",
+    "vite": "8.3.0"
+  }
+}

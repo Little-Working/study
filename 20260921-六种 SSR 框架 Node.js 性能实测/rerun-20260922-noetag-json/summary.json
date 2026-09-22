@@ -1,0 +1,3808 @@
+{
+  "health": {
+    "windows": 402,
+    "counts": {
+      "client-control": 36,
+      "focus": 18,
+      "matrix": 324,
+      "monitor-control": 24
+    },
+    "exactHtmlBytesVerifiedWindows": 402,
+    "good": 447347,
+    "errors": 0,
+    "sampled": 741,
+    "minWindowRequests": 15,
+    "loadCpuPctMax": 40.302303934827954,
+    "loadWorkerEluPctMax": 9.795814865730208,
+    "backendCpuPctMax": 9.922792333140663,
+    "backendTimerOvershootMeanMsMax": 23.10267608358987,
+    "memorySampleCostMsMax": 36.40706200004206,
+    "throttling": {
+      "app": {
+        "nr_periods": 40523,
+        "nr_throttled": 3,
+        "throttled_usec": 13409
+      },
+      "load": {
+        "nr_periods": 34454,
+        "nr_throttled": 0,
+        "throttled_usec": 0
+      },
+      "backend": {
+        "nr_periods": 32529,
+        "nr_throttled": 0,
+        "throttled_usec": 0
+      }
+    },
+    "firstWindowEnd": "2026-09-22T03:16:51.382Z",
+    "lastWindowEnd": "2026-09-22T04:56:35.385Z"
+  },
+  "focus": [
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "rpsMedian": 175.8678698502614,
+      "rpsMin": 170.0780609502853,
+      "rpsMax": 177.65169826832005,
+      "p50MedianMs": 359.2333399951458,
+      "p95MedianMs": 393.48983401060104,
+      "p99MedianMs": 444.1471969783306,
+      "p95MinMs": 379.94898000359535,
+      "p95MaxMs": 438.13656601309776,
+      "cpuPctMedian": 108.80931629507288,
+      "cpuMsPerRequestMedian": 6.1894544431946015,
+      "rssMaxMiB": 464.33984375,
+      "heapMaxMiB": 167.91193389892578,
+      "externalMaxMiB": 110.40564250946045,
+      "eluPctMedian": 89.659255553125,
+      "eventLoopP99MedianMs": 329.777151,
+      "gcMsPerRequestMedian": 0.4377125423970096,
+      "gcCountTotal": 3624,
+      "gcEventMaxMs": 12.562878996133804,
+      "requests": 15893,
+      "rpsRuns": [
+        175.8678698502614,
+        177.65169826832005,
+        170.0780609502853
+      ],
+      "firstBodyP50MedianMs": 154.76574197411537
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "rpsMedian": 140.11218288042977,
+      "rpsMin": 137.06114164214034,
+      "rpsMax": 140.20329617590633,
+      "p50MedianMs": 453.69966301321983,
+      "p95MedianMs": 503.1416090130806,
+      "p99MedianMs": 567.2181170284748,
+      "p95MinMs": 488.3169800043106,
+      "p95MaxMs": 534.4987320005894,
+      "cpuPctMedian": 108.67669064367996,
+      "cpuMsPerRequestMedian": 7.762420201546755,
+      "rssMaxMiB": 378.18359375,
+      "heapMaxMiB": 83.01465606689453,
+      "externalMaxMiB": 111.17119026184082,
+      "eluPctMedian": 89.54137138388951,
+      "eventLoopP99MedianMs": 455.081983,
+      "gcMsPerRequestMedian": 0.6443428453598096,
+      "gcCountTotal": 3963,
+      "gcEventMaxMs": 10.466296017169952,
+      "requests": 12713,
+      "rpsRuns": [
+        137.06114164214034,
+        140.20329617590633,
+        140.11218288042977
+      ],
+      "firstBodyP50MedianMs": 452.7479459941387
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "rpsMedian": 123.76395691387376,
+      "rpsMin": 98.05843050108419,
+      "rpsMax": 127.41399960028015,
+      "p50MedianMs": 510.23827397823334,
+      "p95MedianMs": 604.6968199908733,
+      "p99MedianMs": 782.3352959752083,
+      "p95MinMs": 581.8291730284691,
+      "p95MaxMs": 1163.6784430146217,
+      "cpuPctMedian": 108.32189152877538,
+      "cpuMsPerRequestMedian": 8.756293818571047,
+      "rssMaxMiB": 684.15625,
+      "heapMaxMiB": 346.25360107421875,
+      "externalMaxMiB": 23.15960121154785,
+      "eluPctMedian": 91.77892643397392,
+      "eventLoopP99MedianMs": 505.151487,
+      "gcMsPerRequestMedian": 0.7080925670989477,
+      "gcCountTotal": 2697,
+      "gcEventMaxMs": 28.959612011909485,
+      "requests": 10554,
+      "rpsRuns": [
+        123.76395691387376,
+        98.05843050108419,
+        127.41399960028015
+      ],
+      "firstBodyP50MedianMs": 508.8362310230732
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "rpsMedian": 120.08142572534942,
+      "rpsMin": 75.71393606011459,
+      "rpsMax": 124.59686790796968,
+      "p50MedianMs": 517.019445002079,
+      "p95MedianMs": 600.0816549956799,
+      "p99MedianMs": 823.6503159999847,
+      "p95MinMs": 573.345970004797,
+      "p95MaxMs": 1280.7711369991302,
+      "cpuPctMedian": 103.91126794298088,
+      "cpuMsPerRequestMedian": 9.291846446011936,
+      "rssMaxMiB": 528.9921875,
+      "heapMaxMiB": 237.68179321289062,
+      "externalMaxMiB": 103.13496398925781,
+      "eluPctMedian": 92.73330024478018,
+      "eventLoopP99MedianMs": 540.540927,
+      "gcMsPerRequestMedian": 0.5363675626767956,
+      "gcCountTotal": 3523,
+      "gcEventMaxMs": 34.71161699295044,
+      "requests": 9821,
+      "rpsRuns": [
+        120.08142572534942,
+        75.71393606011459,
+        124.59686790796968
+      ],
+      "firstBodyP50MedianMs": 516.3297310173512
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "rpsMedian": 97.87316777252475,
+      "rpsMin": 89.68083323669603,
+      "rpsMax": 99.2184650089386,
+      "p50MedianMs": 646.9526329934597,
+      "p95MedianMs": 724.6355260014534,
+      "p99MedianMs": 768.145484983921,
+      "p95MinMs": 698.8514550030231,
+      "p95MaxMs": 785.3773989975452,
+      "cpuPctMedian": 114.36235176898523,
+      "cpuMsPerRequestMedian": 11.69127804054054,
+      "rssMaxMiB": 699.75390625,
+      "heapMaxMiB": 338.6984100341797,
+      "externalMaxMiB": 94.84658145904541,
+      "eluPctMedian": 93.76742926729594,
+      "eventLoopP99MedianMs": 404.226047,
+      "gcMsPerRequestMedian": 0.9270292790354909,
+      "gcCountTotal": 3613,
+      "gcEventMaxMs": 23.17569199204445,
+      "requests": 8733,
+      "rpsRuns": [
+        97.87316777252475,
+        89.68083323669603,
+        99.2184650089386
+      ],
+      "firstBodyP50MedianMs": 645.3885010182858
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "rpsMedian": 95.39344849647715,
+      "rpsMin": 87.42154952015171,
+      "rpsMax": 96.54319223680267,
+      "p50MedianMs": 656.1163730025291,
+      "p95MedianMs": 781.003250002861,
+      "p99MedianMs": 998.833682000637,
+      "p95MinMs": 760.1980849802494,
+      "p95MaxMs": 975.6784440279007,
+      "cpuPctMedian": 135.69255935039692,
+      "cpuMsPerRequestMedian": 14.234196274577439,
+      "rssMaxMiB": 753.484375,
+      "heapMaxMiB": 204.92764282226562,
+      "externalMaxMiB": 250.66007614135742,
+      "eluPctMedian": 99.80947187645896,
+      "eventLoopP99MedianMs": 203.423743,
+      "gcMsPerRequestMedian": 1.3551443608742342,
+      "gcCountTotal": 2952,
+      "gcEventMaxMs": 95.55423399806023,
+      "requests": 8477,
+      "rpsRuns": [
+        87.42154952015171,
+        96.54319223680267,
+        95.39344849647715
+      ],
+      "firstBodyP50MedianMs": 652.697133988142
+    }
+  ],
+  "matrix": [
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "hello",
+      "delay": 50,
+      "connections": 1,
+      "rps": 16.40864049953335,
+      "rpsRuns": [
+        16.62531661879593,
+        16.19273209753556
+      ],
+      "p50WindowMedianMs": 60.986110001802444,
+      "p95WindowMedianMs": 64.83582051098347,
+      "p99WindowMedianMs": 66.75512199103832,
+      "cpuPctMedian": 14.791204827761549,
+      "cpuMsPerRequest": 9.026916349809884,
+      "rssMaxMiB": 645.859375,
+      "eventLoopP99WindowMedianMs": 27.574271,
+      "gcMsPerRequest": 0.346049946637208,
+      "requests": 263
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "hello",
+      "delay": 50,
+      "connections": 16,
+      "rps": 283.7030806843694,
+      "rpsRuns": [
+        285.5905689379056,
+        281.81508691714674
+      ],
+      "p50WindowMedianMs": 54.93708801269531,
+      "p95WindowMedianMs": 64.14011749625206,
+      "p99WindowMedianMs": 77.9982755035162,
+      "cpuPctMedian": 47.19410607462273,
+      "cpuMsPerRequest": 1.665984234727392,
+      "rssMaxMiB": 644.68359375,
+      "eventLoopP99WindowMedianMs": 27.656191,
+      "gcMsPerRequest": 0.15634561180807396,
+      "requests": 4567
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "hello",
+      "delay": 50,
+      "connections": 64,
+      "rps": 1088.315636662292,
+      "rpsRuns": [
+        1118.184455248265,
+        1058.4598175308342
+      ],
+      "p50WindowMedianMs": 57.46582850813866,
+      "p95WindowMedianMs": 67.74189598858356,
+      "p99WindowMedianMs": 79.42045348882675,
+      "cpuPctMedian": 101.24737158172613,
+      "cpuMsPerRequest": 0.9316214689265536,
+      "rssMaxMiB": 646.0234375,
+      "eventLoopP99WindowMedianMs": 26.976255000000002,
+      "gcMsPerRequest": 0.09756842767349397,
+      "requests": 17523
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "hello",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.6849794552382615,
+      "rpsRuns": [
+        4.733261380248878,
+        4.637672589589824
+      ],
+      "p50WindowMedianMs": 212.85238300263882,
+      "p95WindowMedianMs": 219.0705009996891,
+      "p99WindowMedianMs": 221.15939751267433,
+      "cpuPctMedian": 6.281790224957688,
+      "cpuMsPerRequest": 13.467776315789473,
+      "rssMaxMiB": 645.40625,
+      "eventLoopP99WindowMedianMs": 27.647999,
+      "gcMsPerRequest": 0.5501628945532598,
+      "requests": 76
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "hello",
+      "delay": 200,
+      "connections": 16,
+      "rps": 74.33029739696019,
+      "rpsRuns": [
+        74.59153808140037,
+        74.06917950726103
+      ],
+      "p50WindowMedianMs": 211.9907450079918,
+      "p95WindowMedianMs": 233.06800198554993,
+      "p99WindowMedianMs": 245.34290650486946,
+      "cpuPctMedian": 29.125970125249516,
+      "cpuMsPerRequest": 3.925654918032787,
+      "rssMaxMiB": 627.71484375,
+      "eventLoopP99WindowMedianMs": 29.540351,
+      "gcMsPerRequest": 0.25709959510408464,
+      "requests": 1220
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "hello",
+      "delay": 200,
+      "connections": 64,
+      "rps": 293.63193784107074,
+      "rpsRuns": [
+        298.10947369466527,
+        289.15692581474127
+      ],
+      "p50WindowMedianMs": 209.415319994092,
+      "p95WindowMedianMs": 254.10059651732445,
+      "p99WindowMedianMs": 294.5659244954586,
+      "cpuPctMedian": 50.63809211704025,
+      "cpuMsPerRequest": 1.7281221945137157,
+      "rssMaxMiB": 627.88671875,
+      "eventLoopP99WindowMedianMs": 33.136639,
+      "gcMsPerRequest": 0.1994976064349747,
+      "requests": 4812
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "hello",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.9433061477416516,
+      "rpsRuns": [
+        1.941595101756995,
+        1.9450202121318183
+      ],
+      "p50WindowMedianMs": 513.355229511857,
+      "p95WindowMedianMs": 521.8221279978752,
+      "p99WindowMedianMs": 521.8221279978752,
+      "cpuPctMedian": 2.5928669716215946,
+      "cpuMsPerRequest": 13.365749999999998,
+      "rssMaxMiB": 643.96484375,
+      "eventLoopP99WindowMedianMs": 27.615231,
+      "gcMsPerRequest": 0.0,
+      "requests": 32
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "hello",
+      "delay": 500,
+      "connections": 16,
+      "rps": 30.643313035211836,
+      "rpsRuns": [
+        30.71054935789376,
+        30.57637047785369
+      ],
+      "p50WindowMedianMs": 515.9084299951792,
+      "p95WindowMedianMs": 542.3487520068884,
+      "p99WindowMedianMs": 552.4012380093336,
+      "cpuPctMedian": 13.477502674842835,
+      "cpuMsPerRequest": 4.404583984375,
+      "rssMaxMiB": 644.6328125,
+      "eventLoopP99WindowMedianMs": 27.598847,
+      "gcMsPerRequest": 0.26178255083505064,
+      "requests": 512
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "hello",
+      "delay": 500,
+      "connections": 64,
+      "rps": 120.69078324773865,
+      "rpsRuns": [
+        119.31290493815776,
+        122.08832133268342
+      ],
+      "p50WindowMedianMs": 512.4408435076475,
+      "p95WindowMedianMs": 590.1075800061226,
+      "p99WindowMedianMs": 622.8550100028515,
+      "cpuPctMedian": 31.581842703182616,
+      "cpuMsPerRequest": 2.624723884256989,
+      "rssMaxMiB": 627.62890625,
+      "eventLoopP99WindowMedianMs": 34.881535,
+      "gcMsPerRequest": 0.19269910501521728,
+      "requests": 2039
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "medium",
+      "delay": 50,
+      "connections": 1,
+      "rps": 14.476596121356657,
+      "rpsRuns": [
+        14.36351470562222,
+        14.589493198446231
+      ],
+      "p50WindowMedianMs": 67.36448049545288,
+      "p95WindowMedianMs": 81.06764049828053,
+      "p99WindowMedianMs": 97.788026496768,
+      "cpuPctMedian": 42.759162109231596,
+      "cpuMsPerRequest": 29.602780172413794,
+      "rssMaxMiB": 659.6640625,
+      "eventLoopP99WindowMedianMs": 28.811263,
+      "gcMsPerRequest": 1.9084099526035374,
+      "requests": 232
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "medium",
+      "delay": 50,
+      "connections": 16,
+      "rps": 118.02586372504473,
+      "rpsRuns": [
+        121.64193822392167,
+        114.44468448159135
+      ],
+      "p50WindowMedianMs": 137.33508248627186,
+      "p95WindowMedianMs": 168.13629700243473,
+      "p99WindowMedianMs": 177.6264870017767,
+      "cpuPctMedian": 107.08703221875732,
+      "cpuMsPerRequest": 9.085789638932498,
+      "rssMaxMiB": 679.07421875,
+      "eventLoopP99WindowMedianMs": 49.446911,
+      "gcMsPerRequest": 0.6989441973448174,
+      "requests": 1911
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "medium",
+      "delay": 50,
+      "connections": 64,
+      "rps": 151.50662013176674,
+      "rpsRuns": [
+        175.10514576451325,
+        127.94564756337269
+      ],
+      "p50WindowMedianMs": 414.1253025084734,
+      "p95WindowMedianMs": 540.341456502676,
+      "p99WindowMedianMs": 594.9065895080566,
+      "cpuPctMedian": 135.28507155906937,
+      "cpuMsPerRequest": 8.951093951612902,
+      "rssMaxMiB": 694.83984375,
+      "eventLoopP99WindowMedianMs": 133.398527,
+      "gcMsPerRequest": 0.7715968906759254,
+      "requests": 2480
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "medium",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.289366681175765,
+      "rpsRuns": [
+        4.288811294456942,
+        4.2899222117546625
+      ],
+      "p50WindowMedianMs": 230.05476000905037,
+      "p95WindowMedianMs": 254.66084849834442,
+      "p99WindowMedianMs": 268.17563550174236,
+      "cpuPctMedian": 18.37237059554084,
+      "cpuMsPerRequest": 42.95857142857143,
+      "rssMaxMiB": 639.75390625,
+      "eventLoopP99WindowMedianMs": 31.416319,
+      "gcMsPerRequest": 3.471425657612937,
+      "requests": 70
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "medium",
+      "delay": 200,
+      "connections": 16,
+      "rps": 48.877102032811045,
+      "rpsRuns": [
+        48.829068706104735,
+        48.92534979305081
+      ],
+      "p50WindowMedianMs": 320.4433644860983,
+      "p95WindowMedianMs": 351.1894164979458,
+      "p99WindowMedianMs": 419.73268599808216,
+      "cpuPctMedian": 57.46465462620951,
+      "cpuMsPerRequest": 11.778822360248448,
+      "rssMaxMiB": 655.3046875,
+      "eventLoopP99WindowMedianMs": 55.705599,
+      "gcMsPerRequest": 0.77108271395938,
+      "requests": 805
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "medium",
+      "delay": 200,
+      "connections": 64,
+      "rps": 117.69513839426523,
+      "rpsRuns": [
+        113.02276284082016,
+        122.49635009654493
+      ],
+      "p50WindowMedianMs": 542.7905584871769,
+      "p95WindowMedianMs": 616.8038820028305,
+      "p99WindowMedianMs": 643.9297465085983,
+      "cpuPctMedian": 101.54699750591817,
+      "cpuMsPerRequest": 8.649694159836066,
+      "rssMaxMiB": 658.0,
+      "eventLoopP99WindowMedianMs": 116.293631,
+      "gcMsPerRequest": 0.7117484452996831,
+      "requests": 1952
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "medium",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.8394887639143704,
+      "rpsRuns": [
+        1.811880816838564,
+        1.8679510632079985
+      ],
+      "p50WindowMedianMs": 534.1427690088749,
+      "p95WindowMedianMs": 641.7933210134506,
+      "p99WindowMedianMs": 641.7933210134506,
+      "cpuPctMedian": 10.677835294982469,
+      "cpuMsPerRequest": 58.3294,
+      "rssMaxMiB": 649.828125,
+      "eventLoopP99WindowMedianMs": 32.784383000000005,
+      "gcMsPerRequest": 3.463819631934166,
+      "requests": 30
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "medium",
+      "delay": 500,
+      "connections": 16,
+      "rps": 25.277557066358295,
+      "rpsRuns": [
+        25.186889145373208,
+        25.36888011958997
+      ],
+      "p50WindowMedianMs": 631.3540785014629,
+      "p95WindowMedianMs": 650.1999745070934,
+      "p99WindowMedianMs": 652.4937629848719,
+      "cpuPctMedian": 31.01674495847856,
+      "cpuMsPerRequest": 12.288257211538461,
+      "rssMaxMiB": 667.99609375,
+      "eventLoopP99WindowMedianMs": 48.611327,
+      "gcMsPerRequest": 0.7904530795864187,
+      "requests": 416
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "medium",
+      "delay": 500,
+      "connections": 64,
+      "rps": 74.11747905913055,
+      "rpsRuns": [
+        77.38433823508007,
+        70.8846330670393
+      ],
+      "p50WindowMedianMs": 845.9521025121212,
+      "p95WindowMedianMs": 979.4272760003805,
+      "p99WindowMedianMs": 1002.1582455039024,
+      "cpuPctMedian": 69.67801971793907,
+      "cpuMsPerRequest": 9.41818124507486,
+      "rssMaxMiB": 675.0078125,
+      "eventLoopP99WindowMedianMs": 104.235007,
+      "gcMsPerRequest": 0.7548518581734199,
+      "requests": 1269
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "large",
+      "delay": 50,
+      "connections": 1,
+      "rps": 13.996670086173244,
+      "rpsRuns": [
+        13.955731660310308,
+        14.037483918889533
+      ],
+      "p50WindowMedianMs": 69.81047098338604,
+      "p95WindowMedianMs": 82.73362399637699,
+      "p99WindowMedianMs": 91.73707750439644,
+      "cpuPctMedian": 43.65563028761112,
+      "cpuMsPerRequest": 31.24810666666667,
+      "rssMaxMiB": 640.24609375,
+      "eventLoopP99WindowMedianMs": 28.942335,
+      "gcMsPerRequest": 1.8751922396818796,
+      "requests": 225
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "large",
+      "delay": 50,
+      "connections": 16,
+      "rps": 70.72165859719111,
+      "rpsRuns": [
+        64.45879595661037,
+        76.98929032692345
+      ],
+      "p50WindowMedianMs": 212.24578998982906,
+      "p95WindowMedianMs": 416.3174050152302,
+      "p99WindowMedianMs": 429.31835900247097,
+      "cpuPctMedian": 119.57736502699836,
+      "cpuMsPerRequest": 16.931231441048034,
+      "rssMaxMiB": 690.96875,
+      "eventLoopP99WindowMedianMs": 142.409727,
+      "gcMsPerRequest": 1.5235289669453318,
+      "requests": 1145
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "large",
+      "delay": 50,
+      "connections": 64,
+      "rps": 87.46109779298344,
+      "rpsRuns": [
+        82.79540920802289,
+        92.13313945379964
+      ],
+      "p50WindowMedianMs": 702.9540050029755,
+      "p95WindowMedianMs": 996.4507119953632,
+      "p99WindowMedianMs": 1087.2588945031166,
+      "cpuPctMedian": 136.35023535851505,
+      "cpuMsPerRequest": 15.615068045363577,
+      "rssMaxMiB": 699.3515625,
+      "eventLoopP99WindowMedianMs": 282.198015,
+      "gcMsPerRequest": 1.348132265397435,
+      "requests": 1499
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "large",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.108342062076664,
+      "rpsRuns": [
+        4.097262486099706,
+        4.119481722003132
+      ],
+      "p50WindowMedianMs": 241.45395550131798,
+      "p95WindowMedianMs": 264.61932952702045,
+      "p99WindowMedianMs": 270.8582359999418,
+      "cpuPctMedian": 24.911605596934763,
+      "cpuMsPerRequest": 60.73233333333333,
+      "rssMaxMiB": 684.3515625,
+      "eventLoopP99WindowMedianMs": 35.610623000000004,
+      "gcMsPerRequest": 2.821716954310735,
+      "requests": 66
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "large",
+      "delay": 200,
+      "connections": 16,
+      "rps": 41.114683704801514,
+      "rpsRuns": [
+        38.93043733222763,
+        43.31923729702832
+      ],
+      "p50WindowMedianMs": 384.8301809877157,
+      "p95WindowMedianMs": 444.7587174922228,
+      "p99WindowMedianMs": 450.89906699955463,
+      "cpuPctMedian": 73.33947172318,
+      "cpuMsPerRequest": 17.868415066469723,
+      "rssMaxMiB": 652.234375,
+      "eventLoopP99WindowMedianMs": 80.838655,
+      "gcMsPerRequest": 1.5449520469680318,
+      "requests": 677
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "large",
+      "delay": 200,
+      "connections": 64,
+      "rps": 73.7764304187171,
+      "rpsRuns": [
+        65.85163639164453,
+        81.69895538101757
+      ],
+      "p50WindowMedianMs": 897.2143054902554,
+      "p95WindowMedianMs": 1006.7294014841318,
+      "p99WindowMedianMs": 1032.2064770013094,
+      "cpuPctMedian": 121.62637653057669,
+      "cpuMsPerRequest": 16.51059951845907,
+      "rssMaxMiB": 731.73828125,
+      "eventLoopP99WindowMedianMs": 211.550207,
+      "gcMsPerRequest": 1.4049185333148626,
+      "requests": 1246
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "large",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.8270070230227824,
+      "rpsRuns": [
+        1.8257205605024107,
+        1.8282952997888078
+      ],
+      "p50WindowMedianMs": 546.2580174952745,
+      "p95WindowMedianMs": 572.2836889922619,
+      "p99WindowMedianMs": 572.2836889922619,
+      "cpuPctMedian": 12.571834640762331,
+      "cpuMsPerRequest": 68.93676666666667,
+      "rssMaxMiB": 652.81640625,
+      "eventLoopP99WindowMedianMs": 33.005567,
+      "gcMsPerRequest": 3.82887066702048,
+      "requests": 30
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "large",
+      "delay": 500,
+      "connections": 16,
+      "rps": 22.105386125533443,
+      "rpsRuns": [
+        23.0678991809462,
+        21.148192492042835
+      ],
+      "p50WindowMedianMs": 720.1270325034857,
+      "p95WindowMedianMs": 791.7210534960032,
+      "p99WindowMedianMs": 818.5975189954042,
+      "cpuPctMedian": 47.4902133480022,
+      "cpuMsPerRequest": 21.52682113821138,
+      "rssMaxMiB": 684.0625,
+      "eventLoopP99WindowMedianMs": 77.00479899999999,
+      "gcMsPerRequest": 1.5751046994675788,
+      "requests": 369
+    },
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "size": "large",
+      "delay": 500,
+      "connections": 64,
+      "rps": 52.50816990900631,
+      "rpsRuns": [
+        52.1153021817042,
+        52.90524718938858
+      ],
+      "p50WindowMedianMs": 1145.5641395002604,
+      "p95WindowMedianMs": 1281.0802664905787,
+      "p99WindowMedianMs": 1290.1550045013428,
+      "cpuPctMedian": 80.35671077485557,
+      "cpuMsPerRequest": 15.329473684210527,
+      "rssMaxMiB": 717.36328125,
+      "eventLoopP99WindowMedianMs": 207.159295,
+      "gcMsPerRequest": 1.4855317549878044,
+      "requests": 912
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "hello",
+      "delay": 50,
+      "connections": 1,
+      "rps": 17.482538921827633,
+      "rpsRuns": [
+        17.56953281796537,
+        17.395790056520482
+      ],
+      "p50WindowMedianMs": 56.92479948699474,
+      "p95WindowMedianMs": 60.80873499810696,
+      "p99WindowMedianMs": 63.658755511045456,
+      "cpuPctMedian": 7.879072836501422,
+      "cpuMsPerRequest": 4.515768683274022,
+      "rssMaxMiB": 359.32421875,
+      "eventLoopP99WindowMedianMs": 27.320319,
+      "gcMsPerRequest": 0.26148549475279564,
+      "requests": 281
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "hello",
+      "delay": 50,
+      "connections": 16,
+      "rps": 277.7176876597482,
+      "rpsRuns": [
+        273.6210088416329,
+        281.81047557057786
+      ],
+      "p50WindowMedianMs": 56.11410449445248,
+      "p95WindowMedianMs": 66.59616647660732,
+      "p99WindowMedianMs": 75.62509901821613,
+      "cpuPctMedian": 30.8375163639557,
+      "cpuMsPerRequest": 1.1128603401969561,
+      "rssMaxMiB": 354.37890625,
+      "eventLoopP99WindowMedianMs": 28.286974999999998,
+      "gcMsPerRequest": 0.09239330014002142,
+      "requests": 4468
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "hello",
+      "delay": 50,
+      "connections": 64,
+      "rps": 1070.3758923888188,
+      "rpsRuns": [
+        1026.3305256664953,
+        1114.471820086476
+      ],
+      "p50WindowMedianMs": 55.744594007730484,
+      "p95WindowMedianMs": 68.62062050402164,
+      "p99WindowMedianMs": 134.36089800298214,
+      "cpuPctMedian": 57.05103139658746,
+      "cpuMsPerRequest": 0.5341829006214788,
+      "rssMaxMiB": 359.28515625,
+      "eventLoopP99WindowMedianMs": 39.673855,
+      "gcMsPerRequest": 0.051995249110148356,
+      "requests": 17217
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "hello",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.805449120551701,
+      "rpsRuns": [
+        4.816623021482824,
+        4.794326943445761
+      ],
+      "p50WindowMedianMs": 207.20303550362587,
+      "p95WindowMedianMs": 214.00011348724365,
+      "p99WindowMedianMs": 218.310182005167,
+      "cpuPctMedian": 2.7882153432104975,
+      "cpuMsPerRequest": 5.814153846153847,
+      "rssMaxMiB": 359.41796875,
+      "eventLoopP99WindowMedianMs": 27.435007,
+      "gcMsPerRequest": 0.0,
+      "requests": 78
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "hello",
+      "delay": 200,
+      "connections": 16,
+      "rps": 74.59706017629891,
+      "rpsRuns": [
+        75.08955470117904,
+        74.10621862154387
+      ],
+      "p50WindowMedianMs": 209.79921199381351,
+      "p95WindowMedianMs": 229.1939729899168,
+      "p99WindowMedianMs": 264.8779965043068,
+      "cpuPctMedian": 22.532474094475262,
+      "cpuMsPerRequest": 3.0262225859247134,
+      "rssMaxMiB": 313.3046875,
+      "eventLoopP99WindowMedianMs": 33.906687,
+      "gcMsPerRequest": 0.1649490368541836,
+      "requests": 1222
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "hello",
+      "delay": 200,
+      "connections": 64,
+      "rps": 275.210117145869,
+      "rpsRuns": [
+        270.7905766526497,
+        279.6524466857403
+      ],
+      "p50WindowMedianMs": 224.84021900594234,
+      "p95WindowMedianMs": 263.6831855028868,
+      "p99WindowMedianMs": 350.31807850301266,
+      "cpuPctMedian": 39.731794896951655,
+      "cpuMsPerRequest": 1.4484322466178754,
+      "rssMaxMiB": 313.3046875,
+      "eventLoopP99WindowMedianMs": 44.859391,
+      "gcMsPerRequest": 0.12366153140188611,
+      "requests": 4509
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "hello",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.9596053543833962,
+      "rpsRuns": [
+        1.9532068589628422,
+        1.9660459091503286
+      ],
+      "p50WindowMedianMs": 508.6911109983921,
+      "p95WindowMedianMs": 517.1102845072746,
+      "p99WindowMedianMs": 517.1102845072746,
+      "cpuPctMedian": 1.9006378377012896,
+      "cpuMsPerRequest": 9.738781249999999,
+      "rssMaxMiB": 429.8515625,
+      "eventLoopP99WindowMedianMs": 28.532735000000002,
+      "gcMsPerRequest": 0.0,
+      "requests": 32
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "hello",
+      "delay": 500,
+      "connections": 16,
+      "rps": 30.982448989224615,
+      "rpsRuns": [
+        30.81955369215305,
+        31.147075386761596
+      ],
+      "p50WindowMedianMs": 513.4858099967241,
+      "p95WindowMedianMs": 529.7438979893923,
+      "p99WindowMedianMs": 536.5639165043831,
+      "cpuPctMedian": 8.491419627609144,
+      "cpuMsPerRequest": 2.7483359375000003,
+      "rssMaxMiB": 353.125,
+      "eventLoopP99WindowMedianMs": 28.860415,
+      "gcMsPerRequest": 0.10364087502239272,
+      "requests": 512
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "hello",
+      "delay": 500,
+      "connections": 64,
+      "rps": 118.34619572568761,
+      "rpsRuns": [
+        115.31995614038215,
+        121.3854000633814
+      ],
+      "p50WindowMedianMs": 529.3602614998817,
+      "p95WindowMedianMs": 549.8422475010157,
+      "p99WindowMedianMs": 622.432716012001,
+      "cpuPctMedian": 20.824973918715315,
+      "cpuMsPerRequest": 1.7687001499250374,
+      "rssMaxMiB": 312.8046875,
+      "eventLoopP99WindowMedianMs": 33.251327,
+      "gcMsPerRequest": 0.1134212982916701,
+      "requests": 2001
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "medium",
+      "delay": 50,
+      "connections": 1,
+      "rps": 13.800320183178902,
+      "rpsRuns": [
+        13.457874846515226,
+        14.141215002146687
+      ],
+      "p50WindowMedianMs": 72.1835560053587,
+      "p95WindowMedianMs": 80.45969350636005,
+      "p99WindowMedianMs": 99.33993200957775,
+      "cpuPctMedian": 36.32700742455961,
+      "cpuMsPerRequest": 26.474027027027027,
+      "rssMaxMiB": 383.671875,
+      "eventLoopP99WindowMedianMs": 35.471359,
+      "gcMsPerRequest": 1.0611049954418663,
+      "requests": 222
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "medium",
+      "delay": 50,
+      "connections": 16,
+      "rps": 132.56054567849705,
+      "rpsRuns": [
+        128.47303769913734,
+        136.66042470805618
+      ],
+      "p50WindowMedianMs": 119.00691398978233,
+      "p95WindowMedianMs": 131.97335150837898,
+      "p99WindowMedianMs": 150.9536444991827,
+      "cpuPctMedian": 80.9199878828999,
+      "cpuMsPerRequest": 6.1117086247086245,
+      "rssMaxMiB": 401.484375,
+      "eventLoopP99WindowMedianMs": 83.951615,
+      "gcMsPerRequest": 0.2951753956454617,
+      "requests": 2145
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "medium",
+      "delay": 50,
+      "connections": 64,
+      "rps": 202.19795601984092,
+      "rpsRuns": [
+        201.4182587984675,
+        202.98136274886934
+      ],
+      "p50WindowMedianMs": 310.9837135076523,
+      "p95WindowMedianMs": 385.6755714863539,
+      "p99WindowMedianMs": 488.7630794942379,
+      "cpuPctMedian": 105.8094391146636,
+      "cpuMsPerRequest": 5.240852879737392,
+      "rssMaxMiB": 516.09375,
+      "eventLoopP99WindowMedianMs": 274.989055,
+      "gcMsPerRequest": 0.4049599855844742,
+      "requests": 3351
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "medium",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.45767726385414,
+      "rpsRuns": [
+        4.44375793102875,
+        4.471684070668485
+      ],
+      "p50WindowMedianMs": 223.5910800099373,
+      "p95WindowMedianMs": 239.9119590073824,
+      "p99WindowMedianMs": 242.24180799722672,
+      "cpuPctMedian": 12.070237011216488,
+      "cpuMsPerRequest": 27.132597222222223,
+      "rssMaxMiB": 342.8203125,
+      "eventLoopP99WindowMedianMs": 39.157759,
+      "gcMsPerRequest": 1.6475653193063207,
+      "requests": 72
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "medium",
+      "delay": 200,
+      "connections": 16,
+      "rps": 53.576095556471245,
+      "rpsRuns": [
+        54.306482668194846,
+        52.845792089465405
+      ],
+      "p50WindowMedianMs": 295.80758748948574,
+      "p95WindowMedianMs": 333.3782375007868,
+      "p99WindowMedianMs": 342.60101449489594,
+      "cpuPctMedian": 42.226112367474926,
+      "cpuMsPerRequest": 7.8900260180995465,
+      "rssMaxMiB": 356.23828125,
+      "eventLoopP99WindowMedianMs": 83.230719,
+      "gcMsPerRequest": 0.2941147830691273,
+      "requests": 884
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "medium",
+      "delay": 200,
+      "connections": 64,
+      "rps": 99.66731098552333,
+      "rpsRuns": [
+        110.46994749165219,
+        89.09659874327588
+      ],
+      "p50WindowMedianMs": 524.7962509989738,
+      "p95WindowMedianMs": 1496.5224255025387,
+      "p99WindowMedianMs": 1574.3307185024023,
+      "cpuPctMedian": 86.67723946209955,
+      "cpuMsPerRequest": 8.721436295503212,
+      "rssMaxMiB": 444.546875,
+      "eventLoopP99WindowMedianMs": 812.7774710000001,
+      "gcMsPerRequest": 0.6903432437260605,
+      "requests": 1868
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "medium",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.918401144824293,
+      "rpsRuns": [
+        1.9424471899625104,
+        1.8949431640398893
+      ],
+      "p50WindowMedianMs": 520.4608670026064,
+      "p95WindowMedianMs": 531.9562814980745,
+      "p99WindowMedianMs": 531.9562814980745,
+      "cpuPctMedian": 4.819731766246558,
+      "cpuMsPerRequest": 25.215062500000002,
+      "rssMaxMiB": 381.17578125,
+      "eventLoopP99WindowMedianMs": 28.557311,
+      "gcMsPerRequest": 1.1630906872451305,
+      "requests": 32
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "medium",
+      "delay": 500,
+      "connections": 16,
+      "rps": 24.1409318097529,
+      "rpsRuns": [
+        25.15563829225268,
+        23.103327769419025
+      ],
+      "p50WindowMedianMs": 629.3884959965944,
+      "p95WindowMedianMs": 754.8120569884777,
+      "p99WindowMedianMs": 801.9351405054331,
+      "cpuPctMedian": 27.970109060370007,
+      "cpuMsPerRequest": 11.587739024390244,
+      "rssMaxMiB": 433.84375,
+      "eventLoopP99WindowMedianMs": 115.24505500000001,
+      "gcMsPerRequest": 0.6802409435917691,
+      "requests": 410
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "medium",
+      "delay": 500,
+      "connections": 64,
+      "rps": 74.89679527402303,
+      "rpsRuns": [
+        74.93232166253921,
+        74.86152290442911
+      ],
+      "p50WindowMedianMs": 800.0869865119457,
+      "p95WindowMedianMs": 1095.3127065002918,
+      "p99WindowMedianMs": 1184.2439530044794,
+      "cpuPctMedian": 46.98955537915058,
+      "cpuMsPerRequest": 6.285242211838006,
+      "rssMaxMiB": 509.0390625,
+      "eventLoopP99WindowMedianMs": 264.044543,
+      "gcMsPerRequest": 0.4161133597201647,
+      "requests": 1284
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "large",
+      "delay": 50,
+      "connections": 1,
+      "rps": 13.796869853805964,
+      "rpsRuns": [
+        13.869214923364027,
+        13.724628156546327
+      ],
+      "p50WindowMedianMs": 72.232361510396,
+      "p95WindowMedianMs": 80.35689149796963,
+      "p99WindowMedianMs": 84.69306500256062,
+      "cpuPctMedian": 39.36056113535943,
+      "cpuMsPerRequest": 28.569488687782805,
+      "rssMaxMiB": 345.3203125,
+      "eventLoopP99WindowMedianMs": 38.486014999999995,
+      "gcMsPerRequest": 1.2318200049626882,
+      "requests": 221
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "large",
+      "delay": 50,
+      "connections": 16,
+      "rps": 81.99798794071812,
+      "rpsRuns": [
+        97.8672174748557,
+        66.27361224794595
+      ],
+      "p50WindowMedianMs": 197.77331049740314,
+      "p95WindowMedianMs": 259.24961799383163,
+      "p99WindowMedianMs": 313.0650615096092,
+      "cpuPctMedian": 91.24228262636456,
+      "cpuMsPerRequest": 11.14656119402985,
+      "rssMaxMiB": 435.94140625,
+      "eventLoopP99WindowMedianMs": 157.483007,
+      "gcMsPerRequest": 0.7053308597473956,
+      "requests": 1340
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "large",
+      "delay": 50,
+      "connections": 64,
+      "rps": 124.30625023527355,
+      "rpsRuns": [
+        128.5867923274811,
+        120.08573021242604
+      ],
+      "p50WindowMedianMs": 496.95384399592876,
+      "p95WindowMedianMs": 719.5299780070782,
+      "p99WindowMedianMs": 783.3931805044413,
+      "cpuPctMedian": 108.99050876096177,
+      "cpuMsPerRequest": 8.780700096899226,
+      "rssMaxMiB": 505.18359375,
+      "eventLoopP99WindowMedianMs": 459.53843099999995,
+      "gcMsPerRequest": 0.6763968313791493,
+      "requests": 2064
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "large",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.027313295274483,
+      "rpsRuns": [
+        4.215130586709474,
+        3.839668924026532
+      ],
+      "p50WindowMedianMs": 239.91897901892662,
+      "p95WindowMedianMs": 267.94650898873806,
+      "p99WindowMedianMs": 471.4031330049038,
+      "cpuPctMedian": 21.737724815588894,
+      "cpuMsPerRequest": 54.22913846153847,
+      "rssMaxMiB": 397.02734375,
+      "eventLoopP99WindowMedianMs": 49.643519,
+      "gcMsPerRequest": 2.594597799044389,
+      "requests": 65
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "large",
+      "delay": 200,
+      "connections": 16,
+      "rps": 43.60047628346387,
+      "rpsRuns": [
+        42.37958114769389,
+        44.81895302049088
+      ],
+      "p50WindowMedianMs": 350.93394750356674,
+      "p95WindowMedianMs": 448.7431505024433,
+      "p99WindowMedianMs": 553.3240305036306,
+      "cpuPctMedian": 54.405322536753,
+      "cpuMsPerRequest": 12.49972,
+      "rssMaxMiB": 415.36328125,
+      "eventLoopP99WindowMedianMs": 138.01881500000002,
+      "gcMsPerRequest": 0.71091503714693,
+      "requests": 725
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "large",
+      "delay": 200,
+      "connections": 64,
+      "rps": 81.89300904028818,
+      "rpsRuns": [
+        83.23008172101939,
+        80.607179147799
+      ],
+      "p50WindowMedianMs": 732.1448700129986,
+      "p95WindowMedianMs": 956.2479265034199,
+      "p99WindowMedianMs": 1031.0223345160484,
+      "cpuPctMedian": 87.32699173746853,
+      "cpuMsPerRequest": 10.681306280875088,
+      "rssMaxMiB": 628.13671875,
+      "eventLoopP99WindowMedianMs": 609.878015,
+      "gcMsPerRequest": 0.7808802250664926,
+      "requests": 1417
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "large",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.8517557497289154,
+      "rpsRuns": [
+        1.8576435167138496,
+        1.8459051871637542
+      ],
+      "p50WindowMedianMs": 539.7804235070944,
+      "p95WindowMedianMs": 551.8801775127649,
+      "p99WindowMedianMs": 551.8801775127649,
+      "cpuPctMedian": 8.753980252417094,
+      "cpuMsPerRequest": 47.37246666666667,
+      "rssMaxMiB": 380.390625,
+      "eventLoopP99WindowMedianMs": 46.940158999999994,
+      "gcMsPerRequest": 1.5931154668331147,
+      "requests": 30
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "large",
+      "delay": 500,
+      "connections": 16,
+      "rps": 23.87247570562468,
+      "rpsRuns": [
+        23.288673465030758,
+        24.43796440100809
+      ],
+      "p50WindowMedianMs": 668.7221255004406,
+      "p95WindowMedianMs": 687.8829569816589,
+      "p99WindowMedianMs": 731.6369165033102,
+      "cpuPctMedian": 31.180002062032763,
+      "cpuMsPerRequest": 13.0857925,
+      "rssMaxMiB": 442.046875,
+      "eventLoopP99WindowMedianMs": 128.057343,
+      "gcMsPerRequest": 0.6239987073838711,
+      "requests": 400
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "size": "large",
+      "delay": 500,
+      "connections": 64,
+      "rps": 61.40034671924702,
+      "rpsRuns": [
+        58.22812001768154,
+        64.55269825616138
+      ],
+      "p50WindowMedianMs": 1014.0468714982271,
+      "p95WindowMedianMs": 1117.1621109992266,
+      "p99WindowMedianMs": 1188.4740639925003,
+      "cpuPctMedian": 62.44062631297832,
+      "cpuMsPerRequest": 10.184788706739527,
+      "rssMaxMiB": 514.41796875,
+      "eventLoopP99WindowMedianMs": 360.185855,
+      "gcMsPerRequest": 0.7071816649539006,
+      "requests": 1098
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "hello",
+      "delay": 50,
+      "connections": 1,
+      "rps": 17.75717300163112,
+      "rpsRuns": [
+        17.906005804494484,
+        17.60770573562293
+      ],
+      "p50WindowMedianMs": 55.816358506679535,
+      "p95WindowMedianMs": 58.96011498570442,
+      "p99WindowMedianMs": 61.45587100088596,
+      "cpuPctMedian": 6.673599314764033,
+      "cpuMsPerRequest": 3.7660666666666667,
+      "rssMaxMiB": 274.79296875,
+      "eventLoopP99WindowMedianMs": 27.230207,
+      "gcMsPerRequest": 0.08628663859869304,
+      "requests": 285
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "hello",
+      "delay": 50,
+      "connections": 16,
+      "rps": 230.54642811897247,
+      "rpsRuns": [
+        229.7625224775879,
+        231.32972734833294
+      ],
+      "p50WindowMedianMs": 68.53456951677799,
+      "p95WindowMedianMs": 80.14245100319386,
+      "p99WindowMedianMs": 91.5725690126419,
+      "cpuPctMedian": 29.129763993481127,
+      "cpuMsPerRequest": 1.2688856138453217,
+      "rssMaxMiB": 262.51171875,
+      "eventLoopP99WindowMedianMs": 32.849919,
+      "gcMsPerRequest": 0.08542032803375055,
+      "requests": 3698
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "hello",
+      "delay": 50,
+      "connections": 64,
+      "rps": 920.7681051582572,
+      "rpsRuns": [
+        831.1229839725682,
+        1010.2405364358018
+      ],
+      "p50WindowMedianMs": 65.69997650384903,
+      "p95WindowMedianMs": 102.86813949048519,
+      "p99WindowMedianMs": 155.83169549703598,
+      "cpuPctMedian": 43.75953998784799,
+      "cpuMsPerRequest": 0.4767986265400929,
+      "rssMaxMiB": 274.98046875,
+      "eventLoopP99WindowMedianMs": 54.091775,
+      "gcMsPerRequest": 0.03769978138884093,
+      "requests": 14853
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "hello",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.800661597932932,
+      "rpsRuns": [
+        4.79541632978024,
+        4.805918353290418
+      ],
+      "p50WindowMedianMs": 207.87972800433636,
+      "p95WindowMedianMs": 213.34166599810123,
+      "p99WindowMedianMs": 213.62829600274563,
+      "cpuPctMedian": 2.3472381279037893,
+      "cpuMsPerRequest": 4.904807692307693,
+      "rssMaxMiB": 288.0390625,
+      "eventLoopP99WindowMedianMs": 29.908991,
+      "gcMsPerRequest": 0.0,
+      "requests": 78
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "hello",
+      "delay": 200,
+      "connections": 16,
+      "rps": 73.51422208839828,
+      "rpsRuns": [
+        73.85734145755379,
+        73.17084673306069
+      ],
+      "p50WindowMedianMs": 215.8090354949236,
+      "p95WindowMedianMs": 231.95096799731255,
+      "p99WindowMedianMs": 253.99360750615597,
+      "cpuPctMedian": 12.632880946956082,
+      "cpuMsPerRequest": 1.7226932773109245,
+      "rssMaxMiB": 250.38671875,
+      "eventLoopP99WindowMedianMs": 29.319167,
+      "gcMsPerRequest": 0.10396638064324355,
+      "requests": 1190
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "hello",
+      "delay": 200,
+      "connections": 64,
+      "rps": 267.4530518609133,
+      "rpsRuns": [
+        260.79779463752607,
+        274.0467876671976
+      ],
+      "p50WindowMedianMs": 239.33740301430225,
+      "p95WindowMedianMs": 254.6536260098219,
+      "p99WindowMedianMs": 261.2782244980335,
+      "cpuPctMedian": 20.787774124327967,
+      "cpuMsPerRequest": 0.7779572610294118,
+      "rssMaxMiB": 257.92578125,
+      "eventLoopP99WindowMedianMs": 41.254911,
+      "gcMsPerRequest": 0.040199332281618434,
+      "requests": 4352
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "hello",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.9672013123531762,
+      "rpsRuns": [
+        1.971755690854178,
+        1.9626679248533863
+      ],
+      "p50WindowMedianMs": 507.18036399781704,
+      "p95WindowMedianMs": 515.9526064991951,
+      "p99WindowMedianMs": 515.9526064991951,
+      "cpuPctMedian": 1.372805944451252,
+      "cpuMsPerRequest": 6.9857812500000005,
+      "rssMaxMiB": 255.4140625,
+      "eventLoopP99WindowMedianMs": 27.582463,
+      "gcMsPerRequest": 0.0,
+      "requests": 32
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "hello",
+      "delay": 500,
+      "connections": 16,
+      "rps": 30.486586085519424,
+      "rpsRuns": [
+        29.75558371143319,
+        31.205289665151348
+      ],
+      "p50WindowMedianMs": 519.0829869806767,
+      "p95WindowMedianMs": 552.3013534992933,
+      "p99WindowMedianMs": 555.8134240061045,
+      "cpuPctMedian": 4.912954930675829,
+      "cpuMsPerRequest": 1.6099798387096773,
+      "rssMaxMiB": 261.36328125,
+      "eventLoopP99WindowMedianMs": 30.892031,
+      "gcMsPerRequest": 0.13230432660108613,
+      "requests": 496
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "hello",
+      "delay": 500,
+      "connections": 64,
+      "rps": 115.10461075734928,
+      "rpsRuns": [
+        117.669351512918,
+        112.65428409256594
+      ],
+      "p50WindowMedianMs": 537.5720785111189,
+      "p95WindowMedianMs": 553.2354075014591,
+      "p99WindowMedianMs": 555.0707640051842,
+      "cpuPctMedian": 9.394198139777924,
+      "cpuMsPerRequest": 0.8146779396462018,
+      "rssMaxMiB": 252.07421875,
+      "eventLoopP99WindowMedianMs": 35.766271,
+      "gcMsPerRequest": 0.04257747501476002,
+      "requests": 1922
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "medium",
+      "delay": 50,
+      "connections": 1,
+      "rps": 14.648636827737443,
+      "rpsRuns": [
+        14.929456583939238,
+        14.36665397790924
+      ],
+      "p50WindowMedianMs": 68.49886851012707,
+      "p95WindowMedianMs": 73.92112399637699,
+      "p99WindowMedianMs": 78.07873399555683,
+      "cpuPctMedian": 34.77778365973311,
+      "cpuMsPerRequest": 23.785765957446806,
+      "rssMaxMiB": 288.03125,
+      "eventLoopP99WindowMedianMs": 32.743423,
+      "gcMsPerRequest": 1.1545296175682798,
+      "requests": 235
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "medium",
+      "delay": 50,
+      "connections": 16,
+      "rps": 138.59039122215535,
+      "rpsRuns": [
+        141.7682098335818,
+        135.43088709273343
+      ],
+      "p50WindowMedianMs": 112.86203549802303,
+      "p95WindowMedianMs": 136.11288200318813,
+      "p99WindowMedianMs": 149.75872600078583,
+      "cpuPctMedian": 72.8307376438677,
+      "cpuMsPerRequest": 5.262293830448291,
+      "rssMaxMiB": 289.86328125,
+      "eventLoopP99WindowMedianMs": 87.654399,
+      "gcMsPerRequest": 0.3594450527860808,
+      "requests": 2253
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "medium",
+      "delay": 50,
+      "connections": 64,
+      "rps": 194.00357410092988,
+      "rpsRuns": [
+        231.81656858007744,
+        156.76392674999397
+      ],
+      "p50WindowMedianMs": 326.68430000543594,
+      "p95WindowMedianMs": 441.9140934795141,
+      "p99WindowMedianMs": 505.97436951100826,
+      "cpuPctMedian": 105.2748520922826,
+      "cpuMsPerRequest": 5.448632457496136,
+      "rssMaxMiB": 293.78125,
+      "eventLoopP99WindowMedianMs": 343.474175,
+      "gcMsPerRequest": 0.425825211106349,
+      "requests": 3235
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "medium",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.532181955494442,
+      "rpsRuns": [
+        4.497631620845542,
+        4.566311832196943
+      ],
+      "p50WindowMedianMs": 219.61581499874592,
+      "p95WindowMedianMs": 230.03670100867748,
+      "p99WindowMedianMs": 231.88849198818207,
+      "cpuPctMedian": 11.934111055543237,
+      "cpuMsPerRequest": 26.365068493150687,
+      "rssMaxMiB": 266.8515625,
+      "eventLoopP99WindowMedianMs": 37.240831,
+      "gcMsPerRequest": 1.4604212604973414,
+      "requests": 73
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "medium",
+      "delay": 200,
+      "connections": 16,
+      "rps": 54.89292511615105,
+      "rpsRuns": [
+        54.95802830477095,
+        54.827975987289406
+      ],
+      "p50WindowMedianMs": 292.03321599960327,
+      "p95WindowMedianMs": 305.2828945070505,
+      "p99WindowMedianMs": 314.7072274982929,
+      "cpuPctMedian": 40.24998571760238,
+      "cpuMsPerRequest": 7.339754464285714,
+      "rssMaxMiB": 288.64453125,
+      "eventLoopP99WindowMedianMs": 71.647231,
+      "gcMsPerRequest": 0.33632792066782713,
+      "requests": 896
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "medium",
+      "delay": 200,
+      "connections": 64,
+      "rps": 139.39572475354322,
+      "rpsRuns": [
+        140.65506816670137,
+        138.13240514371745
+      ],
+      "p50WindowMedianMs": 449.00398901104927,
+      "p95WindowMedianMs": 473.231158003211,
+      "p99WindowMedianMs": 480.60594250261784,
+      "cpuPctMedian": 67.35208775656912,
+      "cpuMsPerRequest": 4.839011474713132,
+      "rssMaxMiB": 296.8125,
+      "eventLoopP99WindowMedianMs": 244.973567,
+      "gcMsPerRequest": 0.3207982414031201,
+      "requests": 2353
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "medium",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.9138331147682488,
+      "rpsRuns": [
+        1.9168675104736548,
+        1.9108083107584053
+      ],
+      "p50WindowMedianMs": 521.7046790122986,
+      "p95WindowMedianMs": 534.1917134970427,
+      "p99WindowMedianMs": 534.1917134970427,
+      "cpuPctMedian": 6.088029472141559,
+      "cpuMsPerRequest": 31.890812500000003,
+      "rssMaxMiB": 266.3125,
+      "eventLoopP99WindowMedianMs": 32.530431,
+      "gcMsPerRequest": 1.5465454384684563,
+      "requests": 32
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "medium",
+      "delay": 500,
+      "connections": 16,
+      "rps": 26.378815130633505,
+      "rpsRuns": [
+        26.270525099768204,
+        26.488001623957295
+      ],
+      "p50WindowMedianMs": 605.6845809966326,
+      "p95WindowMedianMs": 616.4082544893026,
+      "p99WindowMedianMs": 620.2774915099144,
+      "cpuPctMedian": 22.152045577435835,
+      "cpuMsPerRequest": 8.409075892857143,
+      "rssMaxMiB": 288.93359375,
+      "eventLoopP99WindowMedianMs": 77.266943,
+      "gcMsPerRequest": 0.4620890445075929,
+      "requests": 448
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "medium",
+      "delay": 500,
+      "connections": 64,
+      "rps": 74.03602209783689,
+      "rpsRuns": [
+        73.68116819040947,
+        74.38940147946451
+      ],
+      "p50WindowMedianMs": 798.784102499485,
+      "p95WindowMedianMs": 935.1267375051975,
+      "p99WindowMedianMs": 978.6006729900837,
+      "cpuPctMedian": 46.680726738339146,
+      "cpuMsPerRequest": 6.319957284515636,
+      "rssMaxMiB": 312.2890625,
+      "eventLoopP99WindowMedianMs": 275.316735,
+      "gcMsPerRequest": 0.46708255824380757,
+      "requests": 1311
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "large",
+      "delay": 50,
+      "connections": 1,
+      "rps": 14.139103048552897,
+      "rpsRuns": [
+        14.124984268298197,
+        14.153125862343948
+      ],
+      "p50WindowMedianMs": 70.28646148741245,
+      "p95WindowMedianMs": 81.38916300237179,
+      "p99WindowMedianMs": 94.74911649525166,
+      "cpuPctMedian": 40.57753880394853,
+      "cpuMsPerRequest": 28.74285462555066,
+      "rssMaxMiB": 262.96484375,
+      "eventLoopP99WindowMedianMs": 39.215103,
+      "gcMsPerRequest": 1.5595454941237026,
+      "requests": 227
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "large",
+      "delay": 50,
+      "connections": 16,
+      "rps": 98.50117680764129,
+      "rpsRuns": [
+        96.17731015115112,
+        100.84832026311538
+      ],
+      "p50WindowMedianMs": 158.89182348549366,
+      "p95WindowMedianMs": 182.2143775075674,
+      "p99WindowMedianMs": 220.90384501218796,
+      "cpuPctMedian": 88.7719103453359,
+      "cpuMsPerRequest": 9.023926966292136,
+      "rssMaxMiB": 315.71484375,
+      "eventLoopP99WindowMedianMs": 128.909311,
+      "gcMsPerRequest": 0.6912364193637124,
+      "requests": 1602
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "large",
+      "delay": 50,
+      "connections": 64,
+      "rps": 123.59678389325342,
+      "rpsRuns": [
+        108.04193397938246,
+        139.1947954592695
+      ],
+      "p50WindowMedianMs": 518.4444760084152,
+      "p95WindowMedianMs": 613.0500265061855,
+      "p99WindowMedianMs": 676.2116329967976,
+      "cpuPctMedian": 113.2877125397996,
+      "cpuMsPerRequest": 9.179277085330778,
+      "rssMaxMiB": 366.6171875,
+      "eventLoopP99WindowMedianMs": 505.80684699999995,
+      "gcMsPerRequest": 0.7158841479030346,
+      "requests": 2086
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "large",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.2882934682581775,
+      "rpsRuns": [
+        4.276902360671328,
+        4.299745416069962
+      ],
+      "p50WindowMedianMs": 232.45865400135517,
+      "p95WindowMedianMs": 238.93690349161625,
+      "p99WindowMedianMs": 240.828576490283,
+      "cpuPctMedian": 20.242668015019994,
+      "cpuMsPerRequest": 47.2765,
+      "rssMaxMiB": 287.08984375,
+      "eventLoopP99WindowMedianMs": 47.267839,
+      "gcMsPerRequest": 1.7497778573206493,
+      "requests": 70
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "large",
+      "delay": 200,
+      "connections": 16,
+      "rps": 44.5486327880263,
+      "rpsRuns": [
+        46.55324135105231,
+        42.549847144308515
+      ],
+      "p50WindowMedianMs": 354.79090949893,
+      "p95WindowMedianMs": 405.2091704905033,
+      "p99WindowMedianMs": 418.7147610038519,
+      "cpuPctMedian": 56.44430543064224,
+      "cpuMsPerRequest": 12.697786684782608,
+      "rssMaxMiB": 269.12109375,
+      "eventLoopP99WindowMedianMs": 159.023103,
+      "gcMsPerRequest": 0.9049884662760989,
+      "requests": 736
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "large",
+      "delay": 200,
+      "connections": 64,
+      "rps": 97.67649026983038,
+      "rpsRuns": [
+        97.29767359549237,
+        98.0569075233583
+      ],
+      "p50WindowMedianMs": 631.7443625032902,
+      "p95WindowMedianMs": 711.0526334941387,
+      "p99WindowMedianMs": 882.1147274971008,
+      "cpuPctMedian": 82.11122042135962,
+      "cpuMsPerRequest": 8.420023710729104,
+      "rssMaxMiB": 354.44921875,
+      "eventLoopP99WindowMedianMs": 413.663231,
+      "gcMsPerRequest": 0.6422948974897399,
+      "requests": 1687
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "large",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.8738051061062626,
+      "rpsRuns": [
+        1.867258191156906,
+        1.8799846711866184
+      ],
+      "p50WindowMedianMs": 532.8949224948883,
+      "p95WindowMedianMs": 554.8189459890127,
+      "p99WindowMedianMs": 554.8189459890127,
+      "cpuPctMedian": 9.416326945550782,
+      "cpuMsPerRequest": 50.21635483870968,
+      "rssMaxMiB": 263.0234375,
+      "eventLoopP99WindowMedianMs": 43.302911,
+      "gcMsPerRequest": 1.932248871172628,
+      "requests": 31
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "large",
+      "delay": 500,
+      "connections": 16,
+      "rps": 21.540407112162125,
+      "rpsRuns": [
+        18.55225571606677,
+        24.586628815959582
+      ],
+      "p50WindowMedianMs": 667.7742034941912,
+      "p95WindowMedianMs": 1101.191463008523,
+      "p99WindowMedianMs": 1171.2716985046864,
+      "cpuPctMedian": 40.24866163141499,
+      "cpuMsPerRequest": 18.77213586956522,
+      "rssMaxMiB": 305.73046875,
+      "eventLoopP99WindowMedianMs": 208.24063900000002,
+      "gcMsPerRequest": 1.2485142743781856,
+      "requests": 368
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "size": "large",
+      "delay": 500,
+      "connections": 64,
+      "rps": 66.04569147671198,
+      "rpsRuns": [
+        67.57231967351068,
+        64.58899310067238
+      ],
+      "p50WindowMedianMs": 925.4095735102892,
+      "p95WindowMedianMs": 1057.833012998104,
+      "p99WindowMedianMs": 1126.6981005072594,
+      "cpuPctMedian": 56.53940131432779,
+      "cpuMsPerRequest": 8.565714657415437,
+      "rssMaxMiB": 390.23828125,
+      "eventLoopP99WindowMedianMs": 284.68838300000004,
+      "gcMsPerRequest": 0.6208420521470638,
+      "requests": 1153
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "hello",
+      "delay": 50,
+      "connections": 1,
+      "rps": 17.38203335581544,
+      "rpsRuns": [
+        17.300152863030135,
+        17.464099393664913
+      ],
+      "p50WindowMedianMs": 57.09206849336624,
+      "p95WindowMedianMs": 61.08076249063015,
+      "p99WindowMedianMs": 65.44839797914028,
+      "cpuPctMedian": 7.4220770884743335,
+      "cpuMsPerRequest": 4.278010752688172,
+      "rssMaxMiB": 469.44921875,
+      "eventLoopP99WindowMedianMs": 29.630463,
+      "gcMsPerRequest": 0.12466666316046082,
+      "requests": 279
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "hello",
+      "delay": 50,
+      "connections": 16,
+      "rps": 225.3679234035652,
+      "rpsRuns": [
+        224.3857068131911,
+        226.34951183651123
+      ],
+      "p50WindowMedianMs": 70.60569350421429,
+      "p95WindowMedianMs": 80.22167699038982,
+      "p99WindowMedianMs": 85.38520999252796,
+      "cpuPctMedian": 31.857647452484365,
+      "cpuMsPerRequest": 1.4177746905089408,
+      "rssMaxMiB": 469.44921875,
+      "eventLoopP99WindowMedianMs": 30.334975,
+      "gcMsPerRequest": 0.09918332848457063,
+      "requests": 3635
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "hello",
+      "delay": 50,
+      "connections": 64,
+      "rps": 983.6818660917237,
+      "rpsRuns": [
+        1023.0769884437756,
+        944.3829371799657
+      ],
+      "p50WindowMedianMs": 64.17367950081825,
+      "p95WindowMedianMs": 77.16463600099087,
+      "p99WindowMedianMs": 81.13593100011349,
+      "cpuPctMedian": 45.677322009345076,
+      "cpuMsPerRequest": 0.4649079196665403,
+      "rssMaxMiB": 469.00390625,
+      "eventLoopP99WindowMedianMs": 31.678463,
+      "gcMsPerRequest": 0.04813081047910474,
+      "requests": 15834
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "hello",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.792867688172423,
+      "rpsRuns": [
+        4.78407124841862,
+        4.801696535423361
+      ],
+      "p50WindowMedianMs": 208.09638349711895,
+      "p95WindowMedianMs": 214.02040499448776,
+      "p99WindowMedianMs": 214.10254700481892,
+      "cpuPctMedian": 2.9039756648910053,
+      "cpuMsPerRequest": 6.076782051282052,
+      "rssMaxMiB": 449.11328125,
+      "eventLoopP99WindowMedianMs": 29.777919,
+      "gcMsPerRequest": 0.32176473087225205,
+      "requests": 78
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "hello",
+      "delay": 200,
+      "connections": 16,
+      "rps": 72.74157850116832,
+      "rpsRuns": [
+        71.75158736759377,
+        73.72298941009295
+      ],
+      "p50WindowMedianMs": 219.2098700106144,
+      "p95WindowMedianMs": 227.92643098533154,
+      "p99WindowMedianMs": 235.1813170015812,
+      "cpuPctMedian": 12.505398736383476,
+      "cpuMsPerRequest": 1.7217723785166241,
+      "rssMaxMiB": 468.76953125,
+      "eventLoopP99WindowMedianMs": 31.645695,
+      "gcMsPerRequest": 0.09504601364448756,
+      "requests": 1173
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "hello",
+      "delay": 200,
+      "connections": 64,
+      "rps": 267.34698111019384,
+      "rpsRuns": [
+        267.72548308117155,
+        266.9662644917128
+      ],
+      "p50WindowMedianMs": 240.04108799993992,
+      "p95WindowMedianMs": 249.1223829984665,
+      "p99WindowMedianMs": 255.3309055119753,
+      "cpuPctMedian": 25.969187078073507,
+      "cpuMsPerRequest": 0.9733387354485278,
+      "rssMaxMiB": 468.68359375,
+      "eventLoopP99WindowMedianMs": 44.498943,
+      "gcMsPerRequest": 0.0639251780153491,
+      "requests": 4381
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "hello",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.9626921884746127,
+      "rpsRuns": [
+        1.9609663264903,
+        1.9644210910245357
+      ],
+      "p50WindowMedianMs": 508.191070497036,
+      "p95WindowMedianMs": 515.5984659940004,
+      "p99WindowMedianMs": 515.5984659940004,
+      "cpuPctMedian": 1.3052616807416362,
+      "cpuMsPerRequest": 6.66184375,
+      "rssMaxMiB": 469.44921875,
+      "eventLoopP99WindowMedianMs": 29.990910999999997,
+      "gcMsPerRequest": 0.0,
+      "requests": 32
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "hello",
+      "delay": 500,
+      "connections": 16,
+      "rps": 30.46562409110076,
+      "rpsRuns": [
+        30.397772308071378,
+        30.533779459789486
+      ],
+      "p50WindowMedianMs": 522.7241275012493,
+      "p95WindowMedianMs": 535.7718005180359,
+      "p99WindowMedianMs": 538.9117399901152,
+      "cpuPctMedian": 5.163279715074895,
+      "cpuMsPerRequest": 1.699240234375,
+      "rssMaxMiB": 469.63671875,
+      "eventLoopP99WindowMedianMs": 31.293439,
+      "gcMsPerRequest": 0.09514355269493535,
+      "requests": 512
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "hello",
+      "delay": 500,
+      "connections": 64,
+      "rps": 116.44725218101995,
+      "rpsRuns": [
+        115.355162979297,
+        117.56021704773406
+      ],
+      "p50WindowMedianMs": 545.7886440008879,
+      "p95WindowMedianMs": 572.8614989966154,
+      "p99WindowMedianMs": 582.7693880051374,
+      "cpuPctMedian": 12.184106965682936,
+      "cpuMsPerRequest": 1.0512864583333335,
+      "rssMaxMiB": 469.40234375,
+      "eventLoopP99WindowMedianMs": 39.698431,
+      "gcMsPerRequest": 0.060983054153621194,
+      "requests": 1920
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "medium",
+      "delay": 50,
+      "connections": 1,
+      "rps": 13.83928964196035,
+      "rpsRuns": [
+        13.751617958570339,
+        13.927288507917883
+      ],
+      "p50WindowMedianMs": 72.7097725123167,
+      "p95WindowMedianMs": 79.401535987854,
+      "p99WindowMedianMs": 81.94060450792313,
+      "cpuPctMedian": 32.97549513393132,
+      "cpuMsPerRequest": 23.9112600896861,
+      "rssMaxMiB": 480.53515625,
+      "eventLoopP99WindowMedianMs": 37.896191,
+      "gcMsPerRequest": 1.1263660314104482,
+      "requests": 223
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "medium",
+      "delay": 50,
+      "connections": 16,
+      "rps": 141.6010796485706,
+      "rpsRuns": [
+        140.8868909259157,
+        142.31247533568305
+      ],
+      "p50WindowMedianMs": 111.69286100566387,
+      "p95WindowMedianMs": 123.592355504632,
+      "p99WindowMedianMs": 134.2278484851122,
+      "cpuPctMedian": 66.51131350530468,
+      "cpuMsPerRequest": 4.703340472027971,
+      "rssMaxMiB": 480.4609375,
+      "eventLoopP99WindowMedianMs": 78.87257500000001,
+      "gcMsPerRequest": 0.21922489469284778,
+      "requests": 2288
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "medium",
+      "delay": 50,
+      "connections": 64,
+      "rps": 225.33466718665,
+      "rpsRuns": [
+        224.48672328861062,
+        226.18354084930272
+      ],
+      "p50WindowMedianMs": 276.89915449917316,
+      "p95WindowMedianMs": 312.29522001743317,
+      "p99WindowMedianMs": 362.3064295053482,
+      "cpuPctMedian": 97.70253492025431,
+      "cpuMsPerRequest": 4.34233672922252,
+      "rssMaxMiB": 491.7265625,
+      "eventLoopP99WindowMedianMs": 240.451583,
+      "gcMsPerRequest": 0.21104010763021322,
+      "requests": 3730
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "medium",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.496751572885272,
+      "rpsRuns": [
+        4.572750359146577,
+        4.421229919807568
+      ],
+      "p50WindowMedianMs": 221.4675420075655,
+      "p95WindowMedianMs": 229.1232940107584,
+      "p99WindowMedianMs": 230.00998349487782,
+      "cpuPctMedian": 10.25523150916238,
+      "cpuMsPerRequest": 22.85052054794521,
+      "rssMaxMiB": 474.671875,
+      "eventLoopP99WindowMedianMs": 34.512895,
+      "gcMsPerRequest": 0.9668634362416725,
+      "requests": 73
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "medium",
+      "delay": 200,
+      "connections": 16,
+      "rps": 54.04197093661415,
+      "rpsRuns": [
+        53.00677860166722,
+        55.07922024094527
+      ],
+      "p50WindowMedianMs": 294.8201299905777,
+      "p95WindowMedianMs": 308.7491134852171,
+      "p99WindowMedianMs": 335.0400460064411,
+      "cpuPctMedian": 38.641019657823634,
+      "cpuMsPerRequest": 7.161053409090909,
+      "rssMaxMiB": 481.36328125,
+      "eventLoopP99WindowMedianMs": 89.161727,
+      "gcMsPerRequest": 0.3441100864925168,
+      "requests": 880
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "medium",
+      "delay": 200,
+      "connections": 64,
+      "rps": 137.83554398331972,
+      "rpsRuns": [
+        136.43899132114433,
+        139.2609817775706
+      ],
+      "p50WindowMedianMs": 458.31443651020527,
+      "p95WindowMedianMs": 489.6291500031948,
+      "p99WindowMedianMs": 508.3896540105343,
+      "cpuPctMedian": 67.71477713641137,
+      "cpuMsPerRequest": 4.920946180555556,
+      "rssMaxMiB": 491.00390625,
+      "eventLoopP99WindowMedianMs": 247.20179100000001,
+      "gcMsPerRequest": 0.22614749087693375,
+      "requests": 2304
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "medium",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.895753176326223,
+      "rpsRuns": [
+        1.8854804859275343,
+        1.9061384176307672
+      ],
+      "p50WindowMedianMs": 526.3495305031538,
+      "p95WindowMedianMs": 541.2125355005264,
+      "p99WindowMedianMs": 541.2125355005264,
+      "cpuPctMedian": 5.818134734178877,
+      "cpuMsPerRequest": 30.778750000000002,
+      "rssMaxMiB": 475.05859375,
+      "eventLoopP99WindowMedianMs": 37.666815,
+      "gcMsPerRequest": 1.4674279373139143,
+      "requests": 32
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "medium",
+      "delay": 500,
+      "connections": 16,
+      "rps": 26.51072603932555,
+      "rpsRuns": [
+        26.483291641950622,
+        26.5382173349633
+      ],
+      "p50WindowMedianMs": 603.0251965075731,
+      "p95WindowMedianMs": 611.1406499892473,
+      "p99WindowMedianMs": 614.4212410002947,
+      "cpuPctMedian": 20.22955867086501,
+      "cpuMsPerRequest": 7.638649553571428,
+      "rssMaxMiB": 479.00390625,
+      "eventLoopP99WindowMedianMs": 73.695231,
+      "gcMsPerRequest": 0.2699238416472716,
+      "requests": 448
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "medium",
+      "delay": 500,
+      "connections": 64,
+      "rps": 82.72709859368739,
+      "rpsRuns": [
+        82.24665485792488,
+        83.2131883335894
+      ],
+      "p50WindowMedianMs": 770.0768569856882,
+      "p95WindowMedianMs": 791.939051002264,
+      "p99WindowMedianMs": 802.2771719992161,
+      "cpuPctMedian": 41.80073088407816,
+      "cpuMsPerRequest": 5.060192471590909,
+      "rssMaxMiB": 490.6953125,
+      "eventLoopP99WindowMedianMs": 220.921855,
+      "gcMsPerRequest": 0.23089849449355493,
+      "requests": 1408
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "large",
+      "delay": 50,
+      "connections": 1,
+      "rps": 13.601614974631875,
+      "rpsRuns": [
+        13.833042045724197,
+        13.369580012399409
+      ],
+      "p50WindowMedianMs": 73.30368600785732,
+      "p95WindowMedianMs": 79.44837099313736,
+      "p99WindowMedianMs": 82.67213100194931,
+      "cpuPctMedian": 39.71971893080004,
+      "cpuMsPerRequest": 29.246990825688073,
+      "rssMaxMiB": 479.13671875,
+      "eventLoopP99WindowMedianMs": 40.075263,
+      "gcMsPerRequest": 1.1976491346818592,
+      "requests": 218
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "large",
+      "delay": 50,
+      "connections": 16,
+      "rps": 99.4228080864669,
+      "rpsRuns": [
+        98.58068151114507,
+        100.26674182494567
+      ],
+      "p50WindowMedianMs": 159.32587948441505,
+      "p95WindowMedianMs": 168.63268099725246,
+      "p99WindowMedianMs": 179.31743347644806,
+      "cpuPctMedian": 80.43207963777655,
+      "cpuMsPerRequest": 8.097618518518518,
+      "rssMaxMiB": 480.7109375,
+      "eventLoopP99WindowMedianMs": 116.817919,
+      "gcMsPerRequest": 0.4156695767685219,
+      "requests": 1620
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "large",
+      "delay": 50,
+      "connections": 64,
+      "rps": 133.49190496550452,
+      "rpsRuns": [
+        138.17699961074453,
+        128.83192038681034
+      ],
+      "p50WindowMedianMs": 471.6764979958534,
+      "p95WindowMedianMs": 523.8869580030441,
+      "p99WindowMedianMs": 552.588288500905,
+      "cpuPctMedian": 107.51703235435073,
+      "cpuMsPerRequest": 8.062869411243913,
+      "rssMaxMiB": 502.7890625,
+      "eventLoopP99WindowMedianMs": 330.170367,
+      "gcMsPerRequest": 0.41635853691985514,
+      "requests": 2259
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "large",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.262400143776699,
+      "rpsRuns": [
+        4.281959182799098,
+        4.242451608431254
+      ],
+      "p50WindowMedianMs": 234.5566124767065,
+      "p95WindowMedianMs": 240.94688449800014,
+      "p99WindowMedianMs": 243.11359150707722,
+      "cpuPctMedian": 16.710998377822442,
+      "cpuMsPerRequest": 39.21724637681159,
+      "rssMaxMiB": 475.10546875,
+      "eventLoopP99WindowMedianMs": 46.497791,
+      "gcMsPerRequest": 1.2733161885669266,
+      "requests": 69
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "large",
+      "delay": 200,
+      "connections": 16,
+      "rps": 46.3030266725984,
+      "rpsRuns": [
+        46.08209329376407,
+        46.526088717954615
+      ],
+      "p50WindowMedianMs": 344.29626551270485,
+      "p95WindowMedianMs": 355.36294400691986,
+      "p99WindowMedianMs": 361.90295800566673,
+      "cpuPctMedian": 49.33332567469222,
+      "cpuMsPerRequest": 10.668226562500001,
+      "rssMaxMiB": 489.83203125,
+      "eventLoopP99WindowMedianMs": 111.017983,
+      "gcMsPerRequest": 0.46943393753220636,
+      "requests": 768
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "large",
+      "delay": 200,
+      "connections": 64,
+      "rps": 93.12673413202045,
+      "rpsRuns": [
+        94.98064963488842,
+        91.27540672309533
+      ],
+      "p50WindowMedianMs": 672.8120539933443,
+      "p95WindowMedianMs": 729.735012486577,
+      "p99WindowMedianMs": 864.5541120022535,
+      "cpuPctMedian": 80.62190716134819,
+      "cpuMsPerRequest": 8.668533126934985,
+      "rssMaxMiB": 515.68359375,
+      "eventLoopP99WindowMedianMs": 446.69337499999995,
+      "gcMsPerRequest": 0.4641851615425972,
+      "requests": 1615
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "large",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.8612161769687485,
+      "rpsRuns": [
+        1.8526542844550844,
+        1.8698575730948512
+      ],
+      "p50WindowMedianMs": 535.7284014970064,
+      "p95WindowMedianMs": 552.8021259903908,
+      "p99WindowMedianMs": 552.8021259903908,
+      "cpuPctMedian": 8.130423581643356,
+      "cpuMsPerRequest": 43.77166666666667,
+      "rssMaxMiB": 476.44921875,
+      "eventLoopP99WindowMedianMs": 46.923775,
+      "gcMsPerRequest": 1.6961300353209177,
+      "requests": 30
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "large",
+      "delay": 500,
+      "connections": 16,
+      "rps": 24.327285237698522,
+      "rpsRuns": [
+        24.30785174346289,
+        24.346749829940975
+      ],
+      "p50WindowMedianMs": 655.010278493166,
+      "p95WindowMedianMs": 677.201785504818,
+      "p99WindowMedianMs": 684.0745965093374,
+      "cpuPctMedian": 27.257864668848338,
+      "cpuMsPerRequest": 11.230367788461539,
+      "rssMaxMiB": 489.84765625,
+      "eventLoopP99WindowMedianMs": 110.100479,
+      "gcMsPerRequest": 0.5615918366954877,
+      "requests": 416
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "size": "large",
+      "delay": 500,
+      "connections": 64,
+      "rps": 68.7863598560781,
+      "rpsRuns": [
+        71.78261688956522,
+        65.88910560515558
+      ],
+      "p50WindowMedianMs": 927.0125605165958,
+      "p95WindowMedianMs": 1044.8286515027285,
+      "p99WindowMedianMs": 1116.0262915045023,
+      "cpuPctMedian": 59.736738986667135,
+      "cpuMsPerRequest": 8.688433249370277,
+      "rssMaxMiB": 523.75,
+      "eventLoopP99WindowMedianMs": 307.036159,
+      "gcMsPerRequest": 0.4883920191767634,
+      "requests": 1191
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "hello",
+      "delay": 50,
+      "connections": 1,
+      "rps": 17.147862070545056,
+      "rpsRuns": [
+        17.213166279141298,
+        17.08258022929945
+      ],
+      "p50WindowMedianMs": 57.92015600204468,
+      "p95WindowMedianMs": 62.001708984375,
+      "p99WindowMedianMs": 70.24144650995731,
+      "cpuPctMedian": 8.588974880361786,
+      "cpuMsPerRequest": 5.018992727272727,
+      "rssMaxMiB": 461.6015625,
+      "eventLoopP99WindowMedianMs": 29.589503,
+      "gcMsPerRequest": 0.17817517432299526,
+      "requests": 275
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "hello",
+      "delay": 50,
+      "connections": 16,
+      "rps": 216.1668187716426,
+      "rpsRuns": [
+        215.07600517223497,
+        217.25796409292136
+      ],
+      "p50WindowMedianMs": 74.03200498223305,
+      "p95WindowMedianMs": 81.90437951683998,
+      "p99WindowMedianMs": 86.63327150046825,
+      "cpuPctMedian": 35.50922712698724,
+      "cpuMsPerRequest": 1.6465666570688164,
+      "rssMaxMiB": 461.6015625,
+      "eventLoopP99WindowMedianMs": 35.864575,
+      "gcMsPerRequest": 0.0811096792378276,
+      "requests": 3473
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "hello",
+      "delay": 50,
+      "connections": 64,
+      "rps": 912.781517896692,
+      "rpsRuns": [
+        926.0465356739458,
+        899.5565772429463
+      ],
+      "p50WindowMedianMs": 70.95539247989655,
+      "p95WindowMedianMs": 79.59533350169659,
+      "p99WindowMedianMs": 84.39774499833584,
+      "cpuPctMedian": 43.71885412615035,
+      "cpuMsPerRequest": 0.47976236815243284,
+      "rssMaxMiB": 461.53125,
+      "eventLoopP99WindowMedianMs": 32.391167,
+      "gcMsPerRequest": 0.03773529866432081,
+      "requests": 14695
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "hello",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.7471965358014465,
+      "rpsRuns": [
+        4.777813001328078,
+        4.716179716396571
+      ],
+      "p50WindowMedianMs": 209.73542749881744,
+      "p95WindowMedianMs": 218.3510995209217,
+      "p99WindowMedianMs": 219.41302099823952,
+      "cpuPctMedian": 4.556874962303405,
+      "cpuMsPerRequest": 9.603220779220779,
+      "rssMaxMiB": 426.45703125,
+      "eventLoopP99WindowMedianMs": 29.884415,
+      "gcMsPerRequest": 0.7686409609658378,
+      "requests": 77
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "hello",
+      "delay": 200,
+      "connections": 16,
+      "rps": 71.56582742205823,
+      "rpsRuns": [
+        71.99372823134777,
+        71.13933443901205
+      ],
+      "p50WindowMedianMs": 222.97149699926376,
+      "p95WindowMedianMs": 234.06787499785423,
+      "p99WindowMedianMs": 238.47537750005722,
+      "cpuPctMedian": 13.679388959408442,
+      "cpuMsPerRequest": 1.91376058772688,
+      "rssMaxMiB": 461.53125,
+      "eventLoopP99WindowMedianMs": 32.374783,
+      "gcMsPerRequest": 0.10553562234163079,
+      "requests": 1157
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "hello",
+      "delay": 200,
+      "connections": 64,
+      "rps": 255.6732555638215,
+      "rpsRuns": [
+        250.81736971168948,
+        260.5340105589543
+      ],
+      "p50WindowMedianMs": 246.4420970082283,
+      "p95WindowMedianMs": 254.8468615114689,
+      "p99WindowMedianMs": 258.12290950119495,
+      "cpuPctMedian": 23.92076098473767,
+      "cpuMsPerRequest": 0.9371197817836812,
+      "rssMaxMiB": 461.578125,
+      "eventLoopP99WindowMedianMs": 47.218687,
+      "gcMsPerRequest": 0.05378463523607326,
+      "requests": 4216
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "hello",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.9553879067878148,
+      "rpsRuns": [
+        1.9504357616940202,
+        1.9603652628274333
+      ],
+      "p50WindowMedianMs": 509.86183750629425,
+      "p95WindowMedianMs": 523.7566680014133,
+      "p99WindowMedianMs": 523.7566680014133,
+      "cpuPctMedian": 1.5499836877884643,
+      "cpuMsPerRequest": 7.9459687500000005,
+      "rssMaxMiB": 463.703125,
+      "eventLoopP99WindowMedianMs": 29.900799,
+      "gcMsPerRequest": 0.0,
+      "requests": 32
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "hello",
+      "delay": 500,
+      "connections": 16,
+      "rps": 30.21028532607973,
+      "rpsRuns": [
+        30.166026825139266,
+        30.25467388677529
+      ],
+      "p50WindowMedianMs": 527.1775434911251,
+      "p95WindowMedianMs": 539.4858115017414,
+      "p99WindowMedianMs": 544.3088555037975,
+      "cpuPctMedian": 5.943775225272834,
+      "cpuMsPerRequest": 1.9706328125,
+      "rssMaxMiB": 472.71875,
+      "eventLoopP99WindowMedianMs": 31.596542999999997,
+      "gcMsPerRequest": 0.10868454101728275,
+      "requests": 512
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "hello",
+      "delay": 500,
+      "connections": 64,
+      "rps": 115.42738650320149,
+      "rpsRuns": [
+        114.97996455734916,
+        115.87830416115563
+      ],
+      "p50WindowMedianMs": 551.6623564958572,
+      "p95WindowMedianMs": 564.657699495554,
+      "p99WindowMedianMs": 567.2608059942722,
+      "cpuPctMedian": 12.965283904411915,
+      "cpuMsPerRequest": 1.1251854166666668,
+      "rssMaxMiB": 461.55078125,
+      "eventLoopP99WindowMedianMs": 51.150847,
+      "gcMsPerRequest": 0.05334450155496597,
+      "requests": 1920
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "medium",
+      "delay": 50,
+      "connections": 1,
+      "rps": 14.047013518217858,
+      "rpsRuns": [
+        14.06735883367334,
+        14.0267269677473
+      ],
+      "p50WindowMedianMs": 70.8860680013895,
+      "p95WindowMedianMs": 78.22076050937176,
+      "p99WindowMedianMs": 81.78750249743462,
+      "cpuPctMedian": 41.7666602534763,
+      "cpuMsPerRequest": 29.772840707964605,
+      "rssMaxMiB": 477.3359375,
+      "eventLoopP99WindowMedianMs": 38.748159,
+      "gcMsPerRequest": 1.5227734253997296,
+      "requests": 226
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "medium",
+      "delay": 50,
+      "connections": 16,
+      "rps": 115.40376678930822,
+      "rpsRuns": [
+        110.44814972725489,
+        120.37306586927622
+      ],
+      "p50WindowMedianMs": 136.91236400604248,
+      "p95WindowMedianMs": 150.26773500442505,
+      "p99WindowMedianMs": 157.71429200470448,
+      "cpuPctMedian": 78.83288001107492,
+      "cpuMsPerRequest": 6.8394781216648886,
+      "rssMaxMiB": 479.06640625,
+      "eventLoopP99WindowMedianMs": 104.628223,
+      "gcMsPerRequest": 0.5905061430012531,
+      "requests": 1874
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "medium",
+      "delay": 50,
+      "connections": 64,
+      "rps": 170.90057106381175,
+      "rpsRuns": [
+        168.47796652447016,
+        173.31555359582023
+      ],
+      "p50WindowMedianMs": 371.4310355037451,
+      "p95WindowMedianMs": 386.60060949623585,
+      "p99WindowMedianMs": 394.373556509614,
+      "cpuPctMedian": 108.49886539323634,
+      "cpuMsPerRequest": 6.357485494582315,
+      "rssMaxMiB": 507.62109375,
+      "eventLoopP99WindowMedianMs": 331.21894299999997,
+      "gcMsPerRequest": 0.5362006130855178,
+      "requests": 2861
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "medium",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.368725970064053,
+      "rpsRuns": [
+        4.344376939305031,
+        4.392661744526723
+      ],
+      "p50WindowMedianMs": 228.56304797530174,
+      "p95WindowMedianMs": 234.41437497735023,
+      "p99WindowMedianMs": 235.95643751323223,
+      "cpuPctMedian": 16.685972984753903,
+      "cpuMsPerRequest": 38.25292957746479,
+      "rssMaxMiB": 471.0703125,
+      "eventLoopP99WindowMedianMs": 44.859391,
+      "gcMsPerRequest": 1.677004703753431,
+      "requests": 71
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "medium",
+      "delay": 200,
+      "connections": 16,
+      "rps": 49.57318040860844,
+      "rpsRuns": [
+        48.85104173221625,
+        50.2879688676599
+      ],
+      "p50WindowMedianMs": 320.8307325094938,
+      "p95WindowMedianMs": 338.63171000778675,
+      "p99WindowMedianMs": 352.06258149445057,
+      "cpuPctMedian": 45.31378387814554,
+      "cpuMsPerRequest": 9.150767156862745,
+      "rssMaxMiB": 476.69140625,
+      "eventLoopP99WindowMedianMs": 102.531071,
+      "gcMsPerRequest": 0.6116025881732211,
+      "requests": 816
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "medium",
+      "delay": 200,
+      "connections": 64,
+      "rps": 113.83631751285114,
+      "rpsRuns": [
+        113.24557348452092,
+        114.42281669175907
+      ],
+      "p50WindowMedianMs": 554.5633295029402,
+      "p95WindowMedianMs": 572.3561709970236,
+      "p99WindowMedianMs": 580.0249920040369,
+      "cpuPctMedian": 79.338180120923,
+      "cpuMsPerRequest": 6.979763551884357,
+      "rssMaxMiB": 496.109375,
+      "eventLoopP99WindowMedianMs": 336.33075099999996,
+      "gcMsPerRequest": 0.5696816659644516,
+      "requests": 1937
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "medium",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.8824573004013492,
+      "rpsRuns": [
+        1.8791402200190699,
+        1.8857861121905295
+      ],
+      "p50WindowMedianMs": 528.4825799912214,
+      "p95WindowMedianMs": 550.5650785118341,
+      "p99WindowMedianMs": 550.5650785118341,
+      "cpuPctMedian": 7.408388896007491,
+      "cpuMsPerRequest": 39.42734375,
+      "rssMaxMiB": 468.58984375,
+      "eventLoopP99WindowMedianMs": 43.302911,
+      "gcMsPerRequest": 1.7718300940468907,
+      "requests": 32
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "medium",
+      "delay": 500,
+      "connections": 16,
+      "rps": 25.486714255924404,
+      "rpsRuns": [
+        25.43169389491664,
+        25.541973201403962
+      ],
+      "p50WindowMedianMs": 626.4269949942827,
+      "p95WindowMedianMs": 637.1522729992867,
+      "p99WindowMedianMs": 641.2861999869347,
+      "cpuPctMedian": 24.10789223107404,
+      "cpuMsPerRequest": 9.473776442307692,
+      "rssMaxMiB": 477.53515625,
+      "eventLoopP99WindowMedianMs": 80.871423,
+      "gcMsPerRequest": 0.6333571898822601,
+      "requests": 416
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "medium",
+      "delay": 500,
+      "connections": 64,
+      "rps": 73.02788159295025,
+      "rpsRuns": [
+        71.46985647263645,
+        74.6371569833788
+      ],
+      "p50WindowMedianMs": 867.1756359934807,
+      "p95WindowMedianMs": 888.4579610079527,
+      "p99WindowMedianMs": 901.7376689910889,
+      "cpuPctMedian": 52.150362771932265,
+      "cpuMsPerRequest": 7.152769835035349,
+      "rssMaxMiB": 491.28125,
+      "eventLoopP99WindowMedianMs": 331.21894299999997,
+      "gcMsPerRequest": 0.5965752419017004,
+      "requests": 1273
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "large",
+      "delay": 50,
+      "connections": 1,
+      "rps": 13.868551723653525,
+      "rpsRuns": [
+        13.861818519524094,
+        13.875231266792055
+      ],
+      "p50WindowMedianMs": 71.46069748699665,
+      "p95WindowMedianMs": 78.12519150972366,
+      "p99WindowMedianMs": 84.22111049294472,
+      "cpuPctMedian": 43.3034109672554,
+      "cpuMsPerRequest": 31.28224215246637,
+      "rssMaxMiB": 472.03515625,
+      "eventLoopP99WindowMedianMs": 31.866878999999997,
+      "gcMsPerRequest": 1.7737820220635077,
+      "requests": 223
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "large",
+      "delay": 50,
+      "connections": 16,
+      "rps": 78.68719309179168,
+      "rpsRuns": [
+        77.50509788336112,
+        79.86200244296835
+      ],
+      "p50WindowMedianMs": 202.18336048722267,
+      "p95WindowMedianMs": 216.55759298801422,
+      "p99WindowMedianMs": 229.53171600401402,
+      "cpuPctMedian": 96.71611887218755,
+      "cpuMsPerRequest": 12.30490966221524,
+      "rssMaxMiB": 508.1484375,
+      "eventLoopP99WindowMedianMs": 106.856447,
+      "gcMsPerRequest": 1.053537436666586,
+      "requests": 1273
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "large",
+      "delay": 50,
+      "connections": 64,
+      "rps": 95.05059292070662,
+      "rpsRuns": [
+        96.75167896505799,
+        93.31234671160988
+      ],
+      "p50WindowMedianMs": 659.5134209990501,
+      "p95WindowMedianMs": 737.6158535033464,
+      "p99WindowMedianMs": 819.549398496747,
+      "cpuPctMedian": 125.57629591258768,
+      "cpuMsPerRequest": 13.233508793969849,
+      "rssMaxMiB": 608.078125,
+      "eventLoopP99WindowMedianMs": 311.88582299999996,
+      "gcMsPerRequest": 1.154430526547396,
+      "requests": 1592
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "large",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.163657536767203,
+      "rpsRuns": [
+        4.160325294402589,
+        4.166995121377539
+      ],
+      "p50WindowMedianMs": 239.06654450297356,
+      "p95WindowMedianMs": 253.33571150898933,
+      "p99WindowMedianMs": 255.76523649692535,
+      "cpuPctMedian": 21.356323945415284,
+      "cpuMsPerRequest": 51.37688235294118,
+      "rssMaxMiB": 472.734375,
+      "eventLoopP99WindowMedianMs": 41.336831000000004,
+      "gcMsPerRequest": 1.8642920601893873,
+      "requests": 68
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "large",
+      "delay": 200,
+      "connections": 16,
+      "rps": 41.19103582932708,
+      "rpsRuns": [
+        40.90426281986949,
+        41.48185826475053
+      ],
+      "p50WindowMedianMs": 386.55269549787045,
+      "p95WindowMedianMs": 404.5459649860859,
+      "p99WindowMedianMs": 410.05426800251007,
+      "cpuPctMedian": 60.21028004892692,
+      "cpuMsPerRequest": 14.642373511904761,
+      "rssMaxMiB": 541.94921875,
+      "eventLoopP99WindowMedianMs": 101.285887,
+      "gcMsPerRequest": 1.140444353932426,
+      "requests": 672
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "large",
+      "delay": 200,
+      "connections": 64,
+      "rps": 74.03364008147746,
+      "rpsRuns": [
+        74.92680348816909,
+        73.16151970352149
+      ],
+      "p50WindowMedianMs": 840.9959090054035,
+      "p95WindowMedianMs": 1006.7790170013905,
+      "p99WindowMedianMs": 1074.7149560004473,
+      "cpuPctMedian": 103.25059944621805,
+      "cpuMsPerRequest": 13.9609893129771,
+      "rssMaxMiB": 593.12109375,
+      "eventLoopP99WindowMedianMs": 331.087871,
+      "gcMsPerRequest": 1.2366520674174069,
+      "requests": 1310
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "large",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.844314693496271,
+      "rpsRuns": [
+        1.8407843949765417,
+        1.8478585590099863
+      ],
+      "p50WindowMedianMs": 540.7488794922829,
+      "p95WindowMedianMs": 559.4658420085907,
+      "p99WindowMedianMs": 559.4658420085907,
+      "cpuPctMedian": 10.168361492331297,
+      "cpuMsPerRequest": 55.2119,
+      "rssMaxMiB": 466.75390625,
+      "eventLoopP99WindowMedianMs": 36.585471,
+      "gcMsPerRequest": 2.1859808673461276,
+      "requests": 30
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "large",
+      "delay": 500,
+      "connections": 16,
+      "rps": 22.768253489458893,
+      "rpsRuns": [
+        22.79215510507796,
+        22.744401951487877
+      ],
+      "p50WindowMedianMs": 700.3804379999638,
+      "p95WindowMedianMs": 719.2428440004587,
+      "p99WindowMedianMs": 737.1266270130873,
+      "cpuPctMedian": 35.796328069233965,
+      "cpuMsPerRequest": 15.739401041666667,
+      "rssMaxMiB": 539.07421875,
+      "eventLoopP99WindowMedianMs": 98.369535,
+      "gcMsPerRequest": 1.3327598934217046,
+      "requests": 384
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "size": "large",
+      "delay": 500,
+      "connections": 64,
+      "rps": 52.74474724681939,
+      "rpsRuns": [
+        53.71496165705162,
+        51.817077266934426
+      ],
+      "p50WindowMedianMs": 1161.3434990048409,
+      "p95WindowMedianMs": 1262.2389305084944,
+      "p99WindowMedianMs": 1332.8995990008116,
+      "cpuPctMedian": 74.73009847069818,
+      "cpuMsPerRequest": 14.1775022172949,
+      "rssMaxMiB": 631.56640625,
+      "eventLoopP99WindowMedianMs": 349.569023,
+      "gcMsPerRequest": 1.3101301055789787,
+      "requests": 902
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "hello",
+      "delay": 50,
+      "connections": 1,
+      "rps": 17.69246959344715,
+      "rpsRuns": [
+        17.689891718185525,
+        17.69504822014462
+      ],
+      "p50WindowMedianMs": 55.997414499521255,
+      "p95WindowMedianMs": 59.72229650616646,
+      "p99WindowMedianMs": 62.12224951386452,
+      "cpuPctMedian": 6.821916287049838,
+      "cpuMsPerRequest": 3.8729577464788734,
+      "rssMaxMiB": 430.37109375,
+      "eventLoopP99WindowMedianMs": 29.360127,
+      "gcMsPerRequest": 0.13381330983739503,
+      "requests": 284
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "hello",
+      "delay": 50,
+      "connections": 16,
+      "rps": 265.4164711426461,
+      "rpsRuns": [
+        261.18840118226484,
+        269.63245609984466
+      ],
+      "p50WindowMedianMs": 59.18391601741314,
+      "p95WindowMedianMs": 69.55996499955654,
+      "p99WindowMedianMs": 79.92383150756359,
+      "cpuPctMedian": 35.95020729684488,
+      "cpuMsPerRequest": 1.356555763823805,
+      "rssMaxMiB": 430.37109375,
+      "eventLoopP99WindowMedianMs": 29.097983,
+      "gcMsPerRequest": 0.11363109325485578,
+      "requests": 4268
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "hello",
+      "delay": 50,
+      "connections": 64,
+      "rps": 1102.156216797068,
+      "rpsRuns": [
+        1104.6198504486072,
+        1099.6919394625143
+      ],
+      "p50WindowMedianMs": 56.69991049170494,
+      "p95WindowMedianMs": 65.97151897847652,
+      "p99WindowMedianMs": 73.80753049254417,
+      "cpuPctMedian": 50.65008019389296,
+      "cpuMsPerRequest": 0.4601862535211268,
+      "rssMaxMiB": 425.984375,
+      "eventLoopP99WindowMedianMs": 29.876223000000003,
+      "gcMsPerRequest": 0.05817664243469776,
+      "requests": 17750
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "hello",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.804806912451789,
+      "rpsRuns": [
+        4.811244498967701,
+        4.798386530275812
+      ],
+      "p50WindowMedianMs": 207.43997199833393,
+      "p95WindowMedianMs": 212.464104488492,
+      "p99WindowMedianMs": 213.14131800830364,
+      "cpuPctMedian": 2.745378693705661,
+      "cpuMsPerRequest": 5.735346153846153,
+      "rssMaxMiB": 426.55859375,
+      "eventLoopP99WindowMedianMs": 29.990910999999997,
+      "gcMsPerRequest": 0.0,
+      "requests": 78
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "hello",
+      "delay": 200,
+      "connections": 16,
+      "rps": 75.20382830062682,
+      "rpsRuns": [
+        74.82295338648403,
+        75.58361074943807
+      ],
+      "p50WindowMedianMs": 209.8482154905796,
+      "p95WindowMedianMs": 216.95485600829124,
+      "p99WindowMedianMs": 223.71793550252914,
+      "cpuPctMedian": 13.801468495412069,
+      "cpuMsPerRequest": 1.837913961038961,
+      "rssMaxMiB": 425.984375,
+      "eventLoopP99WindowMedianMs": 29.990911,
+      "gcMsPerRequest": 0.11876970379577055,
+      "requests": 1232
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "hello",
+      "delay": 200,
+      "connections": 64,
+      "rps": 296.181581705965,
+      "rpsRuns": [
+        291.6642012727164,
+        300.74619893659536
+      ],
+      "p50WindowMedianMs": 213.3827890008688,
+      "p95WindowMedianMs": 228.48978400230408,
+      "p99WindowMedianMs": 235.42845849692822,
+      "cpuPctMedian": 30.410281599779065,
+      "cpuMsPerRequest": 1.0307748604506926,
+      "rssMaxMiB": 425.47265625,
+      "eventLoopP99WindowMedianMs": 29.933567,
+      "gcMsPerRequest": 0.08729854413416605,
+      "requests": 4837
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "hello",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.9628060584504863,
+      "rpsRuns": [
+        1.9606464757154667,
+        1.9649704038393752
+      ],
+      "p50WindowMedianMs": 508.5804845094681,
+      "p95WindowMedianMs": 516.0715859979391,
+      "p99WindowMedianMs": 516.0715859979391,
+      "cpuPctMedian": 1.4560229395372604,
+      "cpuMsPerRequest": 7.43775,
+      "rssMaxMiB": 430.37109375,
+      "eventLoopP99WindowMedianMs": 29.941759,
+      "gcMsPerRequest": 0.0,
+      "requests": 32
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "hello",
+      "delay": 500,
+      "connections": 16,
+      "rps": 31.222052438452316,
+      "rpsRuns": [
+        31.15617249430547,
+        31.288211580167587
+      ],
+      "p50WindowMedianMs": 509.45555151998997,
+      "p95WindowMedianMs": 523.4079590141773,
+      "p99WindowMedianMs": 530.1344384998083,
+      "cpuPctMedian": 6.199306877520396,
+      "cpuMsPerRequest": 1.9886992187499999,
+      "rssMaxMiB": 426.58984375,
+      "eventLoopP99WindowMedianMs": 29.974527000000002,
+      "gcMsPerRequest": 0.1610814218292944,
+      "requests": 512
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "hello",
+      "delay": 500,
+      "connections": 64,
+      "rps": 122.59206880745116,
+      "rpsRuns": [
+        122.49174070764961,
+        122.69256139146604
+      ],
+      "p50WindowMedianMs": 517.40540599823,
+      "p95WindowMedianMs": 533.1258470118046,
+      "p99WindowMedianMs": 537.454019010067,
+      "cpuPctMedian": 13.61102122696111,
+      "cpuMsPerRequest": 1.11176708984375,
+      "rssMaxMiB": 430.40234375,
+      "eventLoopP99WindowMedianMs": 30.072831,
+      "gcMsPerRequest": 0.084784613296506,
+      "requests": 2048
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "medium",
+      "delay": 50,
+      "connections": 1,
+      "rps": 14.578943934308764,
+      "rpsRuns": [
+        14.303311260437889,
+        14.855596746702675
+      ],
+      "p50WindowMedianMs": 68.56703400611877,
+      "p95WindowMedianMs": 73.76695099473,
+      "p99WindowMedianMs": 76.87373898923397,
+      "cpuPctMedian": 31.39344155086452,
+      "cpuMsPerRequest": 21.577123931623934,
+      "rssMaxMiB": 433.6796875,
+      "eventLoopP99WindowMedianMs": 33.325055000000006,
+      "gcMsPerRequest": 0.8541248164370528,
+      "requests": 234
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "medium",
+      "delay": 50,
+      "connections": 16,
+      "rps": 168.59820611838492,
+      "rpsRuns": [
+        168.90858365313574,
+        168.28919395640796
+      ],
+      "p50WindowMedianMs": 94.00905649363995,
+      "p95WindowMedianMs": 101.74413099884987,
+      "p99WindowMedianMs": 109.09106001257896,
+      "cpuPctMedian": 64.22573813185993,
+      "cpuMsPerRequest": 3.8159162072767367,
+      "rssMaxMiB": 435.890625,
+      "eventLoopP99WindowMedianMs": 56.639487,
+      "gcMsPerRequest": 0.1715291237423675,
+      "requests": 2721
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "medium",
+      "delay": 50,
+      "connections": 64,
+      "rps": 278.64245070307516,
+      "rpsRuns": [
+        285.40391451355686,
+        271.9314931688902
+      ],
+      "p50WindowMedianMs": 218.45360450446606,
+      "p95WindowMedianMs": 272.8639589995146,
+      "p99WindowMedianMs": 363.95198349654675,
+      "cpuPctMedian": 95.06177757900011,
+      "cpuMsPerRequest": 3.4172831377661885,
+      "rssMaxMiB": 443.15234375,
+      "eventLoopP99WindowMedianMs": 196.149247,
+      "gcMsPerRequest": 0.22784570343258173,
+      "requests": 4602
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "medium",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.515438277671018,
+      "rpsRuns": [
+        4.508985404539418,
+        4.521909646869602
+      ],
+      "p50WindowMedianMs": 220.84358549118042,
+      "p95WindowMedianMs": 228.71941298246384,
+      "p99WindowMedianMs": 231.8064849972725,
+      "cpuPctMedian": 11.53201345019913,
+      "cpuMsPerRequest": 25.628824324324324,
+      "rssMaxMiB": 433.45703125,
+      "eventLoopP99WindowMedianMs": 34.652159,
+      "gcMsPerRequest": 0.9169154722948332,
+      "requests": 74
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "medium",
+      "delay": 200,
+      "connections": 16,
+      "rps": 56.628050119982525,
+      "rpsRuns": [
+        56.76260817060629,
+        56.494128511213084
+      ],
+      "p50WindowMedianMs": 281.26521499454975,
+      "p95WindowMedianMs": 292.43999649584293,
+      "p99WindowMedianMs": 309.4133825004101,
+      "cpuPctMedian": 37.938305443662244,
+      "cpuMsPerRequest": 6.707201508620689,
+      "rssMaxMiB": 435.78125,
+      "eventLoopP99WindowMedianMs": 65.585151,
+      "gcMsPerRequest": 0.26554955079637727,
+      "requests": 928
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "medium",
+      "delay": 200,
+      "connections": 64,
+      "rps": 160.8243088283376,
+      "rpsRuns": [
+        160.50115882338397,
+        161.1485211703582
+      ],
+      "p50WindowMedianMs": 394.4056165218353,
+      "p95WindowMedianMs": 418.493743494153,
+      "p99WindowMedianMs": 436.94966550171375,
+      "cpuPctMedian": 60.32739315732212,
+      "cpuMsPerRequest": 3.7561902638424374,
+      "rssMaxMiB": 439.1171875,
+      "eventLoopP99WindowMedianMs": 175.767551,
+      "gcMsPerRequest": 0.23615594723773065,
+      "requests": 2691
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "medium",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.917253212402975,
+      "rpsRuns": [
+        1.9182335268253368,
+        1.9162738994493875
+      ],
+      "p50WindowMedianMs": 520.5572044849396,
+      "p95WindowMedianMs": 525.8337670117617,
+      "p99WindowMedianMs": 525.8337670117617,
+      "cpuPctMedian": 5.112963598356167,
+      "cpuMsPerRequest": 26.71003125,
+      "rssMaxMiB": 436.13671875,
+      "eventLoopP99WindowMedianMs": 31.776767,
+      "gcMsPerRequest": 0.5937858140096068,
+      "requests": 32
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "medium",
+      "delay": 500,
+      "connections": 16,
+      "rps": 27.29634798245992,
+      "rpsRuns": [
+        27.281129530622426,
+        27.31158342263686
+      ],
+      "p50WindowMedianMs": 584.6279890090227,
+      "p95WindowMedianMs": 595.9165769964457,
+      "p99WindowMedianMs": 599.2829854935408,
+      "cpuPctMedian": 18.131449037187508,
+      "cpuMsPerRequest": 6.649200892857143,
+      "rssMaxMiB": 441.73046875,
+      "eventLoopP99WindowMedianMs": 59.998207,
+      "gcMsPerRequest": 0.2242107120608645,
+      "requests": 448
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "medium",
+      "delay": 500,
+      "connections": 64,
+      "rps": 90.22599843468001,
+      "rpsRuns": [
+        89.84220961824856,
+        90.61257474972358
+      ],
+      "p50WindowMedianMs": 705.2267574965954,
+      "p95WindowMedianMs": 729.4881244897842,
+      "p99WindowMedianMs": 745.6929525136948,
+      "cpuPctMedian": 35.80057269786907,
+      "cpuMsPerRequest": 3.9724216005204944,
+      "rssMaxMiB": 442.0234375,
+      "eventLoopP99WindowMedianMs": 179.961855,
+      "gcMsPerRequest": 0.2466627735942699,
+      "requests": 1537
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "large",
+      "delay": 50,
+      "connections": 1,
+      "rps": 13.731926744890906,
+      "rpsRuns": [
+        13.53114913862675,
+        13.933131294244513
+      ],
+      "p50WindowMedianMs": 72.90026399493217,
+      "p95WindowMedianMs": 79.94584649801254,
+      "p99WindowMedianMs": 83.75744798779488,
+      "cpuPctMedian": 40.86436225923336,
+      "cpuMsPerRequest": 29.812298642533936,
+      "rssMaxMiB": 439.05859375,
+      "eventLoopP99WindowMedianMs": 37.666815,
+      "gcMsPerRequest": 1.0435165830327375,
+      "requests": 221
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "large",
+      "delay": 50,
+      "connections": 16,
+      "rps": 125.85123918862878,
+      "rpsRuns": [
+        123.92248812022629,
+        127.78064349239855
+      ],
+      "p50WindowMedianMs": 126.06393150985241,
+      "p95WindowMedianMs": 134.8648079931736,
+      "p99WindowMedianMs": 144.6549725085497,
+      "cpuPctMedian": 73.23020773159126,
+      "cpuMsPerRequest": 5.825050366748166,
+      "rssMaxMiB": 440.421875,
+      "eventLoopP99WindowMedianMs": 86.76966300000001,
+      "gcMsPerRequest": 0.32824479844284526,
+      "requests": 2045
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "large",
+      "delay": 50,
+      "connections": 64,
+      "rps": 182.52155337174364,
+      "rpsRuns": [
+        187.50799509129737,
+        177.5389853556345
+      ],
+      "p50WindowMedianMs": 347.6492909938097,
+      "p95WindowMedianMs": 378.6492494940758,
+      "p99WindowMedianMs": 394.98275649547577,
+      "cpuPctMedian": 110.05456113560838,
+      "cpuMsPerRequest": 6.037518713066317,
+      "rssMaxMiB": 445.328125,
+      "eventLoopP99WindowMedianMs": 296.747007,
+      "gcMsPerRequest": 0.41149189448912366,
+      "requests": 3046
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "large",
+      "delay": 200,
+      "connections": 1,
+      "rps": 4.36789519859224,
+      "rpsRuns": [
+        4.337550568142855,
+        4.397806753331492
+      ],
+      "p50WindowMedianMs": 228.85976050794125,
+      "p95WindowMedianMs": 235.59039901196957,
+      "p99WindowMedianMs": 239.66033498942852,
+      "cpuPctMedian": 14.890517402792696,
+      "cpuMsPerRequest": 34.12916901408451,
+      "rssMaxMiB": 439.7421875,
+      "eventLoopP99WindowMedianMs": 42.041343,
+      "gcMsPerRequest": 1.2519407876780335,
+      "requests": 71
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "large",
+      "delay": 200,
+      "connections": 16,
+      "rps": 50.92859559348196,
+      "rpsRuns": [
+        51.442187558707936,
+        50.42872671037872
+      ],
+      "p50WindowMedianMs": 309.7698505073786,
+      "p95WindowMedianMs": 319.77301101386547,
+      "p99WindowMedianMs": 322.6734334975481,
+      "cpuPctMedian": 41.89943480245644,
+      "cpuMsPerRequest": 8.236805988023953,
+      "rssMaxMiB": 440.609375,
+      "eventLoopP99WindowMedianMs": 91.652095,
+      "gcMsPerRequest": 0.36709475556533494,
+      "requests": 835
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "large",
+      "delay": 200,
+      "connections": 64,
+      "rps": 117.12861286063224,
+      "rpsRuns": [
+        119.43963900703957,
+        114.82294849361301
+      ],
+      "p50WindowMedianMs": 535.4086624830961,
+      "p95WindowMedianMs": 583.4478535056114,
+      "p99WindowMedianMs": 603.4343259930611,
+      "cpuPctMedian": 77.73827516239697,
+      "cpuMsPerRequest": 6.64515037593985,
+      "rssMaxMiB": 491.46875,
+      "eventLoopP99WindowMedianMs": 305.26668700000005,
+      "gcMsPerRequest": 0.4503028641667282,
+      "requests": 1995
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "large",
+      "delay": 500,
+      "connections": 1,
+      "rps": 1.8849993439857577,
+      "rpsRuns": [
+        1.8832188527415585,
+        1.8867832051506894
+      ],
+      "p50WindowMedianMs": 529.3067234903574,
+      "p95WindowMedianMs": 538.882918998599,
+      "p99WindowMedianMs": 538.882918998599,
+      "cpuPctMedian": 7.394231488371236,
+      "cpuMsPerRequest": 39.30496875,
+      "rssMaxMiB": 434.68359375,
+      "eventLoopP99WindowMedianMs": 38.338559000000004,
+      "gcMsPerRequest": 1.0409395629540086,
+      "requests": 32
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "large",
+      "delay": 500,
+      "connections": 16,
+      "rps": 24.48942660104376,
+      "rpsRuns": [
+        24.7201975358734,
+        24.258630341249024
+      ],
+      "p50WindowMedianMs": 620.0051065087318,
+      "p95WindowMedianMs": 632.1103634983301,
+      "p99WindowMedianMs": 636.2488104999065,
+      "cpuPctMedian": 22.36814618523112,
+      "cpuMsPerRequest": 9.148343601895734,
+      "rssMaxMiB": 440.484375,
+      "eventLoopP99WindowMedianMs": 81.62508700000001,
+      "gcMsPerRequest": 0.34727458839450404,
+      "requests": 422
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "size": "large",
+      "delay": 500,
+      "connections": 64,
+      "rps": 76.46088773612459,
+      "rpsRuns": [
+        76.01382561727495,
+        76.89042785493838
+      ],
+      "p50WindowMedianMs": 818.0168325006962,
+      "p95WindowMedianMs": 897.112221494317,
+      "p99WindowMedianMs": 979.6026744991541,
+      "cpuPctMedian": 51.67523020814967,
+      "cpuMsPerRequest": 6.773000756429651,
+      "rssMaxMiB": 485.62109375,
+      "eventLoopP99WindowMedianMs": 245.95660700000002,
+      "gcMsPerRequest": 0.433417553733048,
+      "requests": 1322
+    }
+  ],
+  "controls": [
+    {
+      "framework": "next",
+      "name": "Next.js",
+      "monitorRps": {
+        "lean": [
+          87.93340761221077,
+          94.19179333757818
+        ],
+        "off": [
+          96.99749499962246,
+          93.37939797662943
+        ]
+      },
+      "clientRps": {
+        "default": [
+          88.73455710199318,
+          78.93775839948988
+        ],
+        "workers8": [
+          81.27608133795786,
+          92.1242260178168
+        ],
+        "noSampling": [
+          92.44276084706792,
+          83.25889582935027
+        ]
+      },
+      "leanVsOffPct": -4.334397886981101,
+      "workers8VsDefaultPct": 3.4161822344732418,
+      "noSamplingVsDefaultPct": 4.788710140323715
+    },
+    {
+      "framework": "nuxt",
+      "name": "Nuxt",
+      "monitorRps": {
+        "lean": [
+          130.1944379027693,
+          117.41115296861678
+        ],
+        "off": [
+          89.10403801045925,
+          113.4241289256828
+        ]
+      },
+      "clientRps": {
+        "default": [
+          104.8793160381784,
+          107.67580207547435
+        ],
+        "workers8": [
+          83.81865216012237,
+          110.47029528757645
+        ],
+        "noSampling": [
+          108.44920184868201,
+          112.97960660192679
+        ]
+      },
+      "leanVsOffPct": 22.257360354946144,
+      "workers8VsDefaultPct": -8.593616012665029,
+      "noSamplingVsDefaultPct": 4.174771426680635
+    },
+    {
+      "framework": "svelte",
+      "name": "SvelteKit",
+      "monitorRps": {
+        "lean": [
+          131.09120640604763,
+          131.60523722762133
+        ],
+        "off": [
+          136.2675845564898,
+          134.32552160637618
+        ]
+      },
+      "clientRps": {
+        "default": [
+          133.21084610200998,
+          123.81698029384023
+        ],
+        "workers8": [
+          131.19615534063482,
+          115.76944965118184
+        ],
+        "noSampling": [
+          131.62886185945638,
+          132.8432039521579
+        ]
+      },
+      "leanVsOffPct": -2.91827927221624,
+      "workers8VsDefaultPct": -3.9148373719414487,
+      "noSamplingVsDefaultPct": 2.8962776210460284
+    },
+    {
+      "framework": "tanstack",
+      "name": "TanStack Start",
+      "monitorRps": {
+        "lean": [
+          122.19666397997338,
+          114.03151539351023
+        ],
+        "off": [
+          120.95081009063371,
+          120.6272401216177
+        ]
+      },
+      "clientRps": {
+        "default": [
+          123.01137952307397,
+          94.93800274154984
+        ],
+        "workers8": [
+          118.86458242576998,
+          103.3002844246151
+        ],
+        "noSampling": [
+          121.96997215653663,
+          123.26748515655986
+        ]
+      },
+      "leanVsOffPct": -2.2145517086785804,
+      "workers8VsDefaultPct": 1.9341576204345623,
+      "noSamplingVsDefaultPct": 12.520372742025398
+    },
+    {
+      "framework": "react-router",
+      "name": "React Router",
+      "monitorRps": {
+        "lean": [
+          93.14542281182692,
+          94.37247739954951
+        ],
+        "off": [
+          95.34614077463497,
+          99.4753897152409
+        ]
+      },
+      "clientRps": {
+        "default": [
+          77.03565069038005,
+          95.17677284779641
+        ],
+        "workers8": [
+          95.4655156537501,
+          96.62737917863149
+        ],
+        "noSampling": [
+          91.99365643883857,
+          98.4708906929243
+        ]
+      },
+      "leanVsOffPct": -3.7488825080752464,
+      "workers8VsDefaultPct": 11.544156272673312,
+      "noSamplingVsDefaultPct": 10.598610262017605
+    },
+    {
+      "framework": "solid",
+      "name": "SolidStart",
+      "monitorRps": {
+        "lean": [
+          168.97150218848606,
+          175.6120994777188
+        ],
+        "off": [
+          174.02922157146315,
+          174.5894163261193
+        ]
+      },
+      "clientRps": {
+        "default": [
+          173.83910183429649,
+          169.7134117660324
+        ],
+        "workers8": [
+          175.92006607842472,
+          161.34365630713245
+        ],
+        "noSampling": [
+          174.5870678353684,
+          175.98753348859455
+        ]
+      },
+      "leanVsOffPct": -1.1574356023280163,
+      "workers8VsDefaultPct": -1.8305181786816394,
+      "noSamplingVsDefaultPct": 2.0439634249927785
+    }
+  ]
+}

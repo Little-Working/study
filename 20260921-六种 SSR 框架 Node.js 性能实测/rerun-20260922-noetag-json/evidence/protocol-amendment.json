@@ -1,0 +1,44 @@
+{
+  "at": "2026-09-22T03:27:50.207562+00:00",
+  "formalWindowsStarted": 0,
+  "controls": {
+    "next": {
+      "referenceRps": 83.83615775074153,
+      "workers8Rps": 86.70015367788733,
+      "noSamplingRps": 87.85082833820908,
+      "noSamplingVsReferencePct": 4.788710140323715
+    },
+    "nuxt": {
+      "referenceRps": 106.27755905682638,
+      "workers8Rps": 97.14447372384942,
+      "noSamplingRps": 110.7144042253044,
+      "noSamplingVsReferencePct": 4.174771426680635
+    },
+    "svelte": {
+      "referenceRps": 128.5139131979251,
+      "workers8Rps": 123.48280249590833,
+      "noSamplingRps": 132.23603290580712,
+      "noSamplingVsReferencePct": 2.8962776210460284
+    },
+    "tanstack": {
+      "referenceRps": 108.9746911323119,
+      "workers8Rps": 111.08243342519253,
+      "noSamplingRps": 122.61872865654824,
+      "noSamplingVsReferencePct": 12.520372742025398
+    },
+    "react-router": {
+      "referenceRps": 86.10621176908823,
+      "workers8Rps": 96.0464474161908,
+      "noSamplingRps": 95.23227356588143,
+      "noSamplingVsReferencePct": 10.598610262017605
+    },
+    "solid": {
+      "referenceRps": 171.77625680016445,
+      "workers8Rps": 168.6318611927786,
+      "noSamplingRps": 175.28730066198148,
+      "noSamplingVsReferencePct": 2.0439634249927785
+    }
+  },
+  "decision": "Before any matrix/focus measurement, use 4 workers with sampleEvery=0 for ALL six frameworks. Retain status, byte-count, response-header checks and one-to-one backend count validation. Full content tested independently. Monitoring controls retain the same 1/128 sampler in both modes. Differences are observations, not proven sampler costs or correction multipliers.",
+  "loadSha256": "02b82b4467dda534ffb14cbba643d853fd955df6609a8beda2a530e0d6ccc8df"
+}

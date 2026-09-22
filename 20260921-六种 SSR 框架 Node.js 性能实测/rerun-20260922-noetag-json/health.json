@@ -1,0 +1,38 @@
+{
+  "windows": 402,
+  "counts": {
+    "client-control": 36,
+    "focus": 18,
+    "matrix": 324,
+    "monitor-control": 24
+  },
+  "exactHtmlBytesVerifiedWindows": 402,
+  "good": 447347,
+  "errors": 0,
+  "sampled": 741,
+  "minWindowRequests": 15,
+  "loadCpuPctMax": 40.302303934827954,
+  "loadWorkerEluPctMax": 9.795814865730208,
+  "backendCpuPctMax": 9.922792333140663,
+  "backendTimerOvershootMeanMsMax": 23.10267608358987,
+  "memorySampleCostMsMax": 36.40706200004206,
+  "throttling": {
+    "app": {
+      "nr_periods": 40523,
+      "nr_throttled": 3,
+      "throttled_usec": 13409
+    },
+    "load": {
+      "nr_periods": 34454,
+      "nr_throttled": 0,
+      "throttled_usec": 0
+    },
+    "backend": {
+      "nr_periods": 32529,
+      "nr_throttled": 0,
+      "throttled_usec": 0
+    }
+  },
+  "firstWindowEnd": "2026-09-22T03:16:51.382Z",
+  "lastWindowEnd": "2026-09-22T04:56:35.385Z"
+}

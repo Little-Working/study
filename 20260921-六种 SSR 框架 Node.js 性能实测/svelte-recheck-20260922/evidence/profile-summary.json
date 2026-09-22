@@ -1,0 +1,2197 @@
+{
+  "method": "Inspector CPU sampled self-time, 1ms default sampling; includes idle/GC; separate diagnostic run, not phase wall duration",
+  "sampledMs": 21360.156,
+  "functions": [
+    {
+      "function": "hash",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/exports.js-CHgpnPP5.js",
+      "line": 206,
+      "selfMs": 15038.103,
+      "pct": 70.40258975636695
+    },
+    {
+      "function": "(idle)",
+      "url": "",
+      "line": 0,
+      "selfMs": 1862.338,
+      "pct": 8.718747185179733
+    },
+    {
+      "function": "(garbage collector)",
+      "url": "",
+      "line": 0,
+      "selfMs": 627.299,
+      "pct": 2.9367716228289718
+    },
+    {
+      "function": "writev",
+      "url": "",
+      "line": 0,
+      "selfMs": 482.451,
+      "pct": 2.258649234584242
+    },
+    {
+      "function": "escape_html",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 4129,
+      "selfMs": 358.744,
+      "pct": 1.6795008425968425
+    },
+    {
+      "function": "",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 4823,
+      "selfMs": 296.731,
+      "pct": 1.389179929210255
+    },
+    {
+      "function": "",
+      "url": "node:internal/deps/undici/undici",
+      "line": 6933,
+      "selfMs": 252.164,
+      "pct": 1.1805344492802394
+    },
+    {
+      "function": "webidl.util.getCopyOfBytesHeldByBufferSource",
+      "url": "node:internal/deps/undici/undici",
+      "line": 5186,
+      "selfMs": 250.139,
+      "pct": 1.1710541814394988
+    },
+    {
+      "function": "",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/shared2.js-CN_njRv6.js",
+      "line": 4,
+      "selfMs": 230.735,
+      "pct": 1.0802121482633367
+    },
+    {
+      "function": "encode",
+      "url": "node:internal/encoding",
+      "line": 355,
+      "selfMs": 178.437,
+      "pct": 0.8353731124435608
+    },
+    {
+      "function": "encodeUtf8String",
+      "url": "",
+      "line": 0,
+      "selfMs": 144.966,
+      "pct": 0.6786748186670547
+    },
+    {
+      "function": "",
+      "url": "file:///bench/apps/svelte/build/server/chunks/entries/pages/_page.svelte.js-CRIeu14f.js",
+      "line": 6,
+      "selfMs": 117.447,
+      "pct": 0.5498414899217028
+    },
+    {
+      "function": "rows",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/shared2.js-CN_njRv6.js",
+      "line": 2,
+      "selfMs": 112.162,
+      "pct": 0.5250991612608072
+    },
+    {
+      "function": "render_response",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 2053,
+      "selfMs": 106.702,
+      "pct": 0.4995375501939218
+    },
+    {
+      "function": "#collect_content",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 5105,
+      "selfMs": 58.687,
+      "pct": 0.2747498660590307
+    },
+    {
+      "function": "(program)",
+      "url": "",
+      "line": 0,
+      "selfMs": 56.827,
+      "pct": 0.26604206448679496
+    },
+    {
+      "function": "runMicrotasks",
+      "url": "",
+      "line": 0,
+      "selfMs": 56.366,
+      "pct": 0.2638838405487301
+    },
+    {
+      "function": "#traverse_components",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 4995,
+      "selfMs": 31.773,
+      "pct": 0.14874891363152964
+    },
+    {
+      "function": "post",
+      "url": "node:inspector",
+      "line": 115,
+      "selfMs": 31.038,
+      "pct": 0.145307927526372
+    },
+    {
+      "function": "#collect_ondestroy",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 5002,
+      "selfMs": 23.159,
+      "pct": 0.1084214928018316
+    },
+    {
+      "function": "",
+      "url": "node:events",
+      "line": 332,
+      "selfMs": 19.537,
+      "pct": 0.09146468780471453
+    },
+    {
+      "function": "writeLatin1String",
+      "url": "",
+      "line": 0,
+      "selfMs": 17.424,
+      "pct": 0.08157243795410483
+    },
+    {
+      "function": "attr",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 4159,
+      "selfMs": 17.175,
+      "pct": 0.08040671613072489
+    },
+    {
+      "function": "push",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 4910,
+      "selfMs": 16.032,
+      "pct": 0.0750556316161736
+    },
+    {
+      "function": "get_node_type",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/utils.js-xqduxv9z.js",
+      "line": 844,
+      "selfMs": 13.666,
+      "pct": 0.06397893348718989
+    },
+    {
+      "function": "walk",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 231,
+      "selfMs": 13.557,
+      "pct": 0.06346863758860188
+    },
+    {
+      "function": "read",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 930,
+      "selfMs": 13.211,
+      "pct": 0.0618487992316161
+    },
+    {
+      "function": "createReadableStreamState",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 1422,
+      "selfMs": 12.744,
+      "pct": 0.05966248561106014
+    },
+    {
+      "function": "parseJSONFromBytes",
+      "url": "node:internal/deps/undici/undici",
+      "line": 4393,
+      "selfMs": 12.209,
+      "pct": 0.05715782225560525
+    },
+    {
+      "function": "stringify",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 389,
+      "selfMs": 12.169,
+      "pct": 0.0569705577056647
+    },
+    {
+      "function": "_Response",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11650,
+      "selfMs": 11.51,
+      "pct": 0.05388537424539409
+    },
+    {
+      "function": "extractBody",
+      "url": "node:internal/deps/undici/undici",
+      "line": 6827,
+      "selfMs": 11.29,
+      "pct": 0.052855419220721046
+    },
+    {
+      "function": "set TextDecoder",
+      "url": "",
+      "line": 0,
+      "selfMs": 11.081,
+      "pct": 0.051876961947281655
+    },
+    {
+      "function": "run",
+      "url": "",
+      "line": 0,
+      "selfMs": 10.911,
+      "pct": 0.05108108761003431
+    },
+    {
+      "function": "makeResponse",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11819,
+      "selfMs": 10.684,
+      "pct": 0.05001836128912167
+    },
+    {
+      "function": "__name",
+      "url": "node:internal/deps/undici/undici",
+      "line": 4,
+      "selfMs": 10.391,
+      "pct": 0.04864664846080712
+    },
+    {
+      "function": "httpNetworkFetch",
+      "url": "node:internal/deps/undici/undici",
+      "line": 13723,
+      "selfMs": 10.351,
+      "pct": 0.04845938391086657
+    },
+    {
+      "function": "createAsyncIterator",
+      "url": "node:internal/streams/readable",
+      "line": 1375,
+      "selfMs": 10.009,
+      "pct": 0.046858272008874845
+    },
+    {
+      "function": "resOnFinish",
+      "url": "node:_http_server",
+      "line": 1096,
+      "selfMs": 9.904,
+      "pct": 0.04636670256528089
+    },
+    {
+      "function": "render_page",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 2624,
+      "selfMs": 9.539,
+      "pct": 0.044657913547073345
+    },
+    {
+      "function": "update",
+      "url": "",
+      "line": 0,
+      "selfMs": 9.515,
+      "pct": 0.044545554817109013
+    },
+    {
+      "function": "_render",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/internal.js-ZiFZrh1J.js",
+      "line": 903,
+      "selfMs": 9.498,
+      "pct": 0.04446596738338428
+    },
+    {
+      "function": "should_prerender_data",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 2513,
+      "selfMs": 8.299,
+      "pct": 0.038852712498916205
+    },
+    {
+      "function": "uneval",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 200,
+      "selfMs": 7.999,
+      "pct": 0.03744822837436206
+    },
+    {
+      "function": "writevGeneric",
+      "url": "node:internal/stream_base_commons",
+      "line": 121,
+      "selfMs": 7.768,
+      "pct": 0.036366775598455366
+    },
+    {
+      "function": "onStreamRead",
+      "url": "node:internal/stream_base_commons",
+      "line": 166,
+      "selfMs": 7.747,
+      "pct": 0.03626846170973658
+    },
+    {
+      "function": "addListener",
+      "url": "node:events",
+      "line": 615,
+      "selfMs": 7.547,
+      "pct": 0.035332138960033815
+    },
+    {
+      "function": "onMessageComplete",
+      "url": "node:internal/deps/undici/undici",
+      "line": 7660,
+      "selfMs": 7.448,
+      "pct": 0.034868659198930944
+    },
+    {
+      "function": "setResponse",
+      "url": "file:///bench/apps/svelte/node_modules/@sveltejs/kit/src/exports/node/index.js",
+      "line": 169,
+      "selfMs": 7.407,
+      "pct": 0.03467671303524188
+    },
+    {
+      "function": "latin1Slice",
+      "url": "",
+      "line": 0,
+      "selfMs": 7.166,
+      "pct": 0.03354844412185005
+    },
+    {
+      "function": "readableByteStreamControllerClose",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 2949,
+      "selfMs": 6.888,
+      "pct": 0.032246955499763204
+    },
+    {
+      "function": "fill",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11130,
+      "selfMs": 6.774,
+      "pct": 0.03171325153243263
+    },
+    {
+      "function": "setupReadableByteStreamController",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 3744,
+      "selfMs": 6.529,
+      "pct": 0.03056625616404674
+    },
+    {
+      "function": "internal_respond",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 3366,
+      "selfMs": 6.524,
+      "pct": 0.03054284809530417
+    },
+    {
+      "function": "_storeHeader",
+      "url": "node:_http_outgoing",
+      "line": 438,
+      "selfMs": 6.426,
+      "pct": 0.030084049947949817
+    },
+    {
+      "function": "memoryUsage",
+      "url": "",
+      "line": 0,
+      "selfMs": 6.38,
+      "pct": 0.029868695715518184
+    },
+    {
+      "function": "clearBuffer",
+      "url": "node:internal/streams/writable",
+      "line": 746,
+      "selfMs": 6.266,
+      "pct": 0.029334991748187607
+    },
+    {
+      "function": "",
+      "url": "node:internal/deps/undici/undici",
+      "line": 5128,
+      "selfMs": 6.256,
+      "pct": 0.029288175610702467
+    },
+    {
+      "function": "onHeaders",
+      "url": "node:internal/deps/undici/undici",
+      "line": 3068,
+      "selfMs": 6.205,
+      "pct": 0.029049413309528264
+    },
+    {
+      "function": "setContext",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 4395,
+      "selfMs": 6.197,
+      "pct": 0.029011960399540154
+    },
+    {
+      "function": "refresh",
+      "url": "node:internal/deps/undici/undici",
+      "line": 826,
+      "selfMs": 6.056,
+      "pct": 0.028351852860999706
+    },
+    {
+      "function": "",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 2387,
+      "selfMs": 6.045,
+      "pct": 0.028300355109766053
+    },
+    {
+      "function": "headerValueNormalize",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11122,
+      "selfMs": 5.952,
+      "pct": 0.027864965031154265
+    },
+    {
+      "function": "",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/utils.js-xqduxv9z.js",
+      "line": 611,
+      "selfMs": 5.951,
+      "pct": 0.027860283417405752
+    },
+    {
+      "function": "onHeaderValue",
+      "url": "node:internal/deps/undici/undici",
+      "line": 7475,
+      "selfMs": 5.909,
+      "pct": 0.02766365563996817
+    },
+    {
+      "function": "_write",
+      "url": "node:internal/streams/writable",
+      "line": 452,
+      "selfMs": 5.863,
+      "pct": 0.027448301407536537
+    },
+    {
+      "function": "",
+      "url": "node:internal/deps/undici/undici",
+      "line": 13415,
+      "selfMs": 5.833,
+      "pct": 0.027307852995081122
+    },
+    {
+      "function": "Client.<computed>",
+      "url": "node:internal/deps/undici/undici",
+      "line": 9401,
+      "selfMs": 5.823,
+      "pct": 0.027261036857595983
+    },
+    {
+      "function": "fromInnerResponse",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11940,
+      "selfMs": 5.819,
+      "pct": 0.02724231040260193
+    },
+    {
+      "function": "generate_nonce",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 1390,
+      "selfMs": 5.598,
+      "pct": 0.026207673764180373
+    },
+    {
+      "function": "#render",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 5041,
+      "selfMs": 5.545,
+      "pct": 0.025959548235509142
+    },
+    {
+      "function": "make_trackable",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/exports.js-CHgpnPP5.js",
+      "line": 42,
+      "selfMs": 5.436,
+      "pct": 0.025449252336921135
+    },
+    {
+      "function": "processTicksAndRejections",
+      "url": "node:internal/process/task_queues",
+      "line": 72,
+      "selfMs": 5.402,
+      "pct": 0.025290077469471664
+    },
+    {
+      "function": "readableByteStreamControllerEnqueue",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 3247,
+      "selfMs": 5.389,
+      "pct": 0.025229216490740985
+    },
+    {
+      "function": "ArrayBufferViewGetBuffer",
+      "url": "node:internal/webstreams/util",
+      "line": 112,
+      "selfMs": 5.381,
+      "pct": 0.025191763580752875
+    },
+    {
+      "function": "utf8Slice",
+      "url": "",
+      "line": 0,
+      "selfMs": 5.314,
+      "pct": 0.02487809545960245
+    },
+    {
+      "function": "",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 575,
+      "selfMs": 5.306,
+      "pct": 0.02484064254961434
+    },
+    {
+      "function": "wasm-function[20]",
+      "url": "wasm://wasm/00034eea",
+      "line": 1,
+      "selfMs": 5.251,
+      "pct": 0.024583153793446076
+    },
+    {
+      "function": "stringify_primitive$1",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 860,
+      "selfMs": 5.193,
+      "pct": 0.024311620196032276
+    },
+    {
+      "function": "mainFetch",
+      "url": "node:internal/deps/undici/undici",
+      "line": 13215,
+      "selfMs": 5.064,
+      "pct": 0.023707692022473994
+    },
+    {
+      "function": "serialize_uses",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/utils.js-xqduxv9z.js",
+      "line": 810,
+      "selfMs": 4.989,
+      "pct": 0.023356570991335455
+    },
+    {
+      "function": "",
+      "url": "node:internal/validators",
+      "line": 253,
+      "selfMs": 4.939,
+      "pct": 0.023122490303909764
+    },
+    {
+      "function": "override",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/internal2.js-BlXt2rfE.js",
+      "line": 12,
+      "selfMs": 4.919,
+      "pct": 0.02302885802893949
+    },
+    {
+      "function": "fullyReadBody",
+      "url": "node:internal/deps/undici/undici",
+      "line": 5936,
+      "selfMs": 4.906,
+      "pct": 0.02296799705020881
+    },
+    {
+      "function": "setupReadableByteStreamControllerFromSource",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 3801,
+      "selfMs": 4.903,
+      "pct": 0.022953952208963267
+    },
+    {
+      "function": "end",
+      "url": "node:_http_outgoing",
+      "line": 1143,
+      "selfMs": 4.884,
+      "pct": 0.022865001547741504
+    },
+    {
+      "function": "readableStreamReaderGenericCancel",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 2483,
+      "selfMs": 4.748,
+      "pct": 0.022228302077943626
+    },
+    {
+      "function": "search",
+      "url": "node:internal/deps/undici/undici",
+      "line": 1155,
+      "selfMs": 4.741,
+      "pct": 0.02219553078170403
+    },
+    {
+      "function": "queueMicrotask",
+      "url": "node:internal/process/task_queues",
+      "line": 160,
+      "selfMs": 4.694,
+      "pct": 0.02197549493552388
+    },
+    {
+      "function": "compact",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 405,
+      "selfMs": 4.663,
+      "pct": 0.02183036490931995
+    },
+    {
+      "function": "children",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/internal.js-ZiFZrh1J.js",
+      "line": 1099,
+      "selfMs": 4.66,
+      "pct": 0.02181632006807441
+    },
+    {
+      "function": "_Headers",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11391,
+      "selfMs": 4.601,
+      "pct": 0.021540104856912094
+    },
+    {
+      "function": "_Request",
+      "url": "node:internal/deps/undici/undici",
+      "line": 12090,
+      "selfMs": 4.579,
+      "pct": 0.02143710935444479
+    },
+    {
+      "function": "_addHeaderLine",
+      "url": "node:_http_incoming",
+      "line": 446,
+      "selfMs": 4.539,
+      "pct": 0.021249844804504238
+    },
+    {
+      "function": "onHeaders",
+      "url": "node:internal/deps/undici/undici",
+      "line": 13918,
+      "selfMs": 4.538,
+      "pct": 0.021245163190755725
+    },
+    {
+      "function": "write",
+      "url": "node:_http_outgoing",
+      "line": 897,
+      "selfMs": 4.537,
+      "pct": 0.021240481577007208
+    },
+    {
+      "function": "markResourceTiming",
+      "url": "node:internal/perf/resource_timing",
+      "line": 234,
+      "selfMs": 4.406,
+      "pct": 0.0206271901759519
+    },
+    {
+      "function": "",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 2683,
+      "selfMs": 4.349,
+      "pct": 0.020360338192286612
+    },
+    {
+      "function": "onwrite",
+      "url": "node:internal/streams/writable",
+      "line": 617,
+      "selfMs": 4.291,
+      "pct": 0.02008880459487281
+    },
+    {
+      "function": "httpNetworkOrCacheFetch",
+      "url": "node:internal/deps/undici/undici",
+      "line": 13575,
+      "selfMs": 4.215,
+      "pct": 0.01973300194998576
+    },
+    {
+      "function": "handle",
+      "url": "file:///bench/apps/svelte/build/server/chunks/handler-DKUOYBdk.js",
+      "line": 1135,
+      "selfMs": 4.185,
+      "pct": 0.019592553537530345
+    },
+    {
+      "function": "",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 2713,
+      "selfMs": 4.166,
+      "pct": 0.01950360287630858
+    },
+    {
+      "function": "decode",
+      "url": "node:internal/encoding",
+      "line": 482,
+      "selfMs": 4.163,
+      "pct": 0.01948955803506304
+    },
+    {
+      "function": "SSRState",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 5265,
+      "selfMs": 4.161,
+      "pct": 0.019480194807566013
+    },
+    {
+      "function": "ReadableStream",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 248,
+      "selfMs": 4.152,
+      "pct": 0.019438060283829387
+    },
+    {
+      "function": "readableAddChunkPushByteMode",
+      "url": "node:internal/streams/readable",
+      "line": 470,
+      "selfMs": 4.136,
+      "pct": 0.019363154463853168
+    },
+    {
+      "function": "Socket._writeGeneric",
+      "url": "node:net",
+      "line": 1231,
+      "selfMs": 4.093,
+      "pct": 0.019161845072667074
+    },
+    {
+      "function": "write_",
+      "url": "node:_http_outgoing",
+      "line": 941,
+      "selfMs": 4.088,
+      "pct": 0.019138437003924504
+    },
+    {
+      "function": "replacer",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 768,
+      "selfMs": 4.075,
+      "pct": 0.019077576025193825
+    },
+    {
+      "function": "socketOnDrain",
+      "url": "node:_http_server",
+      "line": 876,
+      "selfMs": 4.07,
+      "pct": 0.019054167956451255
+    },
+    {
+      "function": "setHeader",
+      "url": "node:_http_outgoing",
+      "line": 682,
+      "selfMs": 4.065,
+      "pct": 0.019030759887708686
+    },
+    {
+      "function": "consumeBody",
+      "url": "node:internal/deps/undici/undici",
+      "line": 7034,
+      "selfMs": 4.062,
+      "pct": 0.019016715046463142
+    },
+    {
+      "function": "collect_remote_data",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 1896,
+      "selfMs": 4.015,
+      "pct": 0.018796679200282995
+    },
+    {
+      "function": "initAsyncResource",
+      "url": "node:internal/timers",
+      "line": 203,
+      "selfMs": 4.009,
+      "pct": 0.018768589517791912
+    },
+    {
+      "function": "",
+      "url": "node:internal/validators",
+      "line": 471,
+      "selfMs": 4.003,
+      "pct": 0.01874049983530083
+    },
+    {
+      "function": "resume_",
+      "url": "node:internal/streams/readable",
+      "line": 1270,
+      "selfMs": 3.981,
+      "pct": 0.018637504332833524
+    },
+    {
+      "function": "set",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11464,
+      "selfMs": 3.972,
+      "pct": 0.0185953698090969
+    },
+    {
+      "function": "#close_render",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 5187,
+      "selfMs": 3.966,
+      "pct": 0.018567280126605818
+    },
+    {
+      "function": "",
+      "url": "node:internal/deps/undici/undici",
+      "line": 4907,
+      "selfMs": 3.966,
+      "pct": 0.018567280126605818
+    },
+    {
+      "function": "_HeadersList",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11216,
+      "selfMs": 3.965,
+      "pct": 0.018562598512857305
+    },
+    {
+      "function": "readableByteStreamControllerCallPullIfNeeded",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 3604,
+      "selfMs": 3.963,
+      "pct": 0.018553235285360275
+    },
+    {
+      "function": "derived",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 5395,
+      "selfMs": 3.802,
+      "pct": 0.01779949547184955
+    },
+    {
+      "function": "load_server_data",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 922,
+      "selfMs": 3.757,
+      "pct": 0.017588822853166427
+    },
+    {
+      "function": "",
+      "url": "node:internal/abort_controller",
+      "line": 404,
+      "selfMs": 3.749,
+      "pct": 0.017551369943178317
+    },
+    {
+      "function": "get",
+      "url": "node:internal/bootstrap/node",
+      "line": 97,
+      "selfMs": 3.682,
+      "pct": 0.01723770182202789
+    },
+    {
+      "function": "writeOrBuffer",
+      "url": "node:internal/streams/writable",
+      "line": 550,
+      "selfMs": 3.652,
+      "pct": 0.017097253409572476
+    },
+    {
+      "function": "afterWrite",
+      "url": "node:internal/streams/writable",
+      "line": 701,
+      "selfMs": 3.62,
+      "pct": 0.016947441769620035
+    },
+    {
+      "function": "get",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11295,
+      "selfMs": 3.51,
+      "pct": 0.016432464257283515
+    },
+    {
+      "function": "Event",
+      "url": "node:internal/event_target",
+      "line": 115,
+      "selfMs": 3.453,
+      "pct": 0.016165612273618228
+    },
+    {
+      "function": "get_global_name",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/utils.js-xqduxv9z.js",
+      "line": 730,
+      "selfMs": 3.452,
+      "pct": 0.01616093065986971
+    },
+    {
+      "function": "FastBuffer",
+      "url": "node:internal/buffer",
+      "line": 960,
+      "selfMs": 3.446,
+      "pct": 0.01613284097737863
+    },
+    {
+      "function": "busy",
+      "url": "node:internal/deps/undici/undici",
+      "line": 7785,
+      "selfMs": 3.444,
+      "pct": 0.016123477749881602
+    },
+    {
+      "function": "component",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 4821,
+      "selfMs": 3.441,
+      "pct": 0.016109432908636062
+    },
+    {
+      "function": "fetchParams.controller.resume",
+      "url": "node:internal/deps/undici/undici",
+      "line": 13826,
+      "selfMs": 3.421,
+      "pct": 0.016015800633665783
+    },
+    {
+      "function": "toString",
+      "url": "node:buffer",
+      "line": 918,
+      "selfMs": 3.361,
+      "pct": 0.015734903808754953
+    },
+    {
+      "function": "_writeRaw",
+      "url": "node:_http_outgoing",
+      "line": 408,
+      "selfMs": 3.27,
+      "pct": 0.015308876957640197
+    },
+    {
+      "function": "readableStreamDefaultReaderRead",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 2613,
+      "selfMs": 3.249,
+      "pct": 0.015210563068921407
+    },
+    {
+      "function": "Readable.resume",
+      "url": "node:internal/streams/readable",
+      "line": 1243,
+      "selfMs": 3.204,
+      "pct": 0.014999890450238284
+    },
+    {
+      "function": "Writable.uncork",
+      "url": "node:internal/streams/writable",
+      "line": 522,
+      "selfMs": 3.16,
+      "pct": 0.014793899445303677
+    },
+    {
+      "function": "next",
+      "url": "file:///bench/apps/svelte/node_modules/@sveltejs/kit/src/exports/node/index.js",
+      "line": 216,
+      "selfMs": 3.138,
+      "pct": 0.014690903942836373
+    },
+    {
+      "function": "",
+      "url": "node:internal/process/task_queues",
+      "line": 148,
+      "selfMs": 3.135,
+      "pct": 0.014676859101590832
+    },
+    {
+      "function": "parserOnIncoming",
+      "url": "node:_http_server",
+      "line": 1167,
+      "selfMs": 3.105,
+      "pct": 0.014536410689135417
+    },
+    {
+      "function": "",
+      "url": "node:internal/deps/undici/undici",
+      "line": 7214,
+      "selfMs": 3.099,
+      "pct": 0.014508321006644334
+    },
+    {
+      "function": "getRequest",
+      "url": "file:///bench/apps/svelte/node_modules/@sveltejs/kit/src/exports/node/index.js",
+      "line": 121,
+      "selfMs": 3.099,
+      "pct": 0.014508321006644334
+    },
+    {
+      "function": "Client",
+      "url": "node:internal/deps/undici/undici",
+      "line": 9417,
+      "selfMs": 3.069,
+      "pct": 0.014367872594188919
+    },
+    {
+      "function": "Readable.removeListener",
+      "url": "node:internal/streams/readable",
+      "line": 1175,
+      "selfMs": 3.041,
+      "pct": 0.014236787409230532
+    },
+    {
+      "function": "get pathname",
+      "url": "node:internal/url",
+      "line": 1137,
+      "selfMs": 3.039,
+      "pct": 0.014227424181733504
+    },
+    {
+      "function": "",
+      "url": "node:internal/deps/undici/undici",
+      "line": 7184,
+      "selfMs": 3.029,
+      "pct": 0.014180608044248366
+    },
+    {
+      "function": "enqueue",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 1282,
+      "selfMs": 3.019,
+      "pct": 0.014133791906763228
+    },
+    {
+      "function": "",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 2095,
+      "selfMs": 3.018,
+      "pct": 0.014129110293014713
+    },
+    {
+      "function": "",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 2231,
+      "selfMs": 3.014,
+      "pct": 0.014110383838020659
+    },
+    {
+      "function": "finalizeAndReportTiming",
+      "url": "node:internal/deps/undici/undici",
+      "line": 13088,
+      "selfMs": 3.009,
+      "pct": 0.014086975769278089
+    },
+    {
+      "function": "get_data",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 827,
+      "selfMs": 3.005,
+      "pct": 0.014068249314284034
+    },
+    {
+      "function": "isErrored",
+      "url": "node:internal/streams/utils",
+      "line": 306,
+      "selfMs": 3.005,
+      "pct": 0.014068249314284034
+    },
+    {
+      "function": "webidl.converters.HeadersInit",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11543,
+      "selfMs": 3.002,
+      "pct": 0.014054204473038493
+    },
+    {
+      "function": "",
+      "url": "node:internal/util",
+      "line": 578,
+      "selfMs": 3.002,
+      "pct": 0.014054204473038493
+    },
+    {
+      "function": "toSortedArray",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11331,
+      "selfMs": 2.999,
+      "pct": 0.014040159631792951
+    },
+    {
+      "function": "prefixed",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 2186,
+      "selfMs": 2.997,
+      "pct": 0.014030796404295923
+    },
+    {
+      "function": "get body",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11710,
+      "selfMs": 2.994,
+      "pct": 0.014016751563050382
+    },
+    {
+      "function": "add_script",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 1580,
+      "selfMs": 2.994,
+      "pct": 0.014016751563050382
+    },
+    {
+      "function": "AsyncResource",
+      "url": "node:async_hooks",
+      "line": 181,
+      "selfMs": 2.967,
+      "pct": 0.01389034799184051
+    },
+    {
+      "function": "reset",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/internal2.js-BlXt2rfE.js",
+      "line": 16,
+      "selfMs": 2.959,
+      "pct": 0.013852895081852399
+    },
+    {
+      "function": "#open_render",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 5166,
+      "selfMs": 2.908,
+      "pct": 0.013614132780678193
+    },
+    {
+      "function": "onHeaderField",
+      "url": "node:internal/deps/undici/undici",
+      "line": 7461,
+      "selfMs": 2.907,
+      "pct": 0.01360945116692968
+    },
+    {
+      "function": "start",
+      "url": "node:internal/deps/undici/undici",
+      "line": 6838,
+      "selfMs": 2.889,
+      "pct": 0.013525182119456431
+    },
+    {
+      "function": "_destroy",
+      "url": "node:internal/streams/destroy",
+      "line": 90,
+      "selfMs": 2.888,
+      "pct": 0.013520500505707918
+    },
+    {
+      "function": "get href",
+      "url": "node:internal/url",
+      "line": 1003,
+      "selfMs": 2.861,
+      "pct": 0.013394096934498044
+    },
+    {
+      "function": "writeH1",
+      "url": "node:internal/deps/undici/undici",
+      "line": 7944,
+      "selfMs": 2.857,
+      "pct": 0.013375370479503988
+    },
+    {
+      "function": "get_or_init_context_map",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 2060,
+      "selfMs": 2.846,
+      "pct": 0.013323872728270337
+    },
+    {
+      "function": "RandomBytesJob",
+      "url": "",
+      "line": 0,
+      "selfMs": 2.833,
+      "pct": 0.013263011749539658
+    },
+    {
+      "function": "",
+      "url": "node:internal/deps/undici/undici",
+      "line": 5085,
+      "selfMs": 2.831,
+      "pct": 0.01325364852204263
+    },
+    {
+      "function": "insert",
+      "url": "node:internal/timers",
+      "line": 426,
+      "selfMs": 2.827,
+      "pct": 0.013234922067048575
+    },
+    {
+      "function": "next",
+      "url": "node:internal/streams/readable",
+      "line": 1378,
+      "selfMs": 2.826,
+      "pct": 0.01323024045330006
+    },
+    {
+      "function": "Client",
+      "url": "node:internal/deps/undici/undici",
+      "line": 9426,
+      "selfMs": 2.825,
+      "pct": 0.013225558839551546
+    },
+    {
+      "function": "Readable",
+      "url": "node:internal/streams/readable",
+      "line": 327,
+      "selfMs": 2.791,
+      "pct": 0.013066383972102077
+    },
+    {
+      "function": "text",
+      "url": "file:///bench/apps/svelte/node_modules/@sveltejs/kit/src/exports/index.js",
+      "line": 166,
+      "selfMs": 2.782,
+      "pct": 0.013024249448365452
+    },
+    {
+      "function": "BaseProvider",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 1448,
+      "selfMs": 2.778,
+      "pct": 0.013005522993371398
+    },
+    {
+      "function": "get_type",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 65,
+      "selfMs": 2.749,
+      "pct": 0.012869756194664496
+    },
+    {
+      "function": "",
+      "url": "node:internal/deps/undici/undici",
+      "line": 13464,
+      "selfMs": 2.749,
+      "pct": 0.012869756194664496
+    },
+    {
+      "function": "get startTime",
+      "url": "node:internal/perf/performance_entry",
+      "line": 61,
+      "selfMs": 2.71,
+      "pct": 0.012687173258472456
+    },
+    {
+      "function": "setImmediate",
+      "url": "node:timers",
+      "line": 215,
+      "selfMs": 2.708,
+      "pct": 0.01267781003097543
+    },
+    {
+      "function": "checkInvalidHeaderChar",
+      "url": "node:_http_common",
+      "line": 281,
+      "selfMs": 2.663,
+      "pct": 0.012467137412292308
+    },
+    {
+      "function": "markTransferMode",
+      "url": "node:internal/worker/js_transferable",
+      "line": 91,
+      "selfMs": 2.64,
+      "pct": 0.012359460296076489
+    },
+    {
+      "function": "EventEmitter",
+      "url": "node:events",
+      "line": 209,
+      "selfMs": 2.632,
+      "pct": 0.01232200738608838
+    },
+    {
+      "function": "ssr",
+      "url": "file:///bench/apps/svelte/build/server/chunks/handler-DKUOYBdk.js",
+      "line": 1055,
+      "selfMs": 2.63,
+      "pct": 0.012312644158591351
+    },
+    {
+      "function": "URLSearchParams",
+      "url": "node:internal/url",
+      "line": 381,
+      "selfMs": 2.628,
+      "pct": 0.012303280931094323
+    },
+    {
+      "function": "slowCases",
+      "url": "node:internal/util",
+      "line": 263,
+      "selfMs": 2.607,
+      "pct": 0.012204967042375532
+    },
+    {
+      "function": "",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 4978,
+      "selfMs": 2.517,
+      "pct": 0.01178362180500929
+    },
+    {
+      "function": "enqueueMicrotask",
+      "url": "",
+      "line": 0,
+      "selfMs": 2.514,
+      "pct": 0.011769576963763748
+    },
+    {
+      "function": "onHeadersComplete",
+      "url": "node:internal/deps/undici/undici",
+      "line": 7547,
+      "selfMs": 2.493,
+      "pct": 0.011671263075044958
+    },
+    {
+      "function": "appendHeader",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11156,
+      "selfMs": 2.479,
+      "pct": 0.011605720482565763
+    },
+    {
+      "function": "next",
+      "url": "node:internal/deps/undici/undici",
+      "line": 5826,
+      "selfMs": 2.473,
+      "pct": 0.01157763080007468
+    },
+    {
+      "function": "onFinish",
+      "url": "node:_http_outgoing",
+      "line": 1128,
+      "selfMs": 2.431,
+      "pct": 0.011381003022637101
+    },
+    {
+      "function": "Readable.read",
+      "url": "node:internal/streams/readable",
+      "line": 656,
+      "selfMs": 2.326,
+      "pct": 0.010889433579043149
+    },
+    {
+      "function": "emitReadable_",
+      "url": "node:internal/streams/readable",
+      "line": 841,
+      "selfMs": 2.317,
+      "pct": 0.010847299055306524
+    },
+    {
+      "function": "ensure_array_like",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 5375,
+      "selfMs": 2.247,
+      "pct": 0.010519586092910557
+    },
+    {
+      "function": "onclose",
+      "url": "node:internal/streams/end-of-stream",
+      "line": 259,
+      "selfMs": 2.237,
+      "pct": 0.01047276995542542
+    },
+    {
+      "function": "bufferToLowerCasedHeaderName",
+      "url": "node:internal/deps/undici/undici",
+      "line": 1458,
+      "selfMs": 2.2,
+      "pct": 0.010299550246730408
+    },
+    {
+      "function": "connectionListenerInternal",
+      "url": "node:_http_server",
+      "line": 772,
+      "selfMs": 2.174,
+      "pct": 0.010177828289269048
+    },
+    {
+      "function": "resolve",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 3675,
+      "selfMs": 2.163,
+      "pct": 0.010126330538035397
+    },
+    {
+      "function": "parse",
+      "url": "",
+      "line": 0,
+      "selfMs": 2.151,
+      "pct": 0.010070151173053231
+    },
+    {
+      "function": "isValidHTTPToken",
+      "url": "node:internal/deps/undici/undici",
+      "line": 1896,
+      "selfMs": 2.138,
+      "pct": 0.010009290194322552
+    },
+    {
+      "function": "get",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/internal.js-ZiFZrh1J.js",
+      "line": 915,
+      "selfMs": 2.137,
+      "pct": 0.010004608580574037
+    },
+    {
+      "function": "getTimerDuration",
+      "url": "node:internal/timers",
+      "line": 490,
+      "selfMs": 2.123,
+      "pct": 0.009939065988094844
+    },
+    {
+      "function": "Client",
+      "url": "node:internal/deps/undici/undici",
+      "line": 9435,
+      "selfMs": 2.119,
+      "pct": 0.009920339533100788
+    },
+    {
+      "function": "handler",
+      "url": "file:///bench/apps/svelte/build/server/chunks/handler-DKUOYBdk.js",
+      "line": 863,
+      "selfMs": 2.108,
+      "pct": 0.009868841781867137
+    },
+    {
+      "function": "",
+      "url": "",
+      "line": 0,
+      "selfMs": 2.084,
+      "pct": 0.009756483051902805
+    },
+    {
+      "function": "fetching",
+      "url": "node:internal/deps/undici/undici",
+      "line": 13146,
+      "selfMs": 2.06,
+      "pct": 0.009644124321938473
+    },
+    {
+      "function": "wrapper",
+      "url": "node:events",
+      "line": 635,
+      "selfMs": 2.034,
+      "pct": 0.009522402364477113
+    },
+    {
+      "function": "finalizeResponse",
+      "url": "node:internal/deps/undici/undici",
+      "line": 13406,
+      "selfMs": 1.948,
+      "pct": 0.009119783582104924
+    },
+    {
+      "function": "_Response",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11608,
+      "selfMs": 1.905,
+      "pct": 0.00891847419091883
+    },
+    {
+      "function": "getHighWaterMark",
+      "url": "node:internal/streams/state",
+      "line": 33,
+      "selfMs": 1.872,
+      "pct": 0.008763980937217874
+    },
+    {
+      "function": "getPipelining",
+      "url": "node:internal/deps/undici/undici",
+      "line": 9231,
+      "selfMs": 1.791,
+      "pct": 0.008384770223588255
+    },
+    {
+      "function": "readFileUtf8",
+      "url": "",
+      "line": 0,
+      "selfMs": 1.763,
+      "pct": 0.008253685038629867
+    },
+    {
+      "function": "load_data",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 1017,
+      "selfMs": 1.754,
+      "pct": 0.008211550514893244
+    },
+    {
+      "function": "execute",
+      "url": "node:internal/deps/undici/undici",
+      "line": 7347,
+      "selfMs": 1.752,
+      "pct": 0.008202187287396216
+    },
+    {
+      "function": "fetch",
+      "url": "node:internal/deps/undici/undici",
+      "line": 17856,
+      "selfMs": 1.749,
+      "pct": 0.008188142446150674
+    },
+    {
+      "function": "",
+      "url": "node:internal/deps/undici/undici",
+      "line": 7203,
+      "selfMs": 1.72,
+      "pct": 0.008052375647443773
+    },
+    {
+      "function": "get hostname",
+      "url": "node:internal/url",
+      "line": 1107,
+      "selfMs": 1.689,
+      "pct": 0.007907245621239845
+    },
+    {
+      "function": "dispatch",
+      "url": "",
+      "line": 0,
+      "selfMs": 1.58,
+      "pct": 0.007396949722651838
+    },
+    {
+      "function": "onComplete",
+      "url": "node:internal/deps/undici/undici",
+      "line": 3098,
+      "selfMs": 1.509,
+      "pct": 0.007064555146507357
+    },
+    {
+      "function": "summary",
+      "url": "file:///bench/metrics.cjs",
+      "line": 14,
+      "selfMs": 1.508,
+      "pct": 0.0070598735327588435
+    },
+    {
+      "function": "record_span",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 504,
+      "selfMs": 1.407,
+      "pct": 0.006587030544158947
+    },
+    {
+      "function": "onConnect",
+      "url": "node:internal/deps/undici/undici",
+      "line": 3055,
+      "selfMs": 1.407,
+      "pct": 0.006587030544158947
+    },
+    {
+      "function": "get buffer",
+      "url": "",
+      "line": 0,
+      "selfMs": 1.406,
+      "pct": 0.006582348930410434
+    },
+    {
+      "function": "append",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11245,
+      "selfMs": 1.399,
+      "pct": 0.0065495776341708365
+    },
+    {
+      "function": "setStreamTimeout",
+      "url": "node:internal/stream_base_commons",
+      "line": 240,
+      "selfMs": 1.326,
+      "pct": 0.0062078198305293274
+    },
+    {
+      "function": "webidl.argumentLengthCheck",
+      "url": "node:internal/deps/undici/undici",
+      "line": 4892,
+      "selfMs": 1.22,
+      "pct": 0.005711568773186863
+    },
+    {
+      "function": "readableByteStreamControllerShouldCallPull",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 3039,
+      "selfMs": 1.207,
+      "pct": 0.005650707794456183
+    },
+    {
+      "function": "build",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 2407,
+      "selfMs": 1.187,
+      "pct": 0.005557075519485906
+    },
+    {
+      "function": "#collect_on_destroy",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 4988,
+      "selfMs": 1.168,
+      "pct": 0.005468124858264143
+    },
+    {
+      "function": "serializeParams",
+      "url": "node:internal/url",
+      "line": 1396,
+      "selfMs": 1.163,
+      "pct": 0.0054447167895215745
+    },
+    {
+      "function": "allocate",
+      "url": "node:buffer",
+      "line": 481,
+      "selfMs": 1.157,
+      "pct": 0.0054166271070304915
+    },
+    {
+      "function": "get",
+      "url": "node:internal/streams/readable",
+      "line": 190,
+      "selfMs": 1.144,
+      "pct": 0.005355766128299812
+    },
+    {
+      "function": "endReadableNT",
+      "url": "node:internal/streams/readable",
+      "line": 1752,
+      "selfMs": 1.135,
+      "pct": 0.005313631604563188
+    },
+    {
+      "function": "URL",
+      "url": "node:internal/url",
+      "line": 855,
+      "selfMs": 1.127,
+      "pct": 0.005276178694575077
+    },
+    {
+      "function": "wrappedFn",
+      "url": "node:internal/errors",
+      "line": 538,
+      "selfMs": 1.121,
+      "pct": 0.0052480890120839944
+    },
+    {
+      "function": "#run_on_destroy",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 5011,
+      "selfMs": 1.089,
+      "pct": 0.005098277372131552
+    },
+    {
+      "function": "onconnection",
+      "url": "node:net",
+      "line": 2695,
+      "selfMs": 1.088,
+      "pct": 0.005093595758383038
+    },
+    {
+      "function": "observerCallback",
+      "url": "node:internal/perf/observe",
+      "line": 533,
+      "selfMs": 1.088,
+      "pct": 0.005093595758383038
+    },
+    {
+      "function": "get protocol",
+      "url": "node:internal/url",
+      "line": 1048,
+      "selfMs": 1.084,
+      "pct": 0.005074869303388982
+    },
+    {
+      "function": "CspReportOnlyProvider",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 1545,
+      "selfMs": 1.08,
+      "pct": 0.005056142848394928
+    },
+    {
+      "function": "is_action_request",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 581,
+      "selfMs": 1.08,
+      "pct": 0.005056142848394928
+    },
+    {
+      "function": "is_form_content_type",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/utils.js-xqduxv9z.js",
+      "line": 669,
+      "selfMs": 1.078,
+      "pct": 0.0050467796208978994
+    },
+    {
+      "function": "",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 312,
+      "selfMs": 1.077,
+      "pct": 0.005042098007149386
+    },
+    {
+      "function": "onComplete",
+      "url": "node:internal/deps/undici/undici",
+      "line": 13999,
+      "selfMs": 1.075,
+      "pct": 0.005032734779652358
+    },
+    {
+      "function": "readFileSync",
+      "url": "node:fs",
+      "line": 473,
+      "selfMs": 1.074,
+      "pct": 0.005028053165903845
+    },
+    {
+      "function": "cancel",
+      "url": "file:///bench/apps/svelte/node_modules/@sveltejs/kit/src/exports/node/index.js",
+      "line": 202,
+      "selfMs": 1.073,
+      "pct": 0.005023371552155331
+    },
+    {
+      "function": "_addListener",
+      "url": "node:events",
+      "line": 545,
+      "selfMs": 1.073,
+      "pct": 0.005023371552155331
+    },
+    {
+      "function": "assert",
+      "url": "node:internal/assert",
+      "line": 8,
+      "selfMs": 1.073,
+      "pct": 0.005023371552155331
+    },
+    {
+      "function": "app",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/internal.js-ZiFZrh1J.js",
+      "line": 1176,
+      "selfMs": 1.073,
+      "pct": 0.005023371552155331
+    },
+    {
+      "function": "Head",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 2403,
+      "selfMs": 1.071,
+      "pct": 0.005014008324658303
+    },
+    {
+      "function": "#create",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 5029,
+      "selfMs": 1.07,
+      "pct": 0.005009326710909789
+    },
+    {
+      "function": "webidl.converters.ByteString",
+      "url": "node:internal/deps/undici/undici",
+      "line": 5219,
+      "selfMs": 1.069,
+      "pct": 0.005004645097161276
+    },
+    {
+      "function": "randomFillSync",
+      "url": "node:internal/crypto/random",
+      "line": 120,
+      "selfMs": 1.068,
+      "pct": 0.004999963483412762
+    },
+    {
+      "function": "Agent",
+      "url": "node:internal/deps/undici/undici",
+      "line": 9872,
+      "selfMs": 1.066,
+      "pct": 0.004990600255915734
+    },
+    {
+      "function": "fetch2",
+      "url": "node:internal/deps/undici/undici",
+      "line": 13027,
+      "selfMs": 1.066,
+      "pct": 0.004990600255915734
+    },
+    {
+      "function": "readAllBytes",
+      "url": "node:internal/deps/undici/undici",
+      "line": 5958,
+      "selfMs": 1.066,
+      "pct": 0.004990600255915734
+    },
+    {
+      "function": "",
+      "url": "node:internal/deps/undici/undici",
+      "line": 7193,
+      "selfMs": 1.065,
+      "pct": 0.00498591864216722
+    },
+    {
+      "function": "",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 2681,
+      "selfMs": 1.064,
+      "pct": 0.004981237028418706
+    },
+    {
+      "function": "filterResponse",
+      "url": "node:internal/deps/undici/undici",
+      "line": 11871,
+      "selfMs": 1.063,
+      "pct": 0.004976555414670193
+    },
+    {
+      "function": "Csp",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 1565,
+      "selfMs": 1.063,
+      "pct": 0.004976555414670193
+    },
+    {
+      "function": "decode_pathname",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/exports.js-CHgpnPP5.js",
+      "line": 28,
+      "selfMs": 1.063,
+      "pct": 0.004976555414670193
+    },
+    {
+      "function": "component",
+      "url": "file:///bench/apps/svelte/build/server/chunks/nodes/0.js-C8k6nUtx.js",
+      "line": 3,
+      "selfMs": 1.063,
+      "pct": 0.004976555414670193
+    },
+    {
+      "function": "",
+      "url": "node:internal/deps/undici/undici",
+      "line": 5058,
+      "selfMs": 1.063,
+      "pct": 0.004976555414670193
+    },
+    {
+      "function": "",
+      "url": "node:internal/deps/undici/undici",
+      "line": 7226,
+      "selfMs": 1.063,
+      "pct": 0.004976555414670193
+    },
+    {
+      "function": "isAborted",
+      "url": "node:internal/deps/undici/undici",
+      "line": 5792,
+      "selfMs": 1.062,
+      "pct": 0.004971873800921679
+    },
+    {
+      "function": "ReadableStream",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 254,
+      "selfMs": 1.062,
+      "pct": 0.004971873800921679
+    },
+    {
+      "function": "decodeUTF8",
+      "url": "",
+      "line": 0,
+      "selfMs": 1.061,
+      "pct": 0.004967192187173165
+    },
+    {
+      "function": "emit",
+      "url": "node:events",
+      "line": 489,
+      "selfMs": 1.061,
+      "pct": 0.004967192187173165
+    },
+    {
+      "function": "get",
+      "url": "node:_http_outgoing",
+      "line": 256,
+      "selfMs": 1.061,
+      "pct": 0.004967192187173165
+    },
+    {
+      "function": "fetchParams.controller.next",
+      "url": "node:internal/deps/undici/undici",
+      "line": 13794,
+      "selfMs": 1.061,
+      "pct": 0.004967192187173165
+    },
+    {
+      "function": "_resume",
+      "url": "node:internal/deps/undici/undici",
+      "line": 9633,
+      "selfMs": 1.061,
+      "pct": 0.004967192187173165
+    },
+    {
+      "function": "incRefCount",
+      "url": "node:internal/timers",
+      "line": 370,
+      "selfMs": 1.06,
+      "pct": 0.004962510573424651
+    },
+    {
+      "function": "",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/exports.js-CHgpnPP5.js",
+      "line": 46,
+      "selfMs": 1.06,
+      "pct": 0.004962510573424651
+    },
+    {
+      "function": "clampAndCoarsenConnectionTimingInfo",
+      "url": "node:internal/deps/undici/undici",
+      "line": 5598,
+      "selfMs": 1.06,
+      "pct": 0.004962510573424651
+    },
+    {
+      "function": "is_valid_array_index_string",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 151,
+      "selfMs": 1.059,
+      "pct": 0.004957828959676137
+    },
+    {
+      "function": "stringify_key",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/server.js-DiEmUavo.js",
+      "line": 130,
+      "selfMs": 1.059,
+      "pct": 0.004957828959676137
+    },
+    {
+      "function": "isEncoding",
+      "url": "node:buffer",
+      "line": 622,
+      "selfMs": 1.058,
+      "pct": 0.004953147345927623
+    },
+    {
+      "function": "removeAllListeners",
+      "url": "node:events",
+      "line": 744,
+      "selfMs": 1.058,
+      "pct": 0.004953147345927623
+    },
+    {
+      "function": "utf8DecodeBytes",
+      "url": "node:internal/deps/undici/undici",
+      "line": 4297,
+      "selfMs": 1.056,
+      "pct": 0.004943784118430596
+    },
+    {
+      "function": "handleFetchDone",
+      "url": "node:internal/deps/undici/undici",
+      "line": 13023,
+      "selfMs": 1.055,
+      "pct": 0.004939102504682082
+    },
+    {
+      "function": "server_data_serializer",
+      "url": "file:///bench/apps/svelte/build/server/chunks/index.js-D4iU0TAk.js",
+      "line": 760,
+      "selfMs": 1.055,
+      "pct": 0.004939102504682082
+    },
+    {
+      "function": "get",
+      "url": "node:internal/streams/writable",
+      "line": 1087,
+      "selfMs": 1.055,
+      "pct": 0.004939102504682082
+    },
+    {
+      "function": "AsyncContextFrame",
+      "url": "node:internal/async_context_frame",
+      "line": 67,
+      "selfMs": 1.043,
+      "pct": 0.004882923139699916
+    },
+    {
+      "function": "",
+      "url": "file:///bench/apps/svelte/build/server/chunks/handler-DKUOYBdk.js",
+      "line": 1030,
+      "selfMs": 1.039,
+      "pct": 0.004864196684705861
+    },
+    {
+      "function": "Immediate",
+      "url": "node:internal/timers",
+      "line": 747,
+      "selfMs": 1.033,
+      "pct": 0.004836107002214778
+    },
+    {
+      "function": "run",
+      "url": "node:internal/async_local_storage/async_context_frame",
+      "line": 58,
+      "selfMs": 1.03,
+      "pct": 0.004822062160969236
+    },
+    {
+      "function": "btoa",
+      "url": "",
+      "line": 0,
+      "selfMs": 1.01,
+      "pct": 0.00472842988599896
+    },
+    {
+      "function": "Polka.attach",
+      "url": "file:///bench/apps/svelte/build/server/chunks/handler-DKUOYBdk.js",
+      "line": 821,
+      "selfMs": 1.002,
+      "pct": 0.00469097697601085
+    },
+    {
+      "function": "parse$1",
+      "url": "file:///bench/apps/svelte/build/server/chunks/handler-DKUOYBdk.js",
+      "line": 43,
+      "selfMs": 0.996,
+      "pct": 0.004662887293519767
+    },
+    {
+      "function": "negotiate",
+      "url": "file:///bench/apps/svelte/build/server/chunks/chunks/utils.js-xqduxv9z.js",
+      "line": 608,
+      "selfMs": 0.964,
+      "pct": 0.0045130756535673245
+    },
+    {
+      "function": "Duplex",
+      "url": "node:internal/streams/duplex",
+      "line": 64,
+      "selfMs": 0.957,
+      "pct": 0.004480304357327727
+    },
+    {
+      "function": "ReadableState",
+      "url": "node:internal/streams/readable",
+      "line": 269,
+      "selfMs": 0.815,
+      "pct": 0.003815515205038765
+    },
+    {
+      "function": "get aborted",
+      "url": "node:internal/abort_controller",
+      "line": 255,
+      "selfMs": 0.704,
+      "pct": 0.0032958560789537305
+    },
+    {
+      "function": "matchKnownFields",
+      "url": "node:_http_incoming",
+      "line": 340,
+      "selfMs": 0.43,
+      "pct": 0.002013093911860943
+    },
+    {
+      "function": "_destroy",
+      "url": "node:_http_incoming",
+      "line": 274,
+      "selfMs": 0.236,
+      "pct": 0.0011048608446492618
+    },
+    {
+      "function": "highWaterMarkFrom",
+      "url": "node:internal/streams/state",
+      "line": 15,
+      "selfMs": 0.171,
+      "pct": 0.0008005559509958635
+    },
+    {
+      "function": "emitReadable",
+      "url": "node:internal/streams/readable",
+      "line": 830,
+      "selfMs": 0.146,
+      "pct": 0.0006835156072830179
+    },
+    {
+      "function": "writeGeneric",
+      "url": "node:internal/stream_base_commons",
+      "line": 146,
+      "selfMs": 0.131,
+      "pct": 0.0006132914010553107
+    },
+    {
+      "function": "controller.<computed>.pullFulfilled",
+      "url": "node:internal/webstreams/readablestream",
+      "line": 3616,
+      "selfMs": 0.129,
+      "pct": 0.000603928173558283
+    },
+    {
+      "function": "OutgoingMessage._isLenientHeaderValidation",
+      "url": "node:_http_outgoing",
+      "line": 172,
+      "selfMs": 0.123,
+      "pct": 0.0005758384910672001
+    },
+    {
+      "function": "coarsenedSharedCurrentTime",
+      "url": "node:internal/deps/undici/undici",
+      "line": 5619,
+      "selfMs": 0.106,
+      "pct": 0.000496251057342465
+    },
+    {
+      "function": "parserOnMessageComplete",
+      "url": "node:_http_common",
+      "line": 143,
+      "selfMs": 0.095,
+      "pct": 0.00044475330610881304
+    },
+    {
+      "function": "onParserExecuteCommon",
+      "url": "node:_http_server",
+      "line": 1036,
+      "selfMs": 0.078,
+      "pct": 0.0003651658723840781
+    },
+    {
+      "function": "doWrite",
+      "url": "node:internal/streams/writable",
+      "line": 589,
+      "selfMs": 0.077,
+      "pct": 0.00036048425863556425
+    },
+    {
+      "function": "IncomingMessage.<computed>",
+      "url": "node:_http_incoming",
+      "line": 240,
+      "selfMs": 0.053,
+      "pct": 0.0002481255286712325
+    },
+    {
+      "function": "_send",
+      "url": "node:_http_outgoing",
+      "line": 382,
+      "selfMs": 0.05,
+      "pct": 0.00023408068742569109
+    },
+    {
+      "function": "Socket._write",
+      "url": "node:net",
+      "line": 1273,
+      "selfMs": 0.048,
+      "pct": 0.00022471745992866344
+    },
+    {
+      "function": "get",
+      "url": "node:internal/streams/readable",
+      "line": 1589,
+      "selfMs": 0.046,
+      "pct": 0.0002153542324316358
+    },
+    {
+      "function": "onError",
+      "url": "node:_http_incoming",
+      "line": 512,
+      "selfMs": 0.035,
+      "pct": 0.00016385648119798376
+    },
+    {
+      "function": "_dump",
+      "url": "node:_http_incoming",
+      "line": 502,
+      "selfMs": 0.031,
+      "pct": 0.00014513002620392847
+    },
+    {
+      "function": "clearIncoming",
+      "url": "node:_http_server",
+      "line": 1083,
+      "selfMs": 0.023,
+      "pct": 0.0001076771162158179
+    }
+  ]
+}

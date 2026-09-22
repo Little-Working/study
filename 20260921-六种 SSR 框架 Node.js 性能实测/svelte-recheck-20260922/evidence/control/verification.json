@@ -1,0 +1,131 @@
+{
+  "comparisons": [
+    {
+      "size": "hello",
+      "delay": 50,
+      "repeat": 0,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "hello",
+      "delay": 50,
+      "repeat": 1,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "hello",
+      "delay": 200,
+      "repeat": 0,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "hello",
+      "delay": 200,
+      "repeat": 1,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "hello",
+      "delay": 500,
+      "repeat": 0,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "hello",
+      "delay": 500,
+      "repeat": 1,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "medium",
+      "delay": 50,
+      "repeat": 0,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "medium",
+      "delay": 50,
+      "repeat": 1,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "medium",
+      "delay": 200,
+      "repeat": 0,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "medium",
+      "delay": 200,
+      "repeat": 1,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "medium",
+      "delay": 500,
+      "repeat": 0,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "medium",
+      "delay": 500,
+      "repeat": 1,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "large",
+      "delay": 50,
+      "repeat": 0,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "large",
+      "delay": 50,
+      "repeat": 1,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "large",
+      "delay": 200,
+      "repeat": 0,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "large",
+      "delay": 200,
+      "repeat": 1,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "large",
+      "delay": 500,
+      "repeat": 0,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    },
+    {
+      "size": "large",
+      "delay": 500,
+      "repeat": 1,
+      "identicalHTML": true,
+      "restoredIdenticalETag": true
+    }
+  ],
+  "allPassed": true
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "file": "chunks/index.js-D4iU0TAk.js",
+    "sha256": "c54235f2154a1b35c03e9c2ce1c9159db5039c04e365012c1f822f6d5c6dadf9",
+    "hotspots": [
+      {
+        "line": 2373,
+        "text": "if (!chunks) headers.set(\"etag\", `\"${hash(transformed)}\"`);"
+      }
+    ]
+  },
+  {
+    "file": "chunks/chunks/exports.js-CHgpnPP5.js",
+    "sha256": "cca84a0f041ad475cbe43d9c5f60e27371c9a90cb8871cc0605d6cdfe82c79ad",
+    "hotspots": [
+      {
+        "line": 206,
+        "text": "function hash(...values) {"
+      },
+      {
+        "line": 210,
+        "text": "while (i) hash = hash * 33 ^ value.charCodeAt(--i);"
+      },
+      {
+        "line": 214,
+        "text": "while (i) hash = hash * 33 ^ buffer[--i];"
+      }
+    ]
+  }
+]

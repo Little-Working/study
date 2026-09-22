@@ -1,0 +1,21 @@
+{
+  "time": "2026-09-22T02:31:23.722242+00:00",
+  "removed": {
+    "containers": [
+      "9b19cef7297f",
+      "f1a132706a16",
+      "ef4bb33da2e7"
+    ],
+    "networks": [
+      "75e65b25e498"
+    ],
+    "volumes": [
+      "ssrbench-20260922"
+    ]
+  },
+  "remaining": {
+    "containers": [],
+    "networks": [],
+    "volumes": []
+  }
+}

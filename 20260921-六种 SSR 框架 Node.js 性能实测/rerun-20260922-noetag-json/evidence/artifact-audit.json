@@ -1,0 +1,30 @@
+{
+  "images": {
+    "overview": {
+      "format": "PNG",
+      "width": 2399,
+      "height": 1549
+    },
+    "matrix": {
+      "format": "PNG",
+      "width": 2489,
+      "height": 1980
+    },
+    "runtime": {
+      "format": "PNG",
+      "width": 2399,
+      "height": 1549
+    },
+    "overhead": {
+      "format": "PNG",
+      "width": 2739,
+      "height": 1005
+    }
+  },
+  "visualReview": "All four PNGs visually reviewed; matrix legend overlap fixed and rechecked.",
+  "links": "Report local links verified.",
+  "focusWarmups30Seconds": 18,
+  "focusMeasuredWindows30Seconds": 18,
+  "pageAcceptanceRequests": 216,
+  "sentinelPositiveControlPassed": true
+}

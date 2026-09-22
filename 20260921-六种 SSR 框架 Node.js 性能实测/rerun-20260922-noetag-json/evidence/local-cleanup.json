@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-22T05:05:31.521914+00:00",
+  "removed": [
+    {
+      "path": "/private/tmp/ssr-v2-plot-20260922",
+      "exists": false
+    },
+    {
+      "path": "/private/tmp/ssr-v2-mpl-20260922",
+      "exists": false
+    },
+    {
+      "path": "/private/tmp/ssr-v2-plot-install.log",
+      "exists": false
+    }
+  ],
+  "remainingScaffoldDirectories": []
+}

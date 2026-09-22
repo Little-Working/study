@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "/Users/liuhao/.codex/worktrees/e4ab/turbo-monorepo/docs/reports/ssr-node-2026-09-21/rerun-20260922-noetag-json/reproduce/run.py", line 43, in <module>
+    window(name,'client-control',f'client-{name}-{j}',seconds=12,workers=workers,sample=sample)
+  File "/Users/liuhao/.codex/worktrees/e4ab/turbo-monorepo/docs/reports/ssr-node-2026-09-21/rerun-20260922-noetag-json/reproduce/run.py", line 16, in window
+    before={c:cgroup('ssrbench2-'+c) for c in ['app','load','backend']}
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuhao/.codex/worktrees/e4ab/turbo-monorepo/docs/reports/ssr-node-2026-09-21/rerun-20260922-noetag-json/reproduce/run.py", line 11, in cgroup
+    return json.loads(docker('exec',container,'node','-e',script))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liuhao/.codex/worktrees/e4ab/turbo-monorepo/docs/reports/ssr-node-2026-09-21/rerun-20260922-noetag-json/reproduce/common.py", line 11, in docker
+    if check and r.returncode:raise RuntimeError(f'docker {args}: {r.stdout}\n{r.stderr}')
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: docker ('exec', 'ssrbench2-app', 'node', '-e', "const fs=require('fs');const r={};for(const p of ['cpu.stat','memory.current','memory.peak','memory.events'])r[p]=fs.readFileSync('/sys/fs/cgroup/'+p,'utf8');console.log(JSON.stringify(r));"): {"cpu.stat":"usage_usec 12179869\nuser_usec 11241172\nsystem_usec 938696\nnice_usec 0\nnr_periods 96\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n","memory.current":"522735616\n","memory.peak":"563720192\n","memory.events":"low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n"}
+
+node:events:505
+    throw er; // Unhandled 'error' event
+    ^
+
+Error: listen EADDRINUSE: address already in use 0.0.0.0:9100
+    at Server.setupListenHandle [as _listen2] (node:net:2328:16)
+    at listenInCluster (node:net:2437:12)
+    at node:net:2666:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:2416:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 9100
+}
+
+Node.js v24.21.0
+

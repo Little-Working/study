@@ -1,0 +1,9 @@
+{
+  "windows": 324,
+  "distinctCombinations": 162,
+  "repeatsPerCombination": 2,
+  "good": 284058,
+  "exactHtmlBytesPassed": true,
+  "oneBackendCallPerRequest": true,
+  "formalConfigurationPassed": true
+}

@@ -1,0 +1,10 @@
+{
+  "removed": [
+    "docs/reports/ssr-node-2026-09-21/svelte-recheck-20260922/evidence/compiled-server",
+    "docs/reports/ssr-node-2026-09-21/svelte-recheck-20260922/reproduce/__pycache__",
+    "/private/tmp/svelte-recheck-plotenv",
+    "/private/tmp/svelte-recheck-mpl",
+    "/private/tmp/svelte-recheck-plot-install.log"
+  ],
+  "remaining": []
+}

@@ -1,0 +1,52 @@
+{
+  "at": "2026-09-22T03:30:10.241669+00:00",
+  "formalWindowsStarted": 0,
+  "monitorObservations": [
+    {
+      "id": "monitor-nuxt-2-off",
+      "rps": 113.4241289256828
+    },
+    {
+      "id": "monitor-svelte-1-off",
+      "rps": 136.2675845564898
+    },
+    {
+      "id": "monitor-next-1-off",
+      "rps": 96.99749499962246
+    },
+    {
+      "id": "monitor-next-0-lean",
+      "rps": 87.93340761221077
+    },
+    {
+      "id": "monitor-nuxt-3-lean",
+      "rps": 117.41115296861678
+    },
+    {
+      "id": "monitor-svelte-2-off",
+      "rps": 134.32552160637618
+    },
+    {
+      "id": "monitor-next-2-off",
+      "rps": 93.37939797662943
+    },
+    {
+      "id": "monitor-next-3-lean",
+      "rps": 94.19179333757818
+    },
+    {
+      "id": "monitor-nuxt-1-off",
+      "rps": 89.10403801045925
+    },
+    {
+      "id": "monitor-nuxt-0-lean",
+      "rps": 130.1944379027693
+    },
+    {
+      "id": "monitor-svelte-0-lean",
+      "rps": 131.09120640604763
+    }
+  ],
+  "decision": "All 18 fresh-process focus windows receive 30 seconds warmup before 30 seconds measurement. Matrix and calibration warmup remain unchanged. This decision precedes all formal matrix/focus results; no framework-specific warmup selection. Longer warmup reduces but does not prove elimination of JIT/GC variability.",
+  "loadSha256": "4217647fda3951a7994f000b22d393656a6557dac14c18d08bf0d94691986a9c"
+}

@@ -1,0 +1,22 @@
+{
+  "prepare.py": {
+    "identical": true,
+    "sha256": "50c7df1b9c35586287ca99b7e6b957f9e9b73ce972598b9bbde2ce08e19ca4b6"
+  },
+  "metrics.cjs": {
+    "identical": true,
+    "sha256": "f0bc239accfbaef3440a59fe4943644ca9059d617eb10921146542922c29c786"
+  },
+  "load.mjs": {
+    "identical": true,
+    "sha256": "c64b0e79eebad931b58cbeb33e9498a2db6f2819c43114a6872ea1bff6b28695"
+  },
+  "backend.mjs": {
+    "identical": true,
+    "sha256": "60522e3d57ce5fde7264002fbbe073ff35e06111e0b13541bdf768b5dd3dfc6a"
+  },
+  "locks/svelte/package-lock.json": {
+    "identical": true,
+    "sha256": "c67fbcf04e9725d8b5b943f768fb2af06ac89216cb555f77057529bfebd3eb01"
+  }
+}
