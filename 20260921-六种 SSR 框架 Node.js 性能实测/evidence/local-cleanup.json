@@ -1,0 +1,11 @@
+{
+  "time": "2026-09-21T10:47:40.204313+00:00",
+  "removed": [
+    "/private/tmp/ssrbench-20260921",
+    "/private/tmp/ssrbench-reportenv",
+    "/private/tmp/ssrbench-plotcache",
+    "/private/tmp/ssrbench-matplotlib-install.log",
+    "/Users/liuhao/.codex/worktrees/e4ab/turbo-monorepo/docs/reports/ssr-node-2026-09-21/reproduce/__pycache__"
+  ],
+  "remaining": []
+}

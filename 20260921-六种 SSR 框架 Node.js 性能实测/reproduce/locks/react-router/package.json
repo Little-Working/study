@@ -1,0 +1,18 @@
+{
+  "name": "ssrbench-react-router",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-router": "8.4.0",
+    "@react-router/dev": "8.4.0",
+    "@react-router/node": "8.4.0",
+    "@react-router/serve": "8.4.0",
+    "isbot": "latest",
+    "vite": "latest"
+  }
+}

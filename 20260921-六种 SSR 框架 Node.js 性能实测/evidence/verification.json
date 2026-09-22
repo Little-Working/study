@@ -1,0 +1,23 @@
+{
+  "measurementStartUtc": "2026-09-21T09:50:32.128000+00:00",
+  "measurementEndUtc": "2026-09-21T10:44:10.355321+00:00",
+  "windowCount": 282,
+  "successfulResponses": 441191,
+  "productionAcceptanceRequests": 108,
+  "assertions": [
+    "complete response and backend call reconciliation",
+    "expected 282 windows and 162 matrix scenarios",
+    "no duplicate framework-phase-scenario-repeat keys",
+    "no failed responses or content validation failures",
+    "no new OOM kills; cgroup metrics present",
+    "concurrency/latency/RPS consistency",
+    "stable response size within windows",
+    "report local links exist",
+    "Docker and local cleanup records empty"
+  ],
+  "chartsVisuallyReviewed": [
+    "overview.png",
+    "matrix.png",
+    "memory.png"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "time": "2026-09-21T18:26:00+08:00",
+  "reason": "SvelteKit large/50ms/c64 RPS fell from 190.7 to 91.7 across short windows. Cause not established. Added second fresh-process sustained repeat for all six frameworks.",
+  "dockerContainers": [
+    "ssrbench-app",
+    "ssrbench-load",
+    "ssrbench-backend",
+    "ssrbench-builder"
+  ],
+  "dockerLoadAverage": [
+    1.45,
+    1.38,
+    1.27
+  ],
+  "dockerFreeMemoryBytes": 7353716736,
+  "hostLoadAverage": [
+    5.79,
+    4.98,
+    4.58
+  ],
+  "pmset": "No thermal warning, performance warning or CPU power status recorded. This is not proof of no thermal/frequency variation."
+}

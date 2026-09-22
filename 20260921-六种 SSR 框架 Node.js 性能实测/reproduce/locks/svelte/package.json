@@ -1,0 +1,15 @@
+{
+  "name": "ssrbench-svelte",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@sveltejs/kit": "2.70.3",
+    "@sveltejs/adapter-node": "latest",
+    "@sveltejs/vite-plugin-svelte": "latest",
+    "svelte": "latest",
+    "vite": "latest"
+  }
+}

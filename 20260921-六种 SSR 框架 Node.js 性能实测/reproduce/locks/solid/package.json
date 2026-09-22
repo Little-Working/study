@@ -1,0 +1,15 @@
+{
+  "name": "ssrbench-solid",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@solidjs/start": "2.0.5",
+    "@solidjs/router": "latest",
+    "solid-js": "latest",
+    "nitro": "latest",
+    "vite": "latest"
+  }
+}
