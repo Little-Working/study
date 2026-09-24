@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-24T07:56:12.417593+00:00",
+  "temporaryPlotPaths": {
+    "/private/tmp/ssr-runtime-plot-venv": {
+      "exists": false
+    },
+    "/private/tmp/ssr-runtime-mplconfig": {
+      "exists": false
+    },
+    "/private/tmp/ssr-runtime-plot-cache": {
+      "exists": false
+    },
+    "/private/var/folders/jj/79p84lwj17j5zjh_nck5bht80000gn/T/matplotlib-_f49t3o5": {
+      "exists": false
+    }
+  }
+}

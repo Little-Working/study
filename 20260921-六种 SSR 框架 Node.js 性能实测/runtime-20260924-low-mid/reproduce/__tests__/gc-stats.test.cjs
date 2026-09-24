@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict');
+const {stats,createRecorder}=require('../gc-stats.cjs');
+const zero=stats([]);assert.equal(zero.count,0);assert.equal(zero.p99Ms,null);
+const s=stats(Array.from({length:100},(_,i)=>i+1));
+for(const p of [50,75,90,95,99])assert.equal(s[`p${p}Ms`],p);
+assert.equal(s.maxMs,100);assert.equal(s.totalMs,5050);assert.equal(s.p99Sparse,false);
+const r=createRecorder(5),e=(startTime,duration,kind=1)=>({startTime,duration,detail:{kind,flags:0}});
+r.reset(10);r.ingest([e(9,99),e(10,1),e(11,3,4),e(12,2,1)]);r.stop(20);r.ingest([e(19,4,8),e(20,99),e(21,99)]);
+let out=r.summary();assert.equal(out.count,4);assert.equal(out.totalMs,10);assert.equal(out.kinds.minor.count,2);assert.equal(out.kinds.major.maxMs,3);assert.equal(out.kinds.weakcb.p99Ms,null);
+r.reset(30);r.ingest([e(29,99),...Array.from({length:6},(_,i)=>e(30+i,1))]);out=r.summary();assert.equal(out.count,5);assert.equal(out.dropped,1);
+console.log('GC quantiles, batch collection, kind grouping, boundaries and overflow PASS');

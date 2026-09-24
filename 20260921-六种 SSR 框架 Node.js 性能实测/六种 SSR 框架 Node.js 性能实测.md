@@ -1,132 +1,249 @@
-# 六种 SSR 框架 Node.js 性能复测：关闭压缩与 HTML ETag
+# 六种 SSR 框架：低中并发 Event Loop 与 GC 分位数实测
 
-测试日期：2026-09-22。所有结果均为本机 Docker production 构建实测，模拟后端通过 HTTP 返回 320 KB / 600 KB 完整 JSON，使用统一轻量监控和低开销压测器。SvelteKit 使用明确记录的 ETag 计算补丁；此处不是六种框架默认配置的排名。
+测试日期：2026-09-24。Docker production 构建，关闭动态 HTML/API 路径的 ETag 和压缩；并发 1/8，后端 50/200/500 ms。全部结果为新一轮实测，不复用旧测试数字。
 
-完成 **402 个测量窗口、447,347 个有效完整响应、0 个请求错误/校验失败**，其中 741 次开销对照请求附加了内容抽样；另完成 216 次压测前完整页面验收。正式矩阵和重点复核不在计时窗口内扫描内容；每个测量窗口后端调用数均与页面请求数一致。
+完成 **216 个正式窗口、24 个监控开销对照、36 个空闲基线**，合计 140,677 次有效完整响应（含监控对照），请求错误 0，校验失败 0，GC 记录溢出 0。
 
-## 主要结果
+## 本轮主要发现
 
-以下为大页（后端 JSON 600,000 字节、响应 HTML 约 1.6 MB）、后端 50 ms、并发 64 的 **3 个独立新进程 × 30 秒**结果，每个新进程先暖机 30 秒。吞吐和延迟列是窗口指标的中位数，括号为三次吞吐最小–最大值；p95 不是合并所有请求后重新计算的分位数。
+**可以比较本轮具体场景，但不宜据此给六框架排一个稳定总名次。** 两轮重复、监控开销对照和原始事件均已保留；下方异常说明是结论的一部分。
 
-| 框架 | 有效 RPS：中位数（范围） | 完整响应 p50 ms | p95 ms | p99 ms | CPU ms/请求 | 采样 RSS 最大 MiB |
+在 **后端 200 ms、并发 8** 的参考切片中，EL p99 为两窗分位数均值（包含 10 ms 原生采样间隔）；GC 为两窗原始事件合并统计：
+
+| 框架 | EL p99：Hello / 中页 / 大页 ms | 大页 CPU ms/请求 | 大页 GC ms/请求 | 大页 major GC p99 ms（N） |
+| --- | --- | --- | --- | --- |
+| Next.js | 16.66 / 27.74 / 42.32 | 22.28 | 1.40 | 10.64（225） |
+| Nuxt | 16.78 / 63.32 / 72.61 | 17.47 | 0.76 | 8.09（121） |
+| SvelteKit | 15.72 / 63.24 / 72.52 | 15.41 | 0.87 | 10.54（156） |
+| TanStack Start | 20.29 / 71.57 / 81.36 | 16.93 | 1.21 | 7.50（132） |
+| React Router | 37.61 / 73.04 / 53.33 | 17.27 | 1.32 | 11.13（156） |
+| SolidStart | 16.67 / 45.79 / 69.47 | 13.90 | 1.08 | 9.89（140） |
+
+1. **页面规模增长与 Event Loop 尾延迟升高一致，但不是纯 HTML 字节因果实验。** 相同框架/延迟/并发的 36 组配对中，Hello→中页、Hello→大页的 EL p99 均为 36/36 升高；中页→大页为 32/36 升高。JSON 大小、商品数量、渲染与序列化工作也同步增加，不能把全部差异归因于网络传输字节。
+2. **Event Loop 较低不代表 CPU 和 GC 同时最省。** 上表中 Next.js 的中页/大页 EL p99 较低，但大页 CPU/请求 22.28 ms，高于 SolidStart 的 13.90 ms；其 GC 累计时长/请求也较高。这里只能描述所测实现的指标取舍，未证明内部调度或序列化的具体因果机制。
+3. **GC 类型会改变比较结果。** 大页/200 ms/C8 的全类型 GC p99，React Router 为 7.94 ms、TanStack Start 为 8.42 ms；只看 major，则分别为 11.13 ms、7.50 ms。混合分位数受到不同类型事件比例影响，不能替代 major 指标。
+4. **Hello World 的 GC p99 样本不足。** 参考切片中六框架只有 23–59 个 GC 事件，最近秩 p99 实际等于该样本最大值。全矩阵 108 个组合中，52 个组合 GC 总样本不足 100，74 个组合 major 样本不足 100，其中 1 个组合未观测到任何 GC。它们用于展示观测事实，不用于稳定尾延迟排名。
+5. **并发和后端等待必须同时看。** 大页/200 ms 的 C1 下，SolidStart EL p99 为 21.13 ms、Next.js 为 23.09 ms；C8 下则分别为 69.47、42.32 ms。闭环固定并发中，等待时间变化还会改变请求完成率和对象分配速率，不能直接跨延迟档排名。
+
+## 必须一起阅读的异常与限制
+
+**监控开销尚不能视为可忽略。** lean/off 四窗对照中，React Router 成功完成率变化为 −24.14%，Nuxt 为 +14.27%；其他框架约为 −0.26% 至 −6.40%。这种正负不一致及窗间差异说明监控开销和进程/JIT/环境波动尚未分离。所有正式窗口使用相同监测器，但这不等于每个框架承担同样百分比的开销；没有按差值校正实测数字。
+
+**React Router 第一轮大页有明显异常，第二轮未重复出现同等量级。** 下表保留异常，不删除慢窗口：
+
+| 条件 | 轮次 | EL p99 / max ms | GC max ms | 应用 cgroup throttled ms 增量 |
+| --- | --- | --- | --- | --- |
+| 大页/50 ms/C1 | [1](runtime-20260924-low-mid/runs/matrix-0-react-router-large-50-c1.json) | 90.57 / 3651.14 | 2280.49 | 764.69 |
+| 大页/50 ms/C1 | [2](runtime-20260924-low-mid/runs/matrix-1-react-router-large-50-c1.json) | 23.63 / 32.80 | 6.78 | 0.00 |
+| 大页/200 ms/C1 | [1](runtime-20260924-low-mid/runs/matrix-0-react-router-large-200-c1.json) | 54.17 / 661.65 | 580.07 | 0.00 |
+| 大页/200 ms/C1 | [2](runtime-20260924-low-mid/runs/matrix-1-react-router-large-200-c1.json) | 31.88 / 38.63 | 6.97 | 0.00 |
+| 大页/500 ms/C1 | [1](runtime-20260924-low-mid/runs/matrix-0-react-router-large-500-c1.json) | 37.55 / 223.35 | 136.10 | 0.00 |
+| 大页/500 ms/C1 | [2](runtime-20260924-low-mid/runs/matrix-1-react-router-large-500-c1.json) | 27.53 / 43.19 | 7.56 | 0.00 |
+
+第一轮大页/50 ms/C1 中，最大 GC 事件为 minor 2280.49 ms，EL max 为 3651.14 ms，同时观察到 cgroup CPU 限流。仅凭这些记录不能把秒级异常归因于 React Router 固有实现，也不能证明全部由限流造成；本次未抓取 CPU profile/GC trace，原因未定位。第二轮同条件 GC max 为 6.78 ms、EL max 为 32.80 ms。
+内存采样统一为 1 Hz；最异常窗口约 21 次 memoryUsage 调用累计墙钟耗时 190.29 ms。这个墙钟数包含可能的调度等待，不等于采样 CPU 时间，也说明不能宣称监控完全无干扰。相比之下，压测器最高进程 CPU 为 19.46%（100%=一核）、worker ELU 最高 8.45%，后端最高 CPU 为 7.98%；这些观测未显示压测器/后端持续 CPU 饱和。
+因此，本报告的尾延迟与最大值属于本机 Docker 环境、指定版本和短窗下的真实观测。没有用 QPS 推算 GC，没有丢弃异常，也没有把差异包装为统计显著或长期上界。
+
+## 如何读结论
+
+这次测的是自然运行中的事件循环延迟与 GC 事件时长，不追求极限 QPS。请求实际经过后端 HTTP 等待、JSON 解析、原生 SSR 渲染和框架响应序列化；本轮没有逐阶段计时埋点，不能把 GC 或 Event Loop 数字直接解释成纯 HTML 渲染或序列化耗时。不测浏览器执行或客户端 hydration。不同框架以相同并发运行，实际完成请求量仍不同，因此既列 GC 单次时长，也列次数/秒与毫秒/请求。不要把 HTTP p99、Event Loop p99 和 GC p99 当作同一个指标。
+
+以下重点表固定后端 200 ms、并发 8，三个页面分别展示。它是便于阅读的切片，全部 108 个组合见末尾明细。Event Loop p50–p99 是两窗指标中位数（仅两窗，数值等于两窗均值，并非合并直方图分位数），GC 是同场景原始事件合并分位数；max 均为观测到的最高值，绝非未来上界。
+
+![三种页面重点场景](runtime-20260924-low-mid/overview.png)
+
+## Hello World
+
+**Event Loop：单位 ms，包含 10 ms 采样间隔**
+
+| 框架 | p50 | p75 | p90 | p95 | p99 | max |
 | --- | --- | --- | --- | --- | --- | --- |
-| SolidStart | 175.9 (170.1–177.7) | 359.2 | 393.5 | 444.1 | 6.2 | 464.3 |
-| SvelteKit | 140.1 (137.1–140.2) | 453.7 | 503.1 | 567.2 | 7.8 | 378.2 |
-| Nuxt | 123.8 (98.1–127.4) | 510.2 | 604.7 | 782.3 | 8.8 | 684.2 |
-| TanStack Start | 120.1 (75.7–124.6) | 517.0 | 600.1 | 823.7 | 9.3 | 529.0 |
-| React Router | 97.9 (89.7–99.2) | 647.0 | 724.6 | 768.1 | 11.7 | 699.8 |
-| Next.js | 95.4 (87.4–96.5) | 656.1 | 781.0 | 998.8 | 14.2 | 753.5 |
+| Next.js | 11.60 | 12.21 | 12.61 | 13.57 | 16.66 | 47.61 |
+| Nuxt | 11.64 | 12.19 | 12.63 | 13.29 | 16.78 | 76.48 |
+| SvelteKit | 11.71 | 12.17 | 12.40 | 12.73 | 15.72 | 27.49 |
+| TanStack Start | 11.70 | 12.20 | 12.50 | 13.44 | 20.29 | 43.84 |
+| React Router | 11.18 | 11.98 | 13.20 | 16.67 | 37.61 | 293.86 |
+| SolidStart | 11.09 | 11.85 | 12.32 | 12.66 | 16.67 | 242.22 |
 
-在这个限定场景中，SolidStart 的吞吐中位数最高，为 175.9 RPS，进程 CPU 成本为 6.19 ms/请求。SvelteKit 为 140.1 RPS，完整响应 p95 的窗口中位数为 503.1 ms；这里已经移除 HTML ETag 哈希，并实际传输与解析 600 KB 后端 JSON。
+**GC：单位 ms，全类型合并；N 是事件数**
 
-这里的 503.1 ms 不是纯 render 时间。在接近满并发的闭环负载下，`并发 / RPS` 可近似检查平均响应时长的数量级：SvelteKit 的 `64 / 140.1` 约为 457 ms。该关系不能用于推导 p95，也不能拆分 JSON 解析、渲染和序列化阶段。
-
-相邻框架中，Nuxt / TanStack Start、TanStack Start / React Router、React Router / Next.js 的三次吞吐范围有重叠，顺序不宜解读得过细；这些范围不是置信区间。
-
-**跨进程波动仍未消除。** Nuxt 和 TanStack Start 各有一个明显较慢的重点窗口，均完整保留。较慢窗口同时出现每请求 CPU 成本上升；当时后端计时器平均等待仍约 53–56 ms，响应字节及请求计数无异常。缺少对应的 CPU profile 和宿主机调度/频率记录，尚不能分离 JIT、GC、应用内部路径与主机因素，不能把中间组的排序当作稳定承诺。详见 [异常窗口证据](rerun-20260922-noetag-json/evidence/variability.json)。
-
-![大页重点场景结果](rerun-20260922-noetag-json/overview.png)
-
-框架顺序只对应这一合成场景。相同业务记录产生的框架原生 HTML/hydration 格式略有不同；响应字节不是人为补齐到完全相等。更大的数据对象、字段结构、组件复杂度、缓存策略与部署环境均可能改变顺序。
-
-## Node.js 运行时
-
-| 框架 | 进程 CPU% | ELU% | event-loop delay p99 ms | GC ms/请求 | GC 次数 / 最长事件 ms（三窗） | heap 最大 MiB | external 最大 MiB | 首 body p50 ms |
+| 框架 | N | p50 | p75 | p90 | p95 | p99 | max | major N |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| SolidStart | 108.8 | 89.7 | 329.8 | 0.438 | 3624 / 12.6 | 167.9 | 110.4 | 154.8 |
-| SvelteKit | 108.7 | 89.5 | 455.1 | 0.644 | 3963 / 10.5 | 83.0 | 111.2 | 452.7 |
-| Nuxt | 108.3 | 91.8 | 505.2 | 0.708 | 2697 / 29.0 | 346.3 | 23.2 | 508.8 |
-| TanStack Start | 103.9 | 92.7 | 540.5 | 0.536 | 3523 / 34.7 | 237.7 | 103.1 | 516.3 |
-| React Router | 114.4 | 93.8 | 404.2 | 0.927 | 3613 / 23.2 | 338.7 | 94.8 | 645.4 |
-| Next.js | 135.7 | 99.8 | 203.4 | 1.355 | 2952 / 95.6 | 204.9 | 250.7 | 652.7 |
+| Next.js | 59* | 5.35 | 8.28 | 10.97 | 15.16 | 16.38 | 16.38 | 14 |
+| Nuxt | 26* | 10.76 | 16.03 | 21.09 | 22.78 | 38.25 | 38.25 | 5 |
+| SvelteKit | 23* | 5.01 | 10.96 | 12.28 | 13.05 | 17.87 | 17.87 | 4 |
+| TanStack Start | 30* | 4.23 | 8.83 | 12.23 | 15.15 | 18.27 | 18.27 | 5 |
+| React Router | 34* | 7.35 | 11.25 | 28.51 | 68.05 | 80.38 | 80.38 | 7 |
+| SolidStart | 27* | 6.01 | 22.44 | 61.32 | 62.25 | 208.96 | 208.96 | 7 |
 
-CPU 以单个逻辑核的 100% 为基准。event-loop delay 是 20 ms 分辨率下的原始值；GC 时长不是精确的暂停比例或 GC CPU 占比。内存为每秒采样，可能遗漏瞬时峰值。首 body 可能只是流式外壳，不等于页面渲染完成。
+## 中型页面（约 800 KB HTML）
 
-![Node 运行时指标](rerun-20260922-noetag-json/runtime.png)
+**Event Loop：单位 ms，包含 10 ms 采样间隔**
 
-## 覆盖全部页面、后端延迟和并发
+| 框架 | p50 | p75 | p90 | p95 | p99 | max |
+| --- | --- | --- | --- | --- | --- | --- |
+| Next.js | 11.90 | 12.35 | 14.06 | 19.30 | 27.74 | 46.92 |
+| Nuxt | 11.90 | 12.33 | 13.68 | 39.17 | 63.32 | 102.11 |
+| SvelteKit | 11.53 | 12.20 | 13.39 | 36.00 | 63.24 | 110.36 |
+| TanStack Start | 11.73 | 12.29 | 12.94 | 40.78 | 71.57 | 88.54 |
+| React Router | 11.80 | 12.28 | 12.96 | 39.76 | 73.04 | 95.62 |
+| SolidStart | 11.81 | 12.90 | 14.21 | 24.67 | 45.79 | 462.95 |
 
-3 种页面 × 50/200/500 ms 后端延迟 × 1/16/64 并发 × 6 框架，完整矩阵跑两轮，每个单元每轮 8 秒，暖机不计入。第二轮反转框架顺序，单元采用固定种子打乱。
+**GC：单位 ms，全类型合并；N 是事件数**
 
-![完整矩阵](rerun-20260922-noetag-json/matrix.png)
+| 框架 | N | p50 | p75 | p90 | p95 | p99 | max | major N |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Next.js | 412 | 2.27 | 3.34 | 4.75 | 6.06 | 8.96 | 16.48 | 159 |
+| Nuxt | 430 | 1.45 | 1.98 | 2.96 | 3.46 | 4.47 | 8.11 | 142 |
+| SvelteKit | 297 | 1.63 | 2.79 | 3.71 | 4.46 | 6.53 | 11.29 | 148 |
+| TanStack Start | 293 | 1.37 | 1.96 | 2.86 | 3.30 | 4.33 | 6.57 | 73 |
+| React Router | 293 | 1.49 | 2.12 | 3.35 | 3.76 | 4.91 | 7.52 | 74 |
+| SolidStart | 319 | 1.46 | 3.04 | 3.96 | 5.86 | 7.76 | 22.49 | 159 |
 
-[查看 162 个组合的详细表](rerun-20260922-noetag-json/RESULTS.md)。矩阵 RPS 使用两窗总成功数除以总实际时间；延迟列是两个窗口分位数的中位数，绝不是总体分位数。低并发、高后端延迟单元样本较少，不能用其 p99 做精细排名。
+## 大型页面（约 1.5 MB HTML）
 
-## 监控与压测器开销对照
+**Event Loop：单位 ms，包含 10 ms 采样间隔**
 
-下表是对应两次窗口 RPS 中位数之间的差值。正值表示左侧条件在本次对照中更快，不是理论优化收益，更不是用于修改原始分数的系数。监控为 lean/off/off/lean 的四个新进程；客户端对照在同一个暖机进程按正序/反序进行。
+| 框架 | p50 | p75 | p90 | p95 | p99 | max |
+| --- | --- | --- | --- | --- | --- | --- |
+| Next.js | 12.06 | 12.39 | 26.74 | 32.19 | 42.32 | 54.23 |
+| Nuxt | 11.93 | 12.34 | 23.49 | 47.66 | 72.61 | 349.44 |
+| SvelteKit | 11.43 | 12.13 | 19.22 | 42.35 | 72.52 | 238.42 |
+| TanStack Start | 11.67 | 12.26 | 18.95 | 47.94 | 81.36 | 189.92 |
+| React Router | 11.71 | 12.35 | 22.43 | 38.58 | 53.33 | 84.48 |
+| SolidStart | 11.37 | 12.13 | 15.81 | 39.16 | 69.47 | 178.13 |
 
-| 框架 | lean 相对 off | 8 worker 相对 4 | 取消 1/128 抽样相对默认 |
-| --- | --- | --- | --- |
-| Next.js | -4.3% | +3.4% | +4.8% |
-| Nuxt | +22.3% | -8.6% | +4.2% |
-| SvelteKit | -2.9% | -3.9% | +2.9% |
-| TanStack Start | -2.2% | +1.9% | +12.5% |
-| React Router | -3.7% | +11.5% | +10.6% |
-| SolidStart | -1.2% | -1.8% | +2.0% |
+**GC：单位 ms，全类型合并；N 是事件数**
 
-![监控和客户端开销对照](rerun-20260922-noetag-json/overhead.png)
+| 框架 | N | p50 | p75 | p90 | p95 | p99 | max | major N |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Next.js | 488 | 2.43 | 4.17 | 7.85 | 8.41 | 10.37 | 11.65 | 225 |
+| Nuxt | 375 | 1.84 | 2.57 | 3.94 | 5.36 | 9.62 | 39.76 | 121 |
+| SvelteKit | 448 | 1.88 | 3.00 | 3.92 | 4.95 | 10.54 | 15.40 | 156 |
+| TanStack Start | 531 | 2.34 | 3.28 | 4.33 | 5.51 | 8.42 | 12.35 | 132 |
+| React Router | 542 | 2.43 | 3.41 | 4.86 | 5.88 | 7.94 | 11.63 | 156 |
+| SolidStart | 425 | 2.45 | 3.89 | 6.07 | 8.55 | 12.58 | 23.82 | 140 |
 
-客户端对照完成后，在第一个正式矩阵窗口开始前，六框架统一采用 **最多 4 worker、关闭内容抽样扫描**（并发 1 时为 1 worker）；保留每个响应的状态、字节、响应头及后端调用数检查。这样进一步降低压测器计算开销。决定和当时的数据见 [protocol-amendment.json](rerun-20260922-noetag-json/evidence/protocol-amendment.json)。上表 1/128 抽样仅是客户端对照的参考条件，也用于两种监控模式的对照，不是正式矩阵配置。
 
-全体测量窗口中，压测器 CPU 最大 40.3%（配额 400%），单 worker ELU 最大 9.8%；后端 CPU 最大 9.9%（配额 200%），后端平均计时器等待相对设定值的最大超出为 23.10 ms。单窗口内存采样调用的累计墙钟耗时最大 36.41 ms，不能直接当作纯 CPU 开销。这些数据和对照用于检查瓶颈，不能证明所有系统开销已消失。
+* 表示 N<100。— 表示未观测到。major 单独分位数见 GC 明细。
 
-| 容器角色 | cgroup 周期总数 | 发生限流的周期数 | 累计 throttled ms |
-| --- | --- | --- | --- |
-| app | 40523 | 3 | 13.4 |
-| load | 34454 | 0 | 0.0 |
-| backend | 32529 | 0 | 0.0 |
+![Event Loop 六档分位数](runtime-20260924-low-mid/eventloop-quantiles.png)
 
-所有窗口均检查 OOM 事件。cgroup 统计跨越窗口边界辅助采样，进程 CPU 主指标来自应用自身。少量吞吐差异也可能来自 JIT、GC、进程初始状态和宿主机调度；仅两次对照不足以为每个框架确定精确监控损耗率，报告保留原始观测，不做人工数值矫正。
+![GC 六档分位数](runtime-20260924-low-mid/gc-quantiles.png)
 
-## 实际数据量与版本
+![全部延迟与并发场景的 Event Loop p99](runtime-20260924-low-mid/eventloop-matrix.png)
 
-| 框架 | Hello HTML bytes | 中页 HTML bytes | 大页 HTML bytes |
-| --- | --- | --- | --- |
-| Next.js | 4,878–4,881 | 856,000–856,003 | 1,610,301–1,610,304 |
-| Nuxt | 1,402–1,403 | 853,894–853,895 | 1,609,605–1,609,606 |
-| SvelteKit | 902–902 | 834,421–834,421 | 1,572,533–1,572,533 |
-| TanStack Start | 1,414–1,415 | 841,329–841,330 | 1,585,879–1,585,880 |
-| React Router | 2,708–2,708 | 859,944–859,944 | 1,626,678–1,626,678 |
-| SolidStart | 1,900–1,901 | 868,814–868,815 | 1,638,921–1,638,922 |
+## GC 类型和有限观测
 
-后端分别为 41、320,000、600,000 字节，中页 800 条商品、大页 1,536 条商品。所有框架从后端接收同一结构；预生成的 mock JSON 降低后端序列化瓶颈，应用 JSON 解析、SSR 和 hydration 序列化仍逐请求发生。
-
-| 框架 | 实际安装的主要依赖 |
+| 类型 | 正式窗口事件总数 |
 | --- | --- |
-| Next.js | next 16.3.5；react 19.3.0；react-dom 19.3.0 |
-| Nuxt | nuxt 4.5.2；vue 3.5.41；nitropack 2.13.4；vite 8.3.0 |
-| SvelteKit | svelte 5.57.1；@sveltejs/kit 2.70.3；@sveltejs/adapter-node 5.5.7；vite 8.3.0 |
-| TanStack Start | react 19.3.0；react-dom 19.3.0；nitro 3.0.260903-beta；@tanstack/react-start 1.168.56；@tanstack/react-router 1.170.38；vite 8.3.0 |
-| React Router | react 19.3.0；react-dom 19.3.0；react-router 8.4.0；@react-router/express 8.4.0；express 5.2.1；vite 8.3.0 |
-| SolidStart | nitro 3.0.260903-beta；@solidjs/start 2.0.5；solid-js 1.9.15；@solidjs/router 1.0.0；vite 8.3.0 |
+| minor | 7482 |
+| minor_mark_sweep | 0 |
+| major | 9523 |
+| incremental | 9550 |
+| weakcb | 0 |
 
-运行环境：Node.js v24.21.0、Docker 29.4.0、OrbStack / aarch64（10 vCPU，7.8 GiB）。应用 2 CPU/1,536 MiB，压测器 4 CPU/1 GiB，后端 2 CPU/512 MiB，三者使用不重叠的虚拟 CPU 集。每次仅运行一个被测框架。镜像摘要、系统信息与依赖 lockfile 均保留。
+原始记录保留 kind、flags、窗口内开始时间和时长。minor/minor_mark_sweep/major/incremental/weakcb 按 Node perf_hooks 分类；这些 duration 是 Node 报告的事件时长，不等于 GC 总 CPU 时间，也不代表整个并发 GC 生命周期或精确 stop-the-world 占比。未观测到某类型只能说明本次窗口没有样本。没有用强制 GC 制造“漂亮”的分位数。
 
-## 解释边界
+## 空闲基线与监测开销
 
-- 本轮测量包含模拟后端拉取、完整 JSON 解析、原生 HTML 渲染与数据序列化；未对六框架内部阶段进行等价插桩，不能拆出可信的“纯序列化毫秒数”。总 p95 减去后端延迟也不能得到 render p95。
-- 动态 HTML/API 请求路径不做 gzip/br 或 ETag 计算；未请求的静态资源、构建指纹不在压测范围。压测前的主动 Accept-Encoding 测试与探针无触发记录，正式压测移除重型探针。
-- SvelteKit 改的是生产产物中的 HTML ETag 计算点。该结果用于比较禁用附加计算后的 SSR 链路，不能替代默认 SvelteKit 的生产表现。
-- 所有结果是闭环固定并发下的观测，不是开放到达率负载下的容量 SLA；达到饱和时，请求队列会显著抬高 p95。
-- 新旧实验同时改变了后端 JSON、页面组成、监控和压测器，不能把两者差值全部归因于关闭 ETag 或 gzip。公开 benchmark 也不构成对本次数据的校正依据。
-- 8 秒矩阵窗和 30 秒重点窗不证明长时间稳定性、内存泄漏情况、浏览器 hydration 性能或真实业务页面体验。
+| 框架 | 空闲 EL p50 ms 中位数 | 空闲 EL p99 ms 中位数 | 空闲 EL max ms |
+| --- | --- | --- | --- |
+| Next.js | 11.88 | 12.76 | 64.19 |
+| Nuxt | 11.86 | 12.70 | 74.65 |
+| SvelteKit | 11.85 | 13.23 | 66.98 |
+| TanStack Start | 11.51 | 13.42 | 43.58 |
+| React Router | 11.60 | 13.14 | 54.33 |
+| SolidStart | 10.91 | 13.18 | 33.08 |
 
-## 资料与复现
+| 框架 | lean RPS 两窗 | off RPS 两窗 | lean/off RPS 变化 | lean CPU ms/请求 | off CPU ms/请求 |
+| --- | --- | --- | --- | --- | --- |
+| Next.js | 52.2 / 63.9 | 57.3 / 61.9 | -2.6% | 18.142 | 17.274 |
+| Nuxt | 69.5 / 68.8 | 68.0 / 53.0 | 14.3% | 11.089 | 14.207 |
+| SvelteKit | 67.4 / 70.6 | 70.3 / 68.1 | -0.3% | 10.626 | 10.743 |
+| TanStack Start | 61.7 / 71.6 | 69.7 / 71.2 | -5.4% | 11.019 | 9.503 |
+| React Router | 53.5 / 39.3 | 60.0 / 62.3 | -24.1% | 19.736 | 12.732 |
+| SolidStart | 66.5 / 85.3 | 77.6 / 84.6 | -6.4% | 9.711 | 8.652 |
 
-- [测量协议、指标定义和关闭方式](rerun-20260922-noetag-json/METHODOLOGY.md)
-- [全部组合结果](rerun-20260922-noetag-json/RESULTS.md) / [机器可读汇总](rerun-20260922-noetag-json/summary.json) / [健康检查](rerun-20260922-noetag-json/health.json)
-- [逐窗口原始结果](rerun-20260922-noetag-json/runs/) / [构建、验收和清理证据](rerun-20260922-noetag-json/evidence/)
-- [复现说明](rerun-20260922-noetag-json/reproduce/README.md) / [完整脚本](rerun-20260922-noetag-json/reproduce/)
-- [图片：概览](rerun-20260922-noetag-json/overview.png)、[矩阵](rerun-20260922-noetag-json/matrix.png)、[运行时](rerun-20260922-noetag-json/runtime.png)、[开销对照](rerun-20260922-noetag-json/overhead.png)，均附同名 SVG
+对照采用大页/50 ms/C8、四个独立进程的 lean/off/off/lean 顺序。off 仍保留边界 CPU/内存查询及控制 HTTP 服务；仅禁用周期性采样、EL 直方图和 GC observer。该开销对照仅覆盖这一场景，包含进程/JIT/宿主机波动，不把差值当作精确监控税，也不对正式数据做倍率修正。
 
-本轮生成的应用、依赖、JSON 测试数据、容器和网络在结束后清理；指标证据和可复现代码保留。实际销毁回执见 [cleanup.json](rerun-20260922-noetag-json/evidence/cleanup.json)。
+## 质量与资源检查
 
-## 历史实验
+| 检查 | 结果 |
+| --- | --- |
+| 最少正式请求数/窗 | 35 |
+| 最少 Event Loop 采样数/窗 | 718 |
+| 应用最高进程 CPU % | 99.8 |
+| 客户端最高进程 CPU % | 19.5 |
+| 客户端 worker 最高 ELU % | 8.5 |
+| 后端最高进程 CPU % | 8.0 |
+| 后端平均定时等待超出设定值的最大值 ms | 7.28 |
+| 单窗累计 memoryUsage 调用墙钟耗时最大值 ms | 190.29 |
 
-本轮保留旧数据，不用新参数覆盖旧实验的数值：
+| 角色 | cgroup periods | throttled periods | throttled ms |
+| --- | --- | --- | --- |
+| app | 47077 | 17 | 778.79 |
+| load | 37974 | 0 | 0.00 |
+| backend | 45773 | 0 | 0.00 |
 
-- [本轮独立目录及原始报告](rerun-20260922-noetag-json/REPORT.md)
-- [本轮之前的主报告](REPORT-20260922-before-noetag-json.md)
-- [2026-09-21 初测原始报告](REPORT-20260921-original.md)
-- [SvelteKit ETag 专项复核](svelte-recheck-20260922/REPORT.md)
+cgroup 计数覆盖窗口前后边界采集，可能含辅助采集进程；应用进程 CPU 来自冻结边界的 process.cpuUsage。压测器与后端使用不重叠的 VM CPU 集，仍共享宿主机与虚拟化层。进程 CPU 100% 约等于一逻辑核；应用配额2核，CPU>100%可能包含V8后台线程。固定并发8对不同框架不保证相同CPU利用率。RSS按1Hz采样，可能遗漏短峰值，不能据此判定泄漏。
+
+## 实际响应体积
+
+UTF-8 HTML正文（不含HTTP头），包含框架内联hydration数据；不包含外部JS/CSS/图片。后端JSON分别为41、320000、600000字节；商品记录数为0、800、1536。
+
+| 框架 | Hello字节 | 中页字节 | 大页字节 |
+| --- | --- | --- | --- |
+| Next.js | 4878–4881 | 856000–856003 | 1610301–1610304 |
+| Nuxt | 1402–1403 | 853894–853895 | 1609605–1609606 |
+| SvelteKit | 903–903 | 834422–834422 | 1572534–1572534 |
+| TanStack Start | 1414–1415 | 841329–841330 | 1585879–1585880 |
+| React Router | 2708–2708 | 859944–859944 | 1626678–1626678 |
+| SolidStart | 1900–1901 | 868814–868815 | 1638921–1638922 |
+
+## 环境
+
+| 项目 | 配置 |
+| --- | --- |
+| 宿主CPU | Apple M4 |
+| 宿主核心数 | 10 |
+| 宿主内存GiB | 16.0 |
+| Docker VM CPU | 10 |
+| Docker VM内存GiB | 7.82 |
+| 架构 | aarch64 |
+| Node | v24.21.0 |
+| 应用CPU/内存 | 2 vCPU / 1536 MiB |
+| V8 old space | 1024 MiB |
+
+## 页面实现与比较边界
+
+| 框架 | 本轮实现 |
+| --- | --- |
+| Next.js | App Router；动态 Server Page 拉数据，商品列表为 use client 组件并参与服务端 HTML 预渲染；保留 RSC/水合数据 |
+| Nuxt | useAsyncData + Vue 原生 v-for；Nitro node-server |
+| SvelteKit | +page.server load + Svelte each；adapter-node |
+| TanStack Start | React Start；路由 loader 调用 createServerFn；Nitro Node 服务 |
+| React Router | Framework SSR 模式，loader + React 列表；Express 生产适配器 |
+| SolidStart | SolidJS 通过 SolidStart 测试；query/createAsync + For；Nitro Node 服务 |
+
+六者均遍历真实后端商品数组生成同结构商品列表，保留框架自己的数据序列化和水合协议，没有把列表替换成预制 HTML 字符串。Next.js 数据不代表 Pages Router 或纯 Server Component 列表；SolidJS 数字也不等于脱离路由/服务层的纯 renderToString 微基准。
+
+## 构建、协议与局限
+
+依赖锁文件沿用上一轮：Next 16.3.5、Nuxt 4.5.2、SvelteKit 2.70.3 / Svelte 5.57.1、TanStack React Start 1.168.56、React Router 8.4.0、SolidStart 2.0.5 / Solid 1.9.15。镜像和实际安装证据见 [构建审计](runtime-20260924-low-mid/evidence/build-audit.json)、[环境](runtime-20260924-low-mid/evidence/environment.json)。
+
+完整内容验收覆盖三种页面、三档延迟、identity/gzip-br 协商，并断言每页恰好一次后端调用。正式窗口不拼接/扫描完整HTML，只统计字节、状态和响应头。SvelteKit移除实际HTML ETag哈希调用，补丁见 [记录](runtime-20260924-low-mid/evidence/patches.json)。本结果不代表默认配置。
+
+每组合两次20秒，低并发慢后端的请求及GC样本有限。短窗最大值和p99会受偶发事件影响；不把两轮结果描述为长期稳定保证。各页分组重启进程，同一页的不同延迟/并发组合仍共享该页进程历史。生成的是扁平商品数组，不代表任意组件树或业务对象。HTML、后端JSON和渲染量一起变化，因此不能把差异全部归因于HTML字节数。
+
+- [预先确定的协议](runtime-20260924-low-mid/PROTOCOL.md)
+- [Event Loop 全场景分位数](runtime-20260924-low-mid/RESULTS-eventloop.md)
+- [GC 全场景及分类型分位数](runtime-20260924-low-mid/RESULTS-gc.md)
+- [CPU、内存及 HTTP 辅助指标](runtime-20260924-low-mid/RESULTS-resources.md)
+- SVG 图表：[重点场景](runtime-20260924-low-mid/overview.svg) / [Event Loop 分位数](runtime-20260924-low-mid/eventloop-quantiles.svg) / [GC 分位数](runtime-20260924-low-mid/gc-quantiles.svg) / [完整 EL p99 矩阵](runtime-20260924-low-mid/eventloop-matrix.svg)
+- [汇总 JSON](runtime-20260924-low-mid/summary.json) / [原始窗口](runtime-20260924-low-mid/runs/)
+- [复现步骤](runtime-20260924-low-mid/reproduce/README.md) / [清理证据](runtime-20260924-low-mid/evidence/cleanup.json)
+
+指标依据：[Node 24 perf_hooks](https://nodejs.org/docs/latest-v24.x/api/perf_hooks.html)。
+
+本轮 Docker 容器、网络和测试数据卷已按专属标签销毁。保留报告、指标、脚本与锁文件，不保留运行中的服务或生成的业务数据。

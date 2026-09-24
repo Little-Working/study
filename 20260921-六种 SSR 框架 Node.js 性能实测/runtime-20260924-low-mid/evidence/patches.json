@@ -1,0 +1,20 @@
+[
+  {
+    "framework": "svelte",
+    "path": "/bench/apps/svelte/build/server/chunks/index.js-BfnKoOb_.js",
+    "beforeSha256": "dad604506c901afe13b8c6e10d7367a4c6dc0476ff69398344e7a5fe00193bce",
+    "afterSha256": "cacd88f4fde4969417289cb2de6b616b19dec4f9321908df1167c0df30248f2a",
+    "removed": "\tif (!chunks) headers.set(\"etag\", `\"${hash(transformed)}\"`);"
+  },
+  {
+    "framework": "next",
+    "configuration": {
+      "compress": false,
+      "generateEtags": false
+    }
+  },
+  {
+    "framework": "react-router",
+    "configuration": "Express production adapter; app.disable(etag); no compression middleware; no access logger; no static middleware in HTML-only benchmark"
+  }
+]

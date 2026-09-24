@@ -1,0 +1,43 @@
+{
+  "windows": 240,
+  "matrixWindows": 216,
+  "good": 140677,
+  "errors": 0,
+  "invalid": 0,
+  "gcDropped": 0,
+  "maxAppCpuPct": 99.8090438671948,
+  "maxLoadCpuPct": 19.461892536598253,
+  "maxBackendCpuPct": 7.980680028377051,
+  "maxWorkerEluPct": 8.45307144325886,
+  "minRequestsPerMatrixWindow": 35,
+  "gcTypes": {
+    "minor": 7482,
+    "minor_mark_sweep": 0,
+    "major": 9523,
+    "incremental": 9550,
+    "weakcb": 0
+  },
+  "throttle": {
+    "app": {
+      "nr_periods": 47077,
+      "nr_throttled": 17,
+      "throttled_usec": 778790
+    },
+    "load": {
+      "nr_periods": 37974,
+      "nr_throttled": 0,
+      "throttled_usec": 0
+    },
+    "backend": {
+      "nr_periods": 45773,
+      "nr_throttled": 0,
+      "throttled_usec": 0
+    }
+  },
+  "maxBackendTimerOvershootMeanMs": 7.278401508327818,
+  "maxMemorySampleCostMs": 190.2867710000428,
+  "minEventLoopSamplesPerWindow": 718,
+  "zeroGcCells": 1,
+  "sparseGcCells": 52,
+  "sparseMajorGcCells": 74
+}

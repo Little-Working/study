@@ -1,0 +1,7 @@
+{
+  "at": "2026-09-24T07:56:20.883190+00:00",
+  "removedStaging": "/private/tmp/ssr-runtime-20260924",
+  "exists": false,
+  "generatedAppData": "Docker volume removed; see cleanup.json",
+  "retained": "metrics, logs, source generators, lockfiles, reports and charts"
+}

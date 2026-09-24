@@ -1,0 +1,1 @@
+{"passed":true,"positiveControlCounters":{"compressionCalls":17,"etagModuleCalls":2,"etagHeaders":1},"compressionEntrypoints":["gzip","gzipSync","deflate","deflateSync","deflateRaw","deflateRawSync","brotliCompress","brotliCompressSync","createGzip","createDeflate","createDeflateRaw","createBrotliCompress","Gzip","Deflate","DeflateRaw","BrotliCompress"],"esmBindingVerified":true}

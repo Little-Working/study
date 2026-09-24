@@ -1,0 +1,22 @@
+{
+  "at": "2026-09-24T07:48:48.905389+00:00",
+  "removed": {
+    "containers": [
+      "3fbedb45ca93",
+      "298c5b04560e",
+      "c7a171edf96e",
+      "04520945f43f"
+    ],
+    "networks": [
+      "0fdf0ce23e0e"
+    ],
+    "volumes": [
+      "ssrbench3-20260924"
+    ]
+  },
+  "remaining": {
+    "containers": [],
+    "networks": [],
+    "volumes": []
+  }
+}

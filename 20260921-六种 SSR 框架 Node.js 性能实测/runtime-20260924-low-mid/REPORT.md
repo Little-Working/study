@@ -33,12 +33,12 @@
 
 | 条件 | 轮次 | EL p99 / max ms | GC max ms | 应用 cgroup throttled ms 增量 |
 | --- | --- | --- | --- | --- |
-| 大页/50 ms/C1 | [1](runtime-20260924-low-mid/runs/matrix-0-react-router-large-50-c1.json) | 90.57 / 3651.14 | 2280.49 | 764.69 |
-| 大页/50 ms/C1 | [2](runtime-20260924-low-mid/runs/matrix-1-react-router-large-50-c1.json) | 23.63 / 32.80 | 6.78 | 0.00 |
-| 大页/200 ms/C1 | [1](runtime-20260924-low-mid/runs/matrix-0-react-router-large-200-c1.json) | 54.17 / 661.65 | 580.07 | 0.00 |
-| 大页/200 ms/C1 | [2](runtime-20260924-low-mid/runs/matrix-1-react-router-large-200-c1.json) | 31.88 / 38.63 | 6.97 | 0.00 |
-| 大页/500 ms/C1 | [1](runtime-20260924-low-mid/runs/matrix-0-react-router-large-500-c1.json) | 37.55 / 223.35 | 136.10 | 0.00 |
-| 大页/500 ms/C1 | [2](runtime-20260924-low-mid/runs/matrix-1-react-router-large-500-c1.json) | 27.53 / 43.19 | 7.56 | 0.00 |
+| 大页/50 ms/C1 | [1](runs/matrix-0-react-router-large-50-c1.json) | 90.57 / 3651.14 | 2280.49 | 764.69 |
+| 大页/50 ms/C1 | [2](runs/matrix-1-react-router-large-50-c1.json) | 23.63 / 32.80 | 6.78 | 0.00 |
+| 大页/200 ms/C1 | [1](runs/matrix-0-react-router-large-200-c1.json) | 54.17 / 661.65 | 580.07 | 0.00 |
+| 大页/200 ms/C1 | [2](runs/matrix-1-react-router-large-200-c1.json) | 31.88 / 38.63 | 6.97 | 0.00 |
+| 大页/500 ms/C1 | [1](runs/matrix-0-react-router-large-500-c1.json) | 37.55 / 223.35 | 136.10 | 0.00 |
+| 大页/500 ms/C1 | [2](runs/matrix-1-react-router-large-500-c1.json) | 27.53 / 43.19 | 7.56 | 0.00 |
 
 第一轮大页/50 ms/C1 中，最大 GC 事件为 minor 2280.49 ms，EL max 为 3651.14 ms，同时观察到 cgroup CPU 限流。仅凭这些记录不能把秒级异常归因于 React Router 固有实现，也不能证明全部由限流造成；本次未抓取 CPU profile/GC trace，原因未定位。第二轮同条件 GC max 为 6.78 ms、EL max 为 32.80 ms。
 内存采样统一为 1 Hz；最异常窗口约 21 次 memoryUsage 调用累计墙钟耗时 190.29 ms。这个墙钟数包含可能的调度等待，不等于采样 CPU 时间，也说明不能宣称监控完全无干扰。相比之下，压测器最高进程 CPU 为 19.46%（100%=一核）、worker ELU 最高 8.45%，后端最高 CPU 为 7.98%；这些观测未显示压测器/后端持续 CPU 饱和。
@@ -50,7 +50,7 @@
 
 以下重点表固定后端 200 ms、并发 8，三个页面分别展示。它是便于阅读的切片，全部 108 个组合见末尾明细。Event Loop p50–p99 是两窗指标中位数（仅两窗，数值等于两窗均值，并非合并直方图分位数），GC 是同场景原始事件合并分位数；max 均为观测到的最高值，绝非未来上界。
 
-![三种页面重点场景](runtime-20260924-low-mid/overview.png)
+![三种页面重点场景](overview.png)
 
 ## Hello World
 
@@ -127,11 +127,11 @@
 
 * 表示 N<100。— 表示未观测到。major 单独分位数见 GC 明细。
 
-![Event Loop 六档分位数](runtime-20260924-low-mid/eventloop-quantiles.png)
+![Event Loop 六档分位数](eventloop-quantiles.png)
 
-![GC 六档分位数](runtime-20260924-low-mid/gc-quantiles.png)
+![GC 六档分位数](gc-quantiles.png)
 
-![全部延迟与并发场景的 Event Loop p99](runtime-20260924-low-mid/eventloop-matrix.png)
+![全部延迟与并发场景的 Event Loop p99](eventloop-matrix.png)
 
 ## GC 类型和有限观测
 
@@ -230,19 +230,19 @@ UTF-8 HTML正文（不含HTTP头），包含框架内联hydration数据；不包
 
 ## 构建、协议与局限
 
-依赖锁文件沿用上一轮：Next 16.3.5、Nuxt 4.5.2、SvelteKit 2.70.3 / Svelte 5.57.1、TanStack React Start 1.168.56、React Router 8.4.0、SolidStart 2.0.5 / Solid 1.9.15。镜像和实际安装证据见 [构建审计](runtime-20260924-low-mid/evidence/build-audit.json)、[环境](runtime-20260924-low-mid/evidence/environment.json)。
+依赖锁文件沿用上一轮：Next 16.3.5、Nuxt 4.5.2、SvelteKit 2.70.3 / Svelte 5.57.1、TanStack React Start 1.168.56、React Router 8.4.0、SolidStart 2.0.5 / Solid 1.9.15。镜像和实际安装证据见 [构建审计](evidence/build-audit.json)、[环境](evidence/environment.json)。
 
-完整内容验收覆盖三种页面、三档延迟、identity/gzip-br 协商，并断言每页恰好一次后端调用。正式窗口不拼接/扫描完整HTML，只统计字节、状态和响应头。SvelteKit移除实际HTML ETag哈希调用，补丁见 [记录](runtime-20260924-low-mid/evidence/patches.json)。本结果不代表默认配置。
+完整内容验收覆盖三种页面、三档延迟、identity/gzip-br 协商，并断言每页恰好一次后端调用。正式窗口不拼接/扫描完整HTML，只统计字节、状态和响应头。SvelteKit移除实际HTML ETag哈希调用，补丁见 [记录](evidence/patches.json)。本结果不代表默认配置。
 
 每组合两次20秒，低并发慢后端的请求及GC样本有限。短窗最大值和p99会受偶发事件影响；不把两轮结果描述为长期稳定保证。各页分组重启进程，同一页的不同延迟/并发组合仍共享该页进程历史。生成的是扁平商品数组，不代表任意组件树或业务对象。HTML、后端JSON和渲染量一起变化，因此不能把差异全部归因于HTML字节数。
 
-- [预先确定的协议](runtime-20260924-low-mid/PROTOCOL.md)
-- [Event Loop 全场景分位数](runtime-20260924-low-mid/RESULTS-eventloop.md)
-- [GC 全场景及分类型分位数](runtime-20260924-low-mid/RESULTS-gc.md)
-- [CPU、内存及 HTTP 辅助指标](runtime-20260924-low-mid/RESULTS-resources.md)
-- SVG 图表：[重点场景](runtime-20260924-low-mid/overview.svg) / [Event Loop 分位数](runtime-20260924-low-mid/eventloop-quantiles.svg) / [GC 分位数](runtime-20260924-low-mid/gc-quantiles.svg) / [完整 EL p99 矩阵](runtime-20260924-low-mid/eventloop-matrix.svg)
-- [汇总 JSON](runtime-20260924-low-mid/summary.json) / [原始窗口](runtime-20260924-low-mid/runs/)
-- [复现步骤](runtime-20260924-low-mid/reproduce/README.md) / [清理证据](runtime-20260924-low-mid/evidence/cleanup.json)
+- [预先确定的协议](PROTOCOL.md)
+- [Event Loop 全场景分位数](RESULTS-eventloop.md)
+- [GC 全场景及分类型分位数](RESULTS-gc.md)
+- [CPU、内存及 HTTP 辅助指标](RESULTS-resources.md)
+- SVG 图表：[重点场景](overview.svg) / [Event Loop 分位数](eventloop-quantiles.svg) / [GC 分位数](gc-quantiles.svg) / [完整 EL p99 矩阵](eventloop-matrix.svg)
+- [汇总 JSON](summary.json) / [原始窗口](runs/)
+- [复现步骤](reproduce/README.md) / [清理证据](evidence/cleanup.json)
 
 指标依据：[Node 24 perf_hooks](https://nodejs.org/docs/latest-v24.x/api/perf_hooks.html)。
 

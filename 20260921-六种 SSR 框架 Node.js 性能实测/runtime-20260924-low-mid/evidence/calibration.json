@@ -1,0 +1,122 @@
+{
+  "next": {
+    "hello": {
+      "minBytes": 4804,
+      "maxBytes": 4954,
+      "observedMin": 4878,
+      "observedMax": 4881
+    },
+    "medium": {
+      "minBytes": 843160,
+      "maxBytes": 868843,
+      "observedMin": 856000,
+      "observedMax": 856003
+    },
+    "large": {
+      "minBytes": 1586146,
+      "maxBytes": 1634458,
+      "observedMin": 1610301,
+      "observedMax": 1610304
+    }
+  },
+  "nuxt": {
+    "hello": {
+      "minBytes": 1380,
+      "maxBytes": 1424,
+      "observedMin": 1402,
+      "observedMax": 1403
+    },
+    "medium": {
+      "minBytes": 841085,
+      "maxBytes": 866703,
+      "observedMin": 853894,
+      "observedMax": 853895
+    },
+    "large": {
+      "minBytes": 1585460,
+      "maxBytes": 1633750,
+      "observedMin": 1609605,
+      "observedMax": 1609606
+    }
+  },
+  "svelte": {
+    "hello": {
+      "minBytes": 889,
+      "maxBytes": 916,
+      "observedMin": 903,
+      "observedMax": 903
+    },
+    "medium": {
+      "minBytes": 821905,
+      "maxBytes": 846938,
+      "observedMin": 834422,
+      "observedMax": 834422
+    },
+    "large": {
+      "minBytes": 1548945,
+      "maxBytes": 1596122,
+      "observedMin": 1572534,
+      "observedMax": 1572534
+    }
+  },
+  "tanstack": {
+    "hello": {
+      "minBytes": 1392,
+      "maxBytes": 1436,
+      "observedMin": 1414,
+      "observedMax": 1415
+    },
+    "medium": {
+      "minBytes": 828709,
+      "maxBytes": 853949,
+      "observedMin": 841329,
+      "observedMax": 841330
+    },
+    "large": {
+      "minBytes": 1562090,
+      "maxBytes": 1609668,
+      "observedMin": 1585879,
+      "observedMax": 1585880
+    }
+  },
+  "react-router": {
+    "hello": {
+      "minBytes": 2667,
+      "maxBytes": 2748,
+      "observedMin": 2708,
+      "observedMax": 2708
+    },
+    "medium": {
+      "minBytes": 847044,
+      "maxBytes": 872843,
+      "observedMin": 859944,
+      "observedMax": 859944
+    },
+    "large": {
+      "minBytes": 1602277,
+      "maxBytes": 1651078,
+      "observedMin": 1626678,
+      "observedMax": 1626678
+    }
+  },
+  "solid": {
+    "hello": {
+      "minBytes": 1871,
+      "maxBytes": 1929,
+      "observedMin": 1900,
+      "observedMax": 1901
+    },
+    "medium": {
+      "minBytes": 855781,
+      "maxBytes": 881847,
+      "observedMin": 868814,
+      "observedMax": 868815
+    },
+    "large": {
+      "minBytes": 1614337,
+      "maxBytes": 1663505,
+      "observedMin": 1638921,
+      "observedMax": 1638922
+    }
+  }
+}
